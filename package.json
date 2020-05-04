@@ -1,0 +1,56 @@
+{
+  "name": "webpack-project",
+  "version": "1.0.0",
+  "description": "Template for frontend develop base on Webpack",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --open --mode development --config webpack.dev.js",
+    "build": "webpack --mode production --config webpack.prod.js",
+    "watch": "webpack --watch"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "IE 11",
+    "Firefox ESR"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sergeykonovalenko/webpack-project.git"
+  },
+  "author": "Sergey Konovalenko",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/plugin-transform-runtime": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "autoprefixer": "^9.7.4",
+    "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^5.1.1",
+    "css-loader": "^3.5.3",
+    "express": "^4.17.1",
+    "file-loader": "^6.0.0",
+    "html-webpack-plugin": "^4.3.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.14.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "path": "^0.12.7",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.2.1",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^4.43.0",
+    "webpack-bundle-analyzer": "^3.7.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-middleware": "^3.7.2",
+    "webpack-dev-server": "^3.10.3",
+    "webpack-merge": "^4.2.2",
+    "webpack-visualizer-plugin": "^0.1.11"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.9.6",
+    "@fancyapps/fancybox": "^3.5.7",
+    "jquery": "^3.5.0",
+    "normalize.css": "^8.0.1"
+  }
+}
