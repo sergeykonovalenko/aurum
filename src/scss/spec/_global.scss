@@ -10,6 +10,7 @@ html ::before {
 }
 
 body {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -17,10 +18,10 @@ body {
     min-height: 100vh;
     margin: 0;
     padding: 0;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.5;
-    font-family: "Open Sans", Tahoma, sans-serif;
-    color: $color-main;
+    font-family: "Noto Sans", Tahoma, sans-serif;
+    color: $color-secondary;
     word-wrap: break-word;
     background-color: #fff;
 }
@@ -131,31 +132,7 @@ h6,
 
 .container {
     position: relative;
-    width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
-}
-
-@media (min-width: 576px) {
-    .container {
-        max-width: 540px;
-    }
-}
-
-@media (min-width: 768px) {
-    .container {
-        max-width: 720px;
-    }
-}
-
-@media (min-width: 992px) {
-    .container {
-        max-width: 960px;
-    }
-}
-
-@media (min-width: 1200px) {
-    .container {
-        max-width: 1170px;
-    }
 }

@@ -3,6 +3,7 @@ const fs = require('fs');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 const webpack = require('webpack');
 
 const PAGES = fs
@@ -15,6 +16,7 @@ module.exports = mode => {
     return {
         entry: {
             app: './src/index.js',
+            'modernizr.custom': './src/js/vendor/modernizr-custom.js',
         },
         output: {
             filename: 'js/[name].bundle.js',
@@ -23,39 +25,14 @@ module.exports = mode => {
         },
         module: {
             rules: [
-                // {
-                //     test: /\.(png|jpe?g|gif|svg)$/i,
-                //     use: [
-                //         {
-                //             loader: 'file-loader',
-                //             options: {
-                //                 name: 'img/[path][name].[ext]',
-                //                 outputPath: 'img',
-                //             },
-                //         },
-                //     ],
-                // },
-                // {
-                //     test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-                //     loader: "file-loader",
-                //     options: {
-                //         name: "[name].[ext]"
-                //     }
-                // },
-            ],
-        },
-        optimization: {
-            splitChunks: {
-                cacheGroups: {
-                    vendor: {
-                        test: /node_modules/,
-                        name: 'vendors',
-                        chunks: 'all',
-                        enforce: true,
-                    }
+                {
+                    test: /\.svg$/,
+                    use: [
+                        'svg-sprite-loader',
+                        'svgo-loader',
+                    ]
                 },
-            },
-            // runtimeChunk: true
+            ]
         },
         plugins: [
             new CleanWebpackPlugin(),
@@ -85,6 +62,7 @@ module.exports = mode => {
                     // copyUnmodified: true,
                 }
             ),
+            new SpriteLoaderPlugin(),
         ],
     }
 };

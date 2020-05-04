@@ -1,31 +1,83 @@
-<!doctype html>
-<html lang="ru">
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
 <head>
+    <!-- Meta -->
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Webpack</title>
-
+    <!-- SEO -->
+    <title>AURUM — робочий одяг в Україні</title>
+    <meta name="description" content="✅ Стильный рабочий костюм в Украине">
+    <meta name="keywords" content="спецодяг, робочий одяг, купити робочий одяг, купити спецодяг, спецодяг в Україні">
+    <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
     <link rel="manifest" href="img/favicon/site.webmanifest">
     <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#ffffff">
-
+    <meta name="msapplication-TileColor" content="#ffc40d">
     <meta name="theme-color" content="#ffffff">
+    <!-- OG -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Спецодежда линейки AURUM">
+    <meta property="og:description" content="✅ Стильный рабочий костюм в Украине">
+    <meta property="og:image" content="img/og/poster-1200x630.jpg">
+    <meta property="og:url" content="http://aurum.ua">
+    <meta property="og:site_name" content="AURUM">
+    <!-- Modernizr -->
+    <script src="js/modernizr.custom.bundle.js"></script>
+    <!-- Styles -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <section>
+<body class="home">
+    <header class="main-header">
         <div class="container">
-            <h1>Webpack</h1>
-            <img src="img/base/olivia.jpg" alt="">
+            <a class="main-header__logo">
+                <img src="img/base/logo.svg" width="66" height="72" alt="">
+            </a>
+            <nav class="main-header__nav main-nav">
+                <ul class="main-nav__list">
+                    <li><a href="#">Чому AURUM</a></li>
+                    <li><a href="#">Де купити</a></li>
+                    <li><a href="#">Характеристики</a></li>
+                    <li><a href="#">Модельний ряд</a></li>
+                    <li><a href="#">Інформаційній центр</a></li>
+                    <li><a href="#">Новини</a></li>
+                </ul>
+            </nav><!-- / .main-nav -->
+            <div class="main-header__feedback feedback-small">
+                <p class="feedback-small__schedule">Години роботи: 9:00 до 17:00</p>
+                <a class="feedback-small__phone" href="tel:380500754824">+38 (050) 075-48-24</a>
+                <a class="feedback-small__button" href="#"><span>Передзвоніть мені</span></a>
+            </div><!-- / .feedback-small -->
         </div>
-    </section>
+    </header><!-- / .main-header -->
 
-    <script src="js/vendors.bundle.js"></script>
+    <main class="main">
+        <section class="main-offer">
+            <div class="container">
+                <a class="main-offer__btn-download-full-description" href="#">Скачайте повний опис</a>
+                <div class="main-offer__txt content">
+                    <h1><strong>AURUM</strong> - неперевершений комфорт та надійність <strong>за доступною ціною!</strong></h1>
+                    <p>Найстильніший робочий костюм в Україні!</p>
+                </div>
+                <div class="main-offer__buttons">
+                    <a class="main-offer__button button button--inclined" href="#"><span>Для себе</span></a>
+                    <a class="main-offer__button button button--inclined button--stroke" href="#">
+                        <span>Хочу стати дилером</span>
+                    </a>
+                </div>
+            </div>
+        </section><!-- / .main-offer -->
+    </main><!-- / .main -->
+
+    <footer class="main-footer">
+        <div class="container">
+
+        </div>
+    </footer><!-- / .main-footer -->
+
     <script src="js/app.bundle.js"></script>
 </body>
 </html>

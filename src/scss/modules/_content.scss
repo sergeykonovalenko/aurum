@@ -1,0 +1,77 @@
+.content {
+
+}
+
+.content h1 {
+    //font-size: 38px;
+}
+
+.content p,
+.content ul {
+    margin: 1em 0;
+}
+
+.content ul {
+    padding: 0;
+    list-style: none;
+}
+
+.content li {
+    position: relative;
+    margin-bottom: .5em;
+    padding-left: 40px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 7px;
+        left: 20px;
+        width: 7px;
+        height: 7px;
+        background-color: $color-main;
+        border-radius: 50%;
+    }
+}
+
+.content strong,
+.content b {
+    font-weight: 700;
+    color: $color-main;
+}
+
+.content a {
+    color: $color-main;
+
+    &:hover,
+    &:focus {
+        text-decoration: underline;
+    }
+}
+
+.content *:first-child {
+    margin-top: 0;
+}
+
+.content *:last-child {
+    margin-bottom: 0;
+}
+
+//@media screen and (max-width: 576px) {
+//    .content h1 {
+//        font-size: 35px;
+//    }
+//
+//    .content h2,
+//    .content .heading-2 {
+//        font-size: 30px;
+//    }
+//
+//    .content h3,
+//    .content .heading-3 {
+//        font-size: 24px;
+//    }
+//}

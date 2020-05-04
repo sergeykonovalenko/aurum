@@ -1,0 +1,28 @@
+.main-nav {
+    display: flex;
+}
+
+.main-nav__list {
+    @include reset-list;
+
+    display: flex;
+}
+
+.main-nav__list li {
+    display: flex;
+}
+
+.main-nav__list a {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #fff;
+    transition: all .15s ease-out;
+
+    &:hover {
+        color: $color-main;
+    }
+}

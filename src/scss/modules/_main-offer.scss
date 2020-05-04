@@ -1,0 +1,100 @@
+.main-offer {
+    min-height: 815px;
+    padding-top: 93px;
+    padding-bottom: 155px;
+    color: #fff;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+}
+
+.no-js .main-offer,
+.no-webp .main-offer {
+    background-image: url("img/bg/offer.png");
+}
+
+.webp .main-offer {
+    background-image: url("img/bg/offer.webp");
+}
+
+.main-offer__btn-download-full-description {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    margin-left: 59.829059829%;
+    margin-bottom: 95px;
+    padding: 8px 20px 8px 30px;
+    font-weight: 700;
+    font-size: 9px;
+    text-transform: uppercase;
+    color: #c1c1c1;
+    background: linear-gradient(to left, #575757, #bebebe, #e4e4e4, #575757, #bebebe 80%, #e4e4e4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-width: 2px;
+    border-style: solid;
+    border-image-source: linear-gradient(to left, #575757, #bebebe, #e4e4e4, #575757, #bebebe 80%, #e4e4e4);
+    border-image-slice: 1;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: -18px;
+        bottom: -18px;
+        width: 50px;
+        height: 40px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+
+        .no-js &,
+        .no-webp & {
+            background-image: url("img/bg/book.png");
+        }
+
+        .webp & {
+            background-image: url("img/bg/book.webp");
+        }
+    }
+
+    &:hover {
+        background: linear-gradient(to right, #575757, #bebebe, #e4e4e4, #575757, #bebebe 80%, #e4e4e4);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        border-image-source: linear-gradient(to right, #575757, #bebebe, #e4e4e4, #575757, #bebebe 80%, #e4e4e4);
+    }
+}
+
+.main-offer__txt {
+    margin-bottom: 65px;
+    width: 870px;
+    font-size: 36px;
+}
+
+.main-offer__txt h1 {
+    margin: .6em 0;
+    font-size: 40px;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.main-offer__txt p {
+    margin: .6em 0;
+}
+
+.main-offer__button {
+    position: relative;
+    min-width: 260px;
+    text-transform: none;
+
+    &:first-child {
+        z-index: 2;
+        margin-right: -10px;
+        box-shadow: 0 9px 20.79px .21px rgba(92, 90, 87, .41),
+                    inset 0 11px 15px rgba(251, 224, 193, .49);
+    }
+
+    &:last-child {
+        z-index: 1;
+    }
+}
