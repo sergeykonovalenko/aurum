@@ -1,5 +1,7 @@
 .main-offer {
+    position: relative;
     min-height: 815px;
+    margin-bottom: -125px;
     padding-top: 93px;
     padding-bottom: 155px;
     color: #fff;
@@ -21,7 +23,7 @@
     display: inline-block;
     vertical-align: middle;
     position: relative;
-    margin-left: 59.829059829%;
+    margin-left: 58%;
     margin-bottom: 95px;
     padding: 8px 20px 8px 30px;
     font-weight: 700;
@@ -68,6 +70,7 @@
 .main-offer__txt {
     margin-bottom: 65px;
     width: 870px;
+    max-width: 100%;
     font-size: 36px;
 }
 

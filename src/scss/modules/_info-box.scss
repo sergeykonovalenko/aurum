@@ -1,0 +1,193 @@
+.info-box {
+    position: relative;
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, .3));
+
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 36px;
+        z-index: 1;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        pointer-events: none;
+    }
+
+    &--1--1::before {
+        left: -130px;
+        width: 464px;
+        height: 686px;
+
+        .no-js &,
+        .no-webp & {
+            background-image: url("img/bg/worker-1.png");
+        }
+
+        .webp & {
+            background-image: url("img/bg/worker-1.webp");
+        }
+    }
+
+    &--1--2::before {
+        left: 0;
+        width: 426px;
+        height: 674px;
+
+        .no-js &,
+        .no-webp & {
+            background-image: url("img/bg/worker-3.png");
+        }
+
+        .webp & {
+            background-image: url("img/bg/worker-3.webp");
+        }
+    }
+
+    &--2--1::before {
+        right: -160px;
+        width: 443px;
+        height: 892px;
+
+        .no-js &,
+        .no-webp & {
+            background-image: url("img/bg/worker-2.png");
+        }
+
+        .webp & {
+            background-image: url("img/bg/worker-2.webp");
+        }
+    }
+
+    &--2--2::before {
+        right: -150px;
+        width: 763px;
+        height: 508px;
+
+        .no-js &,
+        .no-webp & {
+            background-image: url("img/bg/worker-4.png");
+        }
+
+        .webp & {
+            background-image: url("img/bg/worker-4.webp");
+        }
+    }
+}
+
+.info-box {
+    width: 1100px;
+    max-width: 100%;
+}
+
+.info-box__wr {
+    padding-top: 80px;
+    padding-bottom: 70px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-origin: border-box;
+    border-width: 20px 20px 57px 20px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, .05);
+    border-radius: 10px;
+    box-shadow: inset 5px 5px 25px 0px rgba(0, 0, 0, .3);
+    clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 36px), calc(50% + 35px) calc(100% - 36px), 50% 100%, calc(50% - 35px) calc(100% - 36px), 0% calc(100% - 36px));
+
+    .info-box--1 & {
+        padding-right: 60px;
+        color: $gray;
+        background-color: #1f1411;
+
+        .no-js &,
+        .no-webp & {
+            background-image: url("img/bg/info-box-1.jpg");
+        }
+
+        .webp & {
+            background-image: url("img/bg/info-box-1.webp");
+        }
+    }
+
+    .info-box--1--1 & {
+        padding-left: 235px;
+    }
+
+    .info-box--1--2 & {
+        padding-left: 375px;
+    }
+
+    .info-box--2 & {
+        padding-left: 130px;
+        background-color: #eeeeee;
+
+        .no-js &,
+        .no-webp & {
+            background-image: url("img/bg/info-box-2.jpg");
+        }
+
+        .webp & {
+            background-image: url("img/bg/info-box-2.webp");
+        }
+    }
+
+    .info-box--2--1 & {
+        padding-right: 330px;
+    }
+
+    .info-box--2--2 & {
+        padding-right: 230px;
+    }
+}
+
+.info-box__txt {
+    margin-bottom: 45px;
+    font-weight: 500;
+    font-size: 24px;
+    font-family: "Ubuntu", Tahoma, sans-serif;
+}
+
+.info-box__txt p:first-child {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.25;
+    font-family: "Noto Sans", Tahoma, sans-serif;
+    text-transform: uppercase;
+}
+
+.info-box--1--1 ul {
+    padding-left: 125px;
+}
+
+.info-box--1--2 ul {
+    padding-left: 45px;
+}
+
+.info-box__txt li {
+    padding-left: 25px;
+
+    &::before {
+        top: 14px;
+        left: 0;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-image: linear-gradient(to bottom, #ffde00, #e29403 57%, #c44906 100%);
+        box-shadow: 0 0 9.1px .9px rgba(241, 100, 6, .73);
+    }
+}
+
+.info-box__button-box {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    .info-box--1 & {
+        text-align: right;
+    }
+}
+
+.info-box__button {
+    min-width: 270px;
+}
+
+.info-box > *:last-child {
+    margin-bottom: 0;
+}

@@ -1,0 +1,29 @@
+.advantages {
+    padding-top: calc(125px + 75px);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+}
+
+.no-js .advantages,
+.no-webp .advantages {
+    background-image: url("img/bg/advantages.png");
+}
+
+.webp .advantages {
+    background-image: url("img/bg/advantages.webp");
+}
+
+.advantages__title {
+    margin-top: 0;
+    margin-bottom: 160px;
+    color: $gray;
+}
+
+.advantages__info-box {
+    margin: 0 auto 55px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}

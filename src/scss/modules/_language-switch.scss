@@ -42,17 +42,19 @@
 }
 
 .language-switch img {
-    margin: 0 auto -11px;
+    margin: 0 auto -7px;
 }
 
 .language-switch span {
+    display: block;
     font-weight: 700;
+    line-height: 1;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, .5);
 }
 
 .language-switch .sub-menu {
     position: absolute;
-    top: 100%;
+    top: calc(100% + 7px);
     left: 0;
     z-index: 1;
     width: 100%;
@@ -72,7 +74,7 @@
 }
 
 .language-switch .sub-menu a {
-    padding: 5px;
+    padding: 7px 5px;
     background-color: $color-bg;
     transition: all .15s ease-out;
 

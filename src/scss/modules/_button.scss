@@ -39,6 +39,7 @@
 
     &:hover,
     &:focus {
+        background-image: linear-gradient(to bottom, #e8a005 30%, #d26105 100%);
         transform: translateY(2px);
 
         &::before {
@@ -77,6 +78,32 @@
         &:focus {
             color: #432b0c;
             background-color: $color-main--light;
+            background-image: none;
+        }
+    }
+
+    &--with-icon {
+        display: inline-flex;
+        justify-content: center;
+        flex-shrink: 0;
+        padding-top: 16.5px;
+        padding-bottom: 16.5px;
+
+        svg {
+            transition: all .15s ease-out;
+        }
+
+        &:hover svg {
+            fill: #ffd08a;
+            animation: .6s shake-custom;
         }
     }
 }
+
+.button__icon {
+    display: flex;
+    align-items: center;
+    height: 27px;
+    margin-left: 15px;
+}
+
