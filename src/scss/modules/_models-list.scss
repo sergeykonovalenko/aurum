@@ -1,0 +1,21 @@
+.models-list {
+    padding: 0;
+    list-style: none;
+}
+
+.models-list__title {
+    margin-top: 0;
+    margin-bottom: 23px;
+}
+
+.models-list__item {
+    margin-bottom: 85px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.models-list__products-list {
+    margin: 0;
+}

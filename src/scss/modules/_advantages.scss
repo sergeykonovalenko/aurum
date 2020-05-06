@@ -1,8 +1,11 @@
 .advantages {
-    padding-top: calc(125px + 75px);
-    padding-bottom: calc(170px + 115px);
+    position: relative;
+    z-index: 1;
+    margin-bottom: -130px;
+    padding-top: calc(110px + 75px);
+    padding-bottom: calc(150px + 130px);
     background-repeat: no-repeat;
-    background-position: bottom center;
+    background-position: center bottom;
     background-size: cover;
 }
 

@@ -1,12 +1,14 @@
 .main-offer {
     position: relative;
+    z-index: 2;
     min-height: 815px;
-    margin-bottom: -125px;
+    margin-bottom: -110px;
     padding-top: 93px;
-    padding-bottom: 155px;
+    //padding-bottom: 155px;
+    padding-bottom: calc(50px + 110px);
     color: #fff;
     background-repeat: no-repeat;
-    background-position: top center;
+    background-position: center top;
     background-size: cover;
 }
 

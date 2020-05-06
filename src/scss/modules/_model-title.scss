@@ -1,0 +1,48 @@
+.model-title {
+    position: relative;
+    padding-left: 65px;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 1.25;
+    font-family: "Ubuntu", Tahoma, sans-serif;
+    text-transform: uppercase;
+    color: $color-main;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 11px;
+        left: 24px;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+    }
+
+    strong {
+        font-weight: 700;
+    }
+
+    &--antistat {
+
+        &::before {
+            background-image: linear-gradient(to bottom, #95b4db 0%, #5688b6 70%, #175b90 100%);
+            box-shadow: 0 0 5.94px 0.06px rgba(86, 145, 218, .73);
+        }
+
+        strong {
+            color: $model-antistat;
+        }
+    }
+
+    &--grey {
+
+        &::before {
+            background-image: linear-gradient(to bottom, #bebebf 0%, #969697 70%, #6e6e6e 100%);
+            box-shadow: 0 0 5.94px 0.06px rgba(145, 145, 145, .73);
+        }
+
+        strong {
+            color: $model-gray;
+        }
+    }
+}

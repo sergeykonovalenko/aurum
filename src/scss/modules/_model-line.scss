@@ -1,3 +1,27 @@
 .model-line {
+    position: relative;
+    padding-top: calc(50px + 130px);
+    padding-bottom: calc(110px + 120px);
     background-color: #e6e6e6;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+}
+
+.no-js .model-line,
+.no-webp .model-line {
+    background-image: url("img/bg/model-line.png");
+}
+
+.webp .model-line {
+    background-image: url("img/bg/model-line.webp");
+}
+
+.model-line__title {
+    margin-top: 0;
+    margin-bottom: 80px;
+}
+
+.model-line__list {
+    margin: 0;
 }
