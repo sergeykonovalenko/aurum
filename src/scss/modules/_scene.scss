@@ -1,0 +1,39 @@
+.scene {
+    position: absolute;
+    z-index: 1;
+    color: #fff;
+}
+
+.scene__item {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+
+    &--1 {
+        width: 135px;
+        height: 104px;
+
+        .no-js &,
+        .no-webp & {
+            background-image: url("img/bg/shavings-1.png");
+        }
+
+        .webp & {
+            background-image: url("img/bg/shavings-1.webp");
+        }
+    }
+
+    &--2 {
+        width: 69px;
+        height: 42px;
+
+        .no-js &,
+        .no-webp & {
+            background-image: url("img/bg/shavings-2.png");
+        }
+
+        .webp & {
+            background-image: url("img/bg/shavings-2.webp");
+        }
+    }
+}

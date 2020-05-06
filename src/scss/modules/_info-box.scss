@@ -13,6 +13,13 @@
         pointer-events: none;
     }
 
+    &--without-tail {
+
+        &::before {
+            bottom: 0;
+        }
+    }
+
     &--1--1::before {
         left: -130px;
         width: 464px;
@@ -109,10 +116,12 @@
 
     .info-box--1--1 & {
         padding-left: 235px;
+        clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 36px), calc(33% + 35px) calc(100% - 36px), 33% 100%, calc(33% - 35px) calc(100% - 36px), 0% calc(100% - 36px));
     }
 
     .info-box--1--2 & {
         padding-left: 375px;
+        clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 36px), calc(43% + 35px) calc(100% - 36px), 43% 100%, calc(43% - 35px) calc(100% - 36px), 0% calc(100% - 36px));
     }
 
     .info-box--2 & {
@@ -131,10 +140,16 @@
 
     .info-box--2--1 & {
         padding-right: 330px;
+        clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 36px), calc(67% + 35px) calc(100% - 36px), 67% 100%, calc(67% - 35px) calc(100% - 36px), 0% calc(100% - 36px));
     }
 
     .info-box--2--2 & {
         padding-right: 230px;
+    }
+
+    .info-box--without-tail & {
+        clip-path: none;
+        border-bottom-width: 20px;
     }
 }
 
@@ -190,4 +205,14 @@
 
 .info-box > *:last-child {
     margin-bottom: 0;
+}
+
+.info-box__scene-1 {
+    bottom: 180px;
+    left: -60px;
+}
+
+.info-box__scene-2 {
+    bottom: 20px;
+    right: -195px;
 }
