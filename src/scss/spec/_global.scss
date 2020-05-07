@@ -108,6 +108,18 @@ h2,
     font-size: 36px;
 }
 
+.heading-2 {
+
+    &--gray {
+        color: $gray;
+    }
+
+    strong {
+        font-weight: 700;
+        color: $color-main;
+    }
+}
+
 h3,
 .heading-3 {
     margin: 1em 0;
@@ -130,11 +142,6 @@ h6,
 .heading-6 {
     margin: 2.33em 0;
     font-size: .67em;
-}
-
-.heading-2 strong {
-    font-weight: 700;
-    color: $color-main;
 }
 
 .container {
