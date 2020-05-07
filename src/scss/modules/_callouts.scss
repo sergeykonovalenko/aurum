@@ -17,7 +17,7 @@
             transform-origin: center;
         }
 
-        .callouts__img {
+        .callouts__img-box {
             opacity: 1;
             visibility: visible;
             transition: opacity .3s ease-in;
@@ -279,7 +279,7 @@
     z-index: 2;
     height: 2px;
     background-color: #e8a82d;
-    //pointer-events: none;
+    pointer-events: none;
 
     &::before,
     &::after {
@@ -631,17 +631,46 @@
     }
 }
 
-/***** callouts img *****/
-.callouts__img {
+/***** callouts img box *****/
+.callouts__img-box {
     position: absolute;
     z-index: 1;
     width: 217px;
     height: 217px;
+    margin: 0;
     border: 2px solid #c8cde0;
     border-radius: 2px;
-    object-fit: cover;
     opacity: 0;
     visibility: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 45px;
+        height: 46px;
+        background: #fff url("img/base/logo.svg") no-repeat center;
+        background-size: 34px auto;
+    }
+
+    &--logo-top-left::before {
+        top: 0;
+        left: 0;
+    }
+
+    &--logo-top-right::before {
+        top: 0;
+        right: 0;
+    }
+
+    &--logo-bottom-right::before {
+        right: 0;
+        bottom: 0;
+    }
+
+    &--logo-bottom-left::before {
+        bottom: 0;
+        left: 0;
+    }
 
     &--jacket--1 {
         right: -120px;
@@ -729,38 +758,54 @@
     }
 
     &--half-bombardment--1 {
-
+        right: -400px;
+        bottom: -277px;
     }
 
     &--half-bombardment--2 {
-
+        right: -337px;
+        bottom: -298px;
     }
 
     &--half-bombardment--3 {
-
+        right: -365px;
+        bottom: -259px;
     }
 
     &--half-bombardment--4 {
-
+        right: -344px;
+        bottom: -282px;
     }
 
     &--half-bombardment--5 {
-
+        right: -370px;
+        bottom: -173px;
     }
 
     &--half-bombardment--6 {
-
+        bottom: -352px;
+        left: -270px;
     }
 
     &--half-bombardment--7 {
-
+        bottom: -162px;
+        left: -354px;
     }
 
     &--half-bombardment--8 {
-
+        bottom: -150px;
+        left: -372px;
     }
 
     &--half-bombardment--9 {
-
+        bottom: -85px;
+        left: -396px;
     }
+}
+
+/***** callouts img *****/
+.callouts__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
