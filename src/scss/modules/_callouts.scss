@@ -63,6 +63,96 @@
         top: 625px;
         right: -105px;
     }
+
+    &--pants--1 {
+        bottom: 970px;
+        left: -45px;
+    }
+
+    &--pants--2 {
+        bottom: 695px;
+        left: 15px;
+    }
+
+    &--pants--3 {
+        top: 395px;
+        left: -105px;
+    }
+
+    &--pants--4 {
+        bottom: 255px;
+        left: -120px;
+    }
+
+    &--pants--5 {
+        top: 890px;
+        left: -30px;
+    }
+
+    &--pants--6 {
+        bottom: 960px;
+        right: 30px;
+    }
+
+    &--pants--7 {
+        bottom: 550px;
+        right: 45px;
+    }
+
+    &--pants--8 {
+        top: 615px;
+        right: -90px;
+    }
+
+    &--pants--9 {
+        top: 865px;
+        right: -60px;
+    }
+
+    &--half-bombardment--1 {
+        bottom: 1180px;
+        left: 7px;
+    }
+
+    &--half-bombardment--2 {
+        bottom: 960px;
+        left: 0;
+    }
+
+    &--half-bombardment--3 {
+        bottom: 645px;
+        left: -100px;
+    }
+
+    &--half-bombardment--4 {
+        bottom: 295px;
+        left: -130px;
+    }
+
+    &--half-bombardment--5 {
+        top: 1280px;
+        left: -70px;
+    }
+
+    &--half-bombardment--6 {
+        right: 40px;
+        bottom: 1100px;
+    }
+
+    &--half-bombardment--7 {
+        right: -15px;
+        bottom: 570px;
+    }
+
+    &--half-bombardment--8 {
+        right: -140px;
+        bottom: 327px;
+    }
+
+    &--half-bombardment--9 {
+        top: 1245px;
+        right: -70px;
+    }
 }
 
 /***** callouts txt *****/
@@ -109,6 +199,78 @@
     &--jacket--8 {
         width: 465px;
     }
+
+    &--pants--1 {
+        width: 380px;
+    }
+
+    &--pants--2 {
+        width: 265px;
+    }
+
+    &--pants--3 {
+        width: 410px;
+    }
+
+    &--pants--4 {
+        width: 410px;
+    }
+
+    &--pants--5 {
+        width: 360px;
+    }
+
+    &--pants--6 {
+        width: 360px;
+    }
+
+    &--pants--7 {
+        width: 320px;
+    }
+
+    &--pants--8 {
+        width: 455px;
+    }
+
+    &--pants--9 {
+        width: 360px;
+    }
+
+    &--half-bombardment--1 {
+        width: 320px;
+    }
+
+    &--half-bombardment--2 {
+        width: 275px;
+    }
+
+    &--half-bombardment--3 {
+        width: 415px;
+    }
+
+    &--half-bombardment--4 {
+        width: 415px;
+    }
+
+    &--half-bombardment--5 {
+        width: 370px;
+    }
+
+    &--half-bombardment--6 {
+        width: 345px;
+    }
+
+    &--half-bombardment--7 {
+        width: 320px;
+    }
+
+    &--half-bombardment--8 {
+        width: 455px;
+    }
+
+    &--half-bombardment--9 {
+        width: 360px;
+    }
 }
 
 /***** callouts pointer *****/
@@ -117,7 +279,7 @@
     z-index: 2;
     height: 2px;
     background-color: #e8a82d;
-    pointer-events: none;
+    //pointer-events: none;
 
     &::before,
     &::after {
@@ -155,6 +317,7 @@
         bottom: 28px;
         left: 100%;
         width: 195px;
+        transform-origin: 0;
     }
 
     &--jacket--3 {
@@ -243,6 +406,229 @@
             left: -8.5px;
         }
     }
+
+    &--pants--1 {
+        bottom: 28px;
+        left: 100%;
+        width: 117px;
+        transform-origin: 0;
+    }
+
+    &--pants--2 {
+        bottom: 28px;
+        left: 100%;
+        width: 105px;
+        transform: rotate(3deg);
+        transform-origin: 0;
+    }
+
+    &--pants--3 {
+        top: 28px;
+        left: 100%;
+        width: 165px;
+        transform: rotate(16deg);
+        transform-origin: 0;
+    }
+
+    &--pants--4 {
+        bottom: 28px;
+        left: 100%;
+        width: 150px;
+        transform: rotate(35deg);
+        transform-origin: 0;
+    }
+
+    &--pants--5 {
+        top: 28px;
+        left: 100%;
+        width: 165px;
+        transform: rotate(43deg);
+        transform-origin: 0;
+    }
+
+    &--pants--6 {
+        right: 100%;
+        bottom: 28px;
+        width: 218px;
+        transform: rotate(-77deg);
+        transform-origin: 100%;
+
+        &::before {
+            right: -8.5px;
+            left: auto;
+        }
+
+        &::after {
+            right: auto;
+            left: -8.5px;
+        }
+    }
+
+    &--pants--7 {
+        right: 100%;
+        bottom: 28px;
+        width: 145px;
+        transform: rotate(9deg);
+        transform-origin: 100%;
+
+        &::before {
+            right: -8.5px;
+            left: auto;
+        }
+
+        &::after {
+            right: auto;
+            left: -8.5px;
+        }
+    }
+
+    &--pants--8 {
+        top: 28px;
+        right: 100%;
+        width: 160px;
+        transform: rotate(-6deg);
+        transform-origin: 100%;
+
+        &::before {
+            right: -8.5px;
+            left: auto;
+        }
+
+        &::after {
+            right: auto;
+            left: -8.5px;
+        }
+    }
+
+    &--pants--9 {
+        top: 28px;
+        right: 100%;
+        width: 195px;
+        transform: rotate(23deg);
+        transform-origin: 100%;
+
+        &::before {
+            right: -8.5px;
+            left: auto;
+        }
+
+        &::after {
+            right: auto;
+            left: -8.5px;
+        }
+    }
+
+    &--half-bombardment--1 {
+        bottom: 28px;
+        left: 100%;
+        width: 205px;
+        transform: rotate(26deg);
+        transform-origin: 0;
+    }
+
+    &--half-bombardment--2 {
+        bottom: 28px;
+        left: 100%;
+        width: 165px;
+        transform: rotate(43deg);
+        transform-origin: 0;
+    }
+
+    &--half-bombardment--3 {
+        bottom: 28px;
+        left: 100%;
+        width: 165px;
+        transform: rotate(26deg);
+        transform-origin: 0;
+    }
+
+    &--half-bombardment--4 {
+        bottom: 28px;
+        left: 100%;
+        width: 160px;
+        transform: rotate(37deg);
+        transform-origin: 0;
+    }
+
+    &--half-bombardment--5 {
+        top: 28px;
+        left: 100%;
+        width: 195px;
+        transform: rotate(38deg);
+        transform-origin: 0;
+    }
+
+    &--half-bombardment--6 {
+        right: 100%;
+        bottom: 28px;
+        width: 175px;
+        transform: rotate(-72deg);
+        transform-origin: 100%;
+
+        &::before {
+            right: -8.5px;
+            left: auto;
+        }
+
+        &::after {
+            right: auto;
+            left: -8.5px;
+        }
+    }
+
+    &--half-bombardment--7 {
+        right: 100%;
+        bottom: 28px;
+        width: 140px;
+        transform: rotate(10deg);
+        transform-origin: 100%;
+
+        &::before {
+            right: -8.5px;
+            left: auto;
+        }
+
+        &::after {
+            right: auto;
+            left: -8.5px;
+        }
+    }
+
+    &--half-bombardment--8 {
+        right: 100%;
+        bottom: 28px;
+        width: 160px;
+        transform: rotate(13deg);
+        transform-origin: 100%;
+
+        &::before {
+            right: -8.5px;
+            left: auto;
+        }
+
+        &::after {
+            right: auto;
+            left: -8.5px;
+        }
+    }
+
+    &--half-bombardment--9 {
+        top: 28px;
+        right: 100%;
+        width: 195px;
+        transform: rotate(22deg);
+        transform-origin: 100%;
+
+        &::before {
+            right: -8.5px;
+            left: auto;
+        }
+
+        &::after {
+            right: auto;
+            left: -8.5px;
+        }
+    }
 }
 
 /***** callouts img *****/
@@ -295,5 +681,86 @@
     &--jacket--8 {
         left: -354px;
         top: 12px;
+    }
+
+    &--pants--1 {
+        right: -333px;
+        bottom: -187px;
+    }
+
+    &--pants--2 {
+        right: -321px;
+        bottom: -192px;
+    }
+
+    &--pants--3 {
+        right: -374px;
+        bottom: -203px;
+    }
+
+    &--pants--4 {
+        right: -339px;
+        bottom: -272px;
+    }
+
+    &--pants--5 {
+        right: -337px;
+        bottom: -270px;
+    }
+
+    &--pants--6 {
+        left: -50px;
+        bottom: -400px;
+    }
+
+    &--pants--7 {
+        left: -359px;
+        bottom: -164px;
+    }
+
+    &--pants--8 {
+        left: -375px;
+        bottom: -147px;
+    }
+
+    &--pants--9 {
+        left: -396px;
+        bottom: -82px;
+    }
+
+    &--half-bombardment--1 {
+
+    }
+
+    &--half-bombardment--2 {
+
+    }
+
+    &--half-bombardment--3 {
+
+    }
+
+    &--half-bombardment--4 {
+
+    }
+
+    &--half-bombardment--5 {
+
+    }
+
+    &--half-bombardment--6 {
+
+    }
+
+    &--half-bombardment--7 {
+
+    }
+
+    &--half-bombardment--8 {
+
+    }
+
+    &--half-bombardment--9 {
+
     }
 }
