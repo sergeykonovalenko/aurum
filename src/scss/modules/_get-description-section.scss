@@ -1,0 +1,27 @@
+.get-description-section {
+    padding-top: calc(110px + 35px);
+    padding-bottom: calc(110px + 110px);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+}
+
+.no-js .get-description-section,
+.no-webp .get-description-section {
+    background-image: url("img/bg/get-description-section.png");
+}
+
+.webp .get-description-section {
+    background-image: url("img/bg/get-description-section.webp");
+}
+
+.get-description-section__box {
+    width: 610px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.get-description-section__scene {
+    right: -25px;
+    bottom: -120px;
+}

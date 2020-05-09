@@ -1,4 +1,7 @@
 .work-stages {
+    position: relative;
+    z-index: 1;
+    margin-bottom: -130px;
     padding-top: calc(85px + 130px);
     padding-bottom: calc(135px + 110px);
     background-repeat: no-repeat;
@@ -98,26 +101,4 @@
         box-shadow: 0 0 10px -2px rgba(0, 0, 0, .05);
         pointer-events: none;
     }
-}
-
-.stage-item__number {
-    position: absolute;
-    top: 38px;
-    left: 5px;
-    z-index: 2;
-    font-weight: 700;
-    font-size: 85px;
-    line-height: 1;
-    color: #dddbdb;
-}
-
-.stage-item__txt {
-    position: relative;
-    z-index: 2;
-    margin: 0;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.25;
-    text-transform: uppercase;
-    text-align: center;
 }

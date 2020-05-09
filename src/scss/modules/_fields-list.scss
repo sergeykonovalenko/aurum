@@ -1,0 +1,12 @@
+.fields-list {
+    padding: 0;
+    list-style: none;
+}
+
+.fields-list__item {
+    margin-bottom: 10px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}

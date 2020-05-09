@@ -17,6 +17,9 @@ $(document).ready(function () {
         });
     }
 
+    // masked input
+    $('input[type="tel"]').mask("+38 (999) 999-99-99");
+
     // is mobile
     function isMobile() {
         return $.browser.device = (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent.toLowerCase()));

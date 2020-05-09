@@ -1,0 +1,66 @@
+.get-description {
+    position: relative;
+    z-index: 2;
+    padding-top: 70px;
+    padding-bottom: 85px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: -80px;
+        left: -85px;
+        z-index: 3;
+        width: 263px;
+        height: 286px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        pointer-events: none;
+
+        .no-js &,
+        .no-webp & {
+            background-image: url("img/bg/helmet.png");
+        }
+
+        .webp & {
+            background-image: url("img/bg/helmet.webp");
+        }
+    }
+}
+
+.get-description__head {
+    width: 410px;
+    max-width: 100%;
+    margin: 0 auto 40px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 1.25;
+    color: #8f8e8e;
+
+    p {
+        margin: .5em 0;
+
+        &:first-child {
+            font-weight: 700;
+            font-size: 30px;
+            color: $color-secondary;
+        }
+    }
+    
+    strong {
+        text-transform: uppercase;
+    }
+}
+
+.get-description__head *:first-child {
+    margin-top: 0;
+}
+
+.get-description__head *:last-child {
+    margin-bottom: 0;
+}
+
+.get-description__form {
+    width: 380px;
+    margin: 0 auto;
+}

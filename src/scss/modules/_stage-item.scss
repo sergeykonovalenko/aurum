@@ -1,0 +1,21 @@
+.stage-item__number {
+    position: absolute;
+    top: 38px;
+    left: 5px;
+    z-index: 2;
+    font-weight: 700;
+    font-size: 85px;
+    line-height: 1;
+    color: #dddbdb;
+}
+
+.stage-item__txt {
+    position: relative;
+    z-index: 2;
+    margin: 0;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.25;
+    text-transform: uppercase;
+    text-align: center;
+}

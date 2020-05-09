@@ -36,4 +36,18 @@
             background-image: url("img/bg/shavings-2.webp");
         }
     }
+
+    &--3 {
+        width: 558px;
+        height: 424px;
+
+        .no-js &,
+        .no-webp & {
+            background-image: url("img/bg/journal.png");
+        }
+
+        .webp & {
+            background-image: url("img/bg/journal.webp");
+        }
+    }
 }
