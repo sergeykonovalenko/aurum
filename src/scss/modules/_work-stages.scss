@@ -1,0 +1,123 @@
+.work-stages {
+    padding-top: calc(85px + 130px);
+    padding-bottom: calc(135px + 110px);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+
+    .no-js &,
+    .no-webp & {
+        background-image: url("img/bg/work-stages.png");
+    }
+
+    .webp & {
+        background-image: url("img/bg/work-stages.webp");
+    }
+}
+
+.work-stages__title {
+    margin-top: 0;
+    margin-bottom: 90px;
+}
+
+.work-stages__list {
+    margin: -20px 0 0 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.work-stages__item {
+    position: relative;
+    min-height: 170px;
+    margin-top: 20px;
+    margin-right: 20px;
+    width: calc((99.999% - 60px) / 4);
+    padding: 25px 60px 24px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+
+    &--wide {
+        width: 35%;
+    }
+
+    &:nth-child(4n),
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &::before {
+        content: "";
+        position: relative;
+        z-index: 2;
+        display: block;
+        height: 70px;
+        margin-bottom: 11px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+    }
+
+    &:nth-child(1)::before {
+        background-image: url("img/bg/stage-item-1.svg");
+    }
+
+    &:nth-child(2)::before {
+        background-image: url("img/bg/stage-item-2.svg");
+    }
+
+    &:nth-child(3)::before {
+        background-image: url("img/bg/stage-item-3.svg");
+    }
+
+    &:nth-child(4)::before {
+        background-image: url("img/bg/stage-item-4.svg");
+    }
+
+    &:nth-child(5)::before {
+        background-image: url("img/bg/stage-item-5.svg");
+    }
+
+    &:nth-child(6)::before {
+        background-image: url("img/bg/stage-item-6.svg");
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        top: 13px;
+        right: 13px;
+        bottom: 13px;
+        left: 13px;
+        background: #fff url("img/bg/logo-gray.svg") no-repeat calc(100% - 5px) 35px;
+        background-size: 125px auto;
+        border-radius: 10px;
+        box-shadow: 0 0 10px -2px rgba(0, 0, 0, .05);
+        pointer-events: none;
+    }
+}
+
+.stage-item__number {
+    position: absolute;
+    top: 38px;
+    left: 5px;
+    z-index: 2;
+    font-weight: 700;
+    font-size: 85px;
+    line-height: 1;
+    color: #dddbdb;
+}
+
+.stage-item__txt {
+    position: relative;
+    z-index: 2;
+    margin: 0;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.25;
+    text-transform: uppercase;
+    text-align: center;
+}

@@ -1,5 +1,6 @@
 .description-clothes {
-    height: 4695px;
+    margin-bottom: -130px;
+    padding-bottom: calc(70px + 130px);
     padding-top: calc(56px + 120px);
     background-repeat: no-repeat;
     background-position: center center;
@@ -18,7 +19,7 @@
 
 .description-clothes__title {
     margin-top: 0;
-    margin-bottom: 95px;
+    margin-bottom: 90px;
 }
 
 .description-clothes__list {
