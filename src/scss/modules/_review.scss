@@ -21,8 +21,9 @@
 }
 
 .review__right {
-    //width: calc(100% - 259px - 30px);
     flex-grow: 1;
+    max-height: 490px;
+    overflow: auto;
 }
 
 .review__author {

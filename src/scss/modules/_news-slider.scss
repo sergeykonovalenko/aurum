@@ -1,0 +1,67 @@
+.news-slider {
+
+}
+
+.news-slider__wr {
+    @include slider-fix(400px);
+
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.news-slider__wr.slick-initialized .slick-track {
+    display: flex !important;
+}
+
+.news-slider__wr.slick-initialized .slick-slide {
+    display: flex;
+    height: inherit !important;
+}
+
+.slick-initialized .my-slider__item {
+    display: flex !important;
+}
+
+.news-slider__item {
+    padding: 30px 15px;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.news-slider .slick-dots {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 10px 0 0;
+    padding: 0;
+}
+
+.news-slider .slick-dots li {
+    margin-right: 10px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.news-slider .slick-dots button {
+    display: block;
+    width: 13px;
+    height: 13px;
+    padding: 0;
+    font-size: 0;
+    line-height: 0;
+    border: none;
+    background-color: #fff;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, .25);
+    transition: all .3s ease;
+}
+
+.news-slider .slick-active button {
+    background-color: $color-main;
+}

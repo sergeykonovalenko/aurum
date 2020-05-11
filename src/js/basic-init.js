@@ -14,9 +14,6 @@ $(document).ready(function () {
         reviewsSlider = $reviewsSlider[0];
 
     $reviewsSlider.slick({
-        // draggable: false,
-        // accessibility: false,
-
         dots: false,
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -46,8 +43,8 @@ $(document).ready(function () {
         slidesToShow: 1,
         slidesToScroll: 1,
         asNavFor: '.review-small-slider__wr',
-        // pauseOnFocus: false,
-        // pauseOnHover: false,
+        pauseOnFocus: false,
+        pauseOnHover: false,
         // focusOnSelect: true,
         swipe: true,
         prevArrow: `<button class="review-big-slider__arrow review-big-slider__arrow--prev" type="button">
@@ -73,9 +70,6 @@ $(document).ready(function () {
     // review small slider
     $('.review-small-slider__wr').slick({
         dots: false,
-        // draggable: false,
-        // accessibility: false,
-
         arrows: false,
         slidesToShow: 3,
         slidesToScroll: 3,
@@ -98,6 +92,25 @@ $(document).ready(function () {
         })
     });
 
+    // news slider
+    $('.news-slider__wr').slick({
+        dots: true,
+        arrows: false,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        pauseOnFocus: false,
+        pauseOnHover: false,
+        // focusOnSelect: true,
+        // responsive: [
+        //     {
+        //         breakpoint: 993,
+        //         settings: {
+        //             slidesToShow: 3,
+        //         }
+        //     },
+        // ]
+    });
+
     // run parallax
     if (!is_mobile) {
         let scene = document.querySelectorAll('.scene');
@@ -105,6 +118,11 @@ $(document).ready(function () {
             let parallaxInstance = new Parallax(sceneItem);
         });
     }
+
+    // custom scroller
+    $('.review__right').mCustomScrollbar({
+        theme: 'dark',
+    });
 
     // masked input
     $('input[type="tel"]').mask("+38 (999) 999-99-99");

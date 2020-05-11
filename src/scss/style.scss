@@ -4,6 +4,7 @@
 @import "~normalize.css/normalize.css";
 @import "~@fancyapps/fancybox/dist/jquery.fancybox.min.css";
 @import "~slick-carousel/slick/slick.css";
+@import "~malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css";
 
 /* ==========================================================================
    SPECIFICATION
@@ -53,3 +54,6 @@
 @import "modules/review";
 @import "modules/review-big-slider";
 @import "modules/review-small-slider";
+@import "modules/news";
+@import "modules/news-slider";
+@import "modules/news-item";
