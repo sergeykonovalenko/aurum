@@ -1,0 +1,37 @@
+.review {
+
+}
+
+.review__wr {
+    display: flex;
+}
+
+.review__left {
+    flex-shrink: 0;
+    width: 259px;
+    margin-right: 30px;
+}
+
+.review__big-slider {
+    margin-bottom: 2px;
+}
+
+.review__small-slider {
+
+}
+
+.review__right {
+    //width: calc(100% - 259px - 30px);
+    flex-grow: 1;
+}
+
+.review__author {
+    margin-top: 0;
+    margin-bottom: 1em;
+    font-weight: 700;
+    color: #484747;
+}
+
+.review__txt {
+    color: #6c6b6a;
+}

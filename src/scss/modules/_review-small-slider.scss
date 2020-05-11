@@ -1,0 +1,43 @@
+.review-small-slider {
+    overflow: hidden;
+}
+
+.review-small-slider__wr {
+    @include slider-fix(87px);
+
+    margin-right: -1px;
+    margin-left: -1px;
+}
+
+.slick-slide {
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.review-small-slider__item {
+    padding: 0 1px;
+    cursor: pointer;
+}
+
+.review-small-slider__img-box {
+    position: relative;
+    margin: 0;
+    height: 0;
+    padding-bottom: 82.353%;
+    background-color: $color-secondary;
+
+    .slick-current & {
+        //border: 3px solid $color-main;
+    }
+}
+
+.review-small-slider__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

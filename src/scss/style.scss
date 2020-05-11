@@ -3,6 +3,7 @@
    ========================================================================== */
 @import "~normalize.css/normalize.css";
 @import "~@fancyapps/fancybox/dist/jquery.fancybox.min.css";
+@import "~slick-carousel/slick/slick.css";
 
 /* ==========================================================================
    SPECIFICATION
@@ -45,3 +46,10 @@
 @import "modules/certificates-and-feedback";
 @import "modules/certificates";
 @import "modules/feedback";
+@import "modules/customers";
+@import "modules/reviews";
+@import "modules/reviews-slider";
+@import "modules/review";
+@import "modules/review";
+@import "modules/review-big-slider";
+@import "modules/review-small-slider";

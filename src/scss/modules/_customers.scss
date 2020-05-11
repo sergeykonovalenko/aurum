@@ -1,0 +1,34 @@
+.customers {
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+.customers__title {
+    margin-top: 0;
+    margin-bottom: 90px;
+}
+
+.customers__list {
+    margin: -15px;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.customers__item {
+    display: flex;
+    justify-content: center;
+    padding: 15px 15px;
+    width: calc(99.999% / 4);
+}
+
+.customers__img-box {
+    display: flex;
+    align-items: center;
+}
+
+.customers__img {
+
+}

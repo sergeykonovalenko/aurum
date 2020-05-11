@@ -1,0 +1,34 @@
+.reviews {
+    padding-top: 185px;
+    padding-bottom: calc(115px + 165px);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+
+    .no-js &,
+    .no-webp & {
+        background-image: url("img/bg/reviews.png");
+    }
+
+    .webp & {
+        background-image: url("img/bg/reviews.webp");
+    }
+}
+
+.reviews__title {
+    margin-top: 0;
+    margin-bottom: 90px;
+}
+
+.reviews__slider {
+    margin: 0 auto 45px;
+}
+
+.reviews__button-box {
+    margin: 0;
+    text-align: center;
+}
+
+.reviews__button {
+    min-width: 380px;
+}
