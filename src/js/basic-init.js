@@ -14,12 +14,15 @@ $(document).ready(function () {
         reviewsSlider = $reviewsSlider[0];
 
     $reviewsSlider.slick({
+        // draggable: false,
+        // accessibility: false,
+
         dots: false,
         slidesToShow: 1,
         slidesToScroll: 1,
         pauseOnFocus: false,
         pauseOnHover: false,
-        focusOnSelect: true,
+        // focusOnSelect: true,
         swipe: true,
         prevArrow: `<button class="reviews-slider__arrow reviews-slider__arrow--prev" type="button">
                         <span class="visually-hidden">Назад</span> 
@@ -70,13 +73,16 @@ $(document).ready(function () {
     // review small slider
     $('.review-small-slider__wr').slick({
         dots: false,
+        // draggable: false,
+        // accessibility: false,
+
         arrows: false,
         slidesToShow: 3,
         slidesToScroll: 3,
         asNavFor: '.review-big-slider',
-        // pauseOnFocus: false,
-        // pauseOnHover: false,
-        // focusOnSelect: true,
+        pauseOnFocus: false,
+        pauseOnHover: false,
+        focusOnSelect: true,
         swipe: true,
         // responsive: [
         //     {
