@@ -1,5 +1,8 @@
 .get-description-section {
-    padding-top: calc(110px + 35px);
+    position: relative;
+    z-index: 1;
+    margin-bottom: -110px;
+    padding-top: calc(35px + 110px);
     padding-bottom: calc(110px + 110px);
     background-repeat: no-repeat;
     background-position: center bottom;

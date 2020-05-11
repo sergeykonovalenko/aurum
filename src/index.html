@@ -376,7 +376,7 @@
                         <div class="description-clothes__box">
                             <picture>
                                 <source srcset="img/base/description-1.webp" type="image/webp">
-                                <img class="description-clothes__img" src="img/base/description-1.png" alt="">
+                                <img class="description-clothes__img" src="img/base/description-1.png" width="676" height="678" alt="">
                             </picture>
                             <ul class="description-clothes__callouts callouts">
                                 <li class="callouts__item callouts__item--jacket--1">
@@ -469,7 +469,7 @@
                         <div class="description-clothes__box">
                             <picture>
                                 <source srcset="img/base/description-2.webp" type="image/webp">
-                                <img class="description-clothes__img" src="img/base/description-2.png" alt="">
+                                <img class="description-clothes__img" src="img/base/description-2.png" width="537" height="1061" alt="">
                             </picture>
                             <ul class="description-clothes__callouts callouts">
                                 <li class="callouts__item callouts__item--pants--1">
@@ -572,7 +572,7 @@
                         <div class="description-clothes__box">
                             <picture>
                                 <source srcset="img/base/description-3.webp" type="image/webp">
-                                <img class="description-clothes__img" src="img/base/description-3.png" alt="">
+                                <img class="description-clothes__img" src="img/base/description-3.png" width="519" height="1468" alt="">
                             </picture>
                             <ul class="description-clothes__callouts callouts">
                                 <li class="callouts__item callouts__item--half-bombardment--1">
@@ -706,7 +706,7 @@
 
         <section class="get-description-section">
             <div class="container">
-                <div class="get-description-section__box get-description border-box border-box--wide">
+                <div class="get-description-section__box get-description">
                     <div class="get-description__head content">
                         <p>Отримати повний опис спецодягу <strong>AURUM</strong></p>
                         <p>Введіть свою електронну адресу для отримання повного опису</p>
@@ -725,7 +725,7 @@
                         <button class="form__button button button--with-icon">
                             Надіслати
                             <span class="button__icon">
-                                <svg width="30px" height="23" fill="#be893d">
+                                <svg width="30" height="23" fill="#be893d">
                                     <use xlink:href="#icon-email"></use>
                                 </svg>
                             </span>
@@ -740,12 +740,12 @@
 
         <div class="certificates-and-feedback">
             <div class="container">
-                <section class="certificates">
-                    <p class="certificates__title"></p>
+                <section class="certificates-and-feedback__certificates certificates">
+                    <p class="certificates__title heading-2">Сертифікати <strong>AURUM</strong></p>
                     <ul class="certificates__list">
                         <li class="certificates__item">
                             <a class="certificates__thumb-link" href="img/base/certificate-full-1.jpg" data-fancybox="certificates">
-                                <picture>
+                                <picture class="certificates__thumb-box">
                                     <source srcset="img/base/certificate-thumb-1.webp" type="image/webp">
                                     <img class="certificates__thumb" src="img/base/certificate-thumb-1.jpg" alt="">
                                 </picture>
@@ -753,7 +753,7 @@
                         </li>
                         <li class="certificates__item">
                             <a class="certificates__thumb-link" href="img/base/certificate-full-2.jpg" data-fancybox="certificates">
-                                <picture>
+                                <picture class="certificates__thumb-box">
                                     <source srcset="img/base/certificate-thumb-2.webp" type="image/webp">
                                     <img class="certificates__thumb" src="img/base/certificate-thumb-2.jpg" alt="">
                                 </picture>
@@ -761,9 +761,41 @@
                         </li>
                     </ul>
                 </section><!-- / .certificates -->
-                <section>
 
-                </section>
+                <section class="certificates-and-feedback__feedback feedback">
+                    <div class="feedback__head content">
+                        <p><strong>Залишилися питання?</strong></p>
+                        <p>Залиште заявку і наш експерт зв'яжеться з Вами</p>
+                    </div>
+                    <form class="feedback__form form" action="#" method="post">
+                        <ul class="form__fields-list fields-list fields-list--white">
+                            <li class="fields-list__item">
+                                <label class="visually-hidden" for="feedback-form-name">Ваше ім’я</label>
+                                <input class="fields-list__field" id="feedback-form-name" type="text" name="name" placeholder="Ваше ім’я">
+                            </li>
+                            <li class="fields-list__item">
+                                <label class="visually-hidden" for="feedback-form-phone">Ваш телефон</label>
+                                <input class="fields-list__field" id="feedback-form-phone" type="tel" name="phone" placeholder="+38 (___) ___-__-__" required>
+                            </li>
+                            <li class="fields-list__item">
+                                <label class="visually-hidden" for="feedback-form-email">Ваш e-mail</label>
+                                <input class="fields-list__field" id="feedback-form-email" type="email" name="email" placeholder="Ваш e-mail" required>
+                            </li>
+                            <li class="fields-list__item">
+                                <label class="visually-hidden" for="feedback-form-comment">Залиште коментарій</label>
+                                <textarea class="fields-list__field" id="feedback-form-comment" name="comment" placeholder="Залиште коментарій"></textarea>
+                            </li>
+                        </ul><!-- / .fields-list -->
+                        <button class="form__button button button--with-icon">
+                            Надіслати
+                            <span class="button__icon">
+                                <svg width="12" height="23" fill="#be893d">
+                                    <use xlink:href="#icon-question-mark"></use>
+                                </svg>
+                            </span>
+                        </button>
+                    </form><!-- / .form -->
+                </section><!-- / .feedback -->
             </div>
         </div><!-- / .certificates-and-feedback -->
     </main><!-- / .main -->

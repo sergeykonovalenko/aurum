@@ -1,14 +1,19 @@
 .get-description {
     position: relative;
     z-index: 2;
-    padding-top: 70px;
-    padding-bottom: 85px;
+    padding: 70px 30px 85px;
+    background: linear-gradient(90deg, #f2f1f0 0%, #dddcdc 100%);
+    background-origin: border-box;
+    border-radius: 10px;
+    border: 17px solid rgba(255, 255, 255, .5);
+    box-shadow: inset 3px 3px 15px rgba(0, 0, 0, .1),
+                0 9px 36px 15px rgba(0, 0, 0, .33);
 
     &::before {
         content: "";
         position: absolute;
-        top: -80px;
-        left: -85px;
+        top: -100px;
+        left: -100px;
         z-index: 3;
         width: 263px;
         height: 286px;

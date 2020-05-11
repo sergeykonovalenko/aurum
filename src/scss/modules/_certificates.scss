@@ -1,0 +1,89 @@
+.certificates {
+    position: relative;
+    z-index: 2;
+}
+
+.certificates__title {
+    margin-top: 0;
+    margin-bottom: 90px;
+}
+
+.certificates__list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 775px;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+
+.certificates__item {
+    width: calc((99.999% - 15px) / 2);
+    margin-right: 15px;
+
+    &:nth-child(2n) {
+        margin-right: 0;
+    }
+
+    &:nth-child(n + 3) {
+        margin-top: 15px;
+    }
+}
+
+.certificates__thumb-link {
+    position: relative;
+    display: block;
+    height: 0;
+    padding-bottom: 139.210526%;
+    border-radius: 5px;
+    transition: all .15s ease-out;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        bottom: 10px;
+        left: 10px;
+        background: rgba(0, 0, 0, .5) url("img/bg/magnifying-glass.svg") no-repeat center center;
+        background-size: 30px 30px;
+        opacity: 0;
+        transition-duration: .3s;
+        transition-timing-function: ease-out;
+        transition-property: opacity, transform, filter;
+        pointer-events: none;
+    }
+
+    &:hover {
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, .15);
+
+        &::after {
+            opacity: 1;
+        }
+
+        .certificates__thumb {
+            transform: scale(1.1);
+        }
+    }
+}
+
+.certificates__thumb-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $color-secondary;
+    border: 10px solid #ebebeb;
+    border-radius: 5px;
+    overflow: hidden;
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+}
+
+.certificates__thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    transition: transform .3s ease-out;
+}

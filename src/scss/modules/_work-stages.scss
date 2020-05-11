@@ -1,6 +1,6 @@
 .work-stages {
     position: relative;
-    z-index: 1;
+    z-index: 2;
     margin-bottom: -130px;
     padding-top: calc(85px + 130px);
     padding-bottom: calc(135px + 110px);
@@ -95,7 +95,12 @@
         right: 13px;
         bottom: 13px;
         left: 13px;
-        background: #fff url("img/bg/logo-gray.svg") no-repeat calc(100% - 5px) 35px;
+        background-color: #fff;
+        background-repeat: no-repeat;
+        background-position: calc(100% - 5px) 35px;
+        background-image: url("img/bg/logo-gray.svg");
+        // баг в Microsoft Edge
+        //background: #fff url("img/bg/logo-gray.svg") no-repeat calc(100% - 5px) 35px;
         background-size: 125px auto;
         border-radius: 10px;
         box-shadow: 0 0 10px -2px rgba(0, 0, 0, .05);

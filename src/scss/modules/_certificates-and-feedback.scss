@@ -1,0 +1,46 @@
+.certificates-and-feedback {
+    padding-top: calc(110px + 60px);
+    padding-bottom: calc(130px + 130px);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+    
+    .no-js &,
+    .no-webp & {
+        background-image: url("img/bg/certificates-and-feedback.jpg");
+    }
+
+    .webp & {
+        background-image: url("img/bg/certificates-and-feedback.webp");
+    }
+}
+
+.certificates-and-feedback .container {
+
+    &::after {
+        content: "";
+        position: absolute;
+        right: -12px;
+        bottom: 13px;
+        z-index: 1;
+        width: 329px;
+        height: 845px;
+
+        .no-js &,
+        .no-webp & {
+            background-image: url("img/bg/feedback-worker.png");
+        }
+
+        .webp & {
+            background-image: url("img/bg/feedback-worker.webp");
+        }
+    }
+}
+
+.certificates-and-feedback__certificates {
+    margin-bottom: 190px;
+}
+
+.certificates-and-feedback__feedback {
+    margin: 0 auto;
+}
