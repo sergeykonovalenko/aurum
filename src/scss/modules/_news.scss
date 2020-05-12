@@ -1,5 +1,17 @@
 .news {
-    padding-bottom: calc(25px + 160px);
+    padding-top: calc(15px + 160px);
+    padding-bottom: 45px;
+    background-repeat: no-repeat;
+    background-position: left top;
+
+    .no-js &,
+    .no-webp & {
+        background-image: url("img/bg/news.jpg");
+    }
+
+    .webp & {
+        background-image: url("img/bg/news.webp");
+    }
 }
 
 .news__title {

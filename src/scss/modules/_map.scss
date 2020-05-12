@@ -1,0 +1,11 @@
+.map {
+    position: absolute;
+    z-index: 1;
+    top: 30px;
+    left: calc(50% - 25px);
+}
+
+.map__box {
+    width: calc(50vw - (var(--scrollbar-width) / 2) + 25px);
+    height: 655px;
+}

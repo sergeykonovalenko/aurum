@@ -1,6 +1,9 @@
 .reviews {
+    position: relative;
+    z-index: 1;
+    margin-bottom: -165px;
     padding-top: 185px;
-    padding-bottom: calc(115px + 165px);
+    padding-bottom: calc(115px + 160px);
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;

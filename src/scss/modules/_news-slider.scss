@@ -30,6 +30,40 @@
     }
 }
 
+.news-slider__arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    padding: 15px;
+    background: 0 0;
+    border: none;
+    cursor: pointer;
+    transform: translate(0, -50%);
+
+    &--prev {
+        left: -70px;
+    }
+
+    &--next {
+        right: -70px;
+    }
+
+    svg {
+        transition: all .15s ease-out;
+    }
+
+    &:hover {
+
+        svg {
+            fill: $color-main;
+        }
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
 .news-slider .slick-dots {
     display: flex;
     justify-content: center;

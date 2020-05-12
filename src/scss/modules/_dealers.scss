@@ -1,0 +1,73 @@
+.dealers {
+    position: relative;
+    z-index: 2;
+    width: 560px;
+    height: 715px;
+    padding-right: 30px;
+    color: #f5f5f5;
+    background-color: $color-bg;
+    box-shadow: 0 0 51px rgba(0, 0, 0, .54);
+    overflow: hidden;
+    transition: all .15s ease-out;
+
+    &--all-shown {
+        width: 960px;
+    }
+}
+
+.dealers__wr {
+    width: 930px;
+    padding: 35px 15px 15px;
+}
+
+.dealers__head {
+    margin: 0 0 20px 30px;
+}
+
+.dealers__body {
+    max-height: 605px;
+    overflow: hidden;
+}
+
+.dealers .mCSB_inside > .mCSB_container {
+    margin-right: 0;
+    margin-left: 30px;
+}
+
+.dealers .mCSB_scrollTools {
+    right: auto;
+    left: 0;
+}
+
+.dealers__btn-show-all {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 100%;
+    padding: 0;
+    background-color: #2c2c2f;
+    border: none;
+    cursor: pointer;
+    transition: all .15s ease-out;
+
+    svg {
+        transition: all .15s ease-out;
+        
+        .dealers--all-shown & {
+            transform: rotate(180deg);
+        }
+    }
+
+    &:hover {
+        background-color: #3b3b3f;
+
+        svg {
+            fill: #666466;
+        }
+    }
+
+    &:focus {
+        outline: none;
+    }
+}

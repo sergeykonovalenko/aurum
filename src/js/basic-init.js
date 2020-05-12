@@ -95,12 +95,19 @@ $(document).ready(function () {
     // news slider
     $('.news-slider__wr').slick({
         dots: true,
-        arrows: false,
         slidesToShow: 3,
         slidesToScroll: 3,
         pauseOnFocus: false,
         pauseOnHover: false,
         // focusOnSelect: true,
+        prevArrow: `<button class="news-slider__arrow news-slider__arrow--prev" type="button">
+                        <span class="visually-hidden">Назад</span> 
+                        <svg width="34" height="23" viewBox="0 0 512 341.333" fill="#c3c3c3" xmlns="http://www.w3.org/2000/svg"><path d="M3.124 178.208l160 160a10.666 10.666 0 1 0 15.084-15.083L36.416 181.335h464.917a10.667 10.667 0 1 0 0-21.335H36.416L178.208 18.208a10.665 10.665 0 1 0-15.083-15.083l-160 160a10.663 10.663 0 0 0 0 15.083z"/></svg>
+                    </button>`,
+        nextArrow: `<button class="news-slider__arrow news-slider__arrow--next" type="button">
+                        <span class="visually-hidden">Вперед</span>  
+                        <svg width="34" height="23" viewBox="0 0 512 341.3" fill="#c3c3c3" xmlns="http://www.w3.org/2000/svg"><path d="M508.9 163.1l-160-160C344.7-1 338-1 333.8 3.1c-4.2 4.2-4.2 10.9 0 15.1L475.6 160H10.7C4.8 160 0 164.8 0 170.7s4.8 10.7 10.7 10.7h464.9L333.8 323.1c-4.2 4.2-4.2 10.9 0 15.1 2.1 2.1 4.8 3.1 7.5 3.1s5.5-1 7.5-3.1l160-160c4.2-4.2 4.2-10.9.1-15.1z"/></svg>
+                    </button>`,
         // responsive: [
         //     {
         //         breakpoint: 993,
@@ -111,6 +118,11 @@ $(document).ready(function () {
         // ]
     });
 
+    // show/hide dealers
+    $('.dealers__btn-show-all').on('click', function () {
+        $('.dealers').toggleClass('dealers--all-shown');
+    });
+
     // run parallax
     if (!is_mobile) {
         let scene = document.querySelectorAll('.scene');
@@ -119,9 +131,16 @@ $(document).ready(function () {
         });
     }
 
+    // get the width of the scrollbar
+    document.documentElement.style.setProperty('--scrollbar-width', (window.innerWidth - document.documentElement.clientWidth) + "px");
+
     // custom scroller
-    $('.review__right').mCustomScrollbar({
+    $('.js-custom-scroller-dark').mCustomScrollbar({
         theme: 'dark',
+    });
+
+    $('.js-custom-scroller-light').mCustomScrollbar({
+        theme: 'light',
     });
 
     // masked input
