@@ -1,7 +1,24 @@
 .main-footer {
+    padding-top: calc(145px + 195px);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
 
+    .no-js &,
+    .no-webp & {
+        background-image: url("img/bg/footer.png");
+    }
+
+    .webp & {
+        background-image: url("img/bg/footer.webp");
+    }
 }
 
-.main-footer .container {
-    display: flex;
+.main-footer__dealers-map {
+    margin-bottom: 85px;
+}
+
+.main-footer__contacts {
+    width: 790px;
+    margin: 0 auto;
 }

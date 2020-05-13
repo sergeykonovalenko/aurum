@@ -1,3 +1,44 @@
 .contacts {
+    padding: 45px 30px 70px;
+    color: #aaaaa9;
+    border: 20px solid transparent;
+    border-radius: 5px;
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover, cover;
+    background-origin: padding-box, border-box;
+    background-clip: padding-box, border-box;
+    box-shadow: inset 3px 3px 10px rgba(0, 0, 0, .3);
 
+    .no-js &,
+    .no-webp & {
+        background-image: url("img/bg/contacts.jpg"),
+                          linear-gradient(to right top, #352e2b, #342d2a, #332b2a, #322a29, #312929, #302829, #2e2729, #2c2629, #292528 40%, #272428 60%, #242326 70%, #222225 100%);
+    }
+
+    .webp & {
+        background-image: url("img/bg/contacts.webp"),
+                          linear-gradient(to right top, #352e2b, #342d2a, #332b2a, #322a29, #312929, #302829, #2e2729, #2c2629, #292528 40%, #272428 60%, #242326 70%, #222225 100%);
+    }
+}
+
+.contacts__logo {
+    margin: 0 auto 30px;
+}
+
+.contacts__title {
+    margin-top: 0;
+    margin-bottom: 32px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.25;
+    text-align: center;
+}
+
+.contacts__list {
+    margin: 0 0 60px 0;
+}
+
+.contacts__button-box {
+    margin: 0;
+    text-align: center;
 }

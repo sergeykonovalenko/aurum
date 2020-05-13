@@ -1,0 +1,33 @@
+.info-window {
+    margin: 0;
+
+    a {
+        display: inline-block;
+        vertical-align: middle;
+        color: $color-secondary;
+        transition: all .15s ease-out;
+
+        &:hover {
+            color: $color-main--dark;
+        }
+    }
+}
+
+.info-window__title {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.info-window__address {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.info-window__phone {
+    margin-bottom: 5px;
+}
+
+.info-window__site {
+    font-weight: 700;
+}
