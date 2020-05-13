@@ -1,4 +1,5 @@
 import '@fancyapps/fancybox/dist/jquery.fancybox.min';
+import 'waypoints/lib/noframework.waypoints.min';
 import 'slick-carousel/slick/slick.min';
 import Parallax from 'parallax-js';
 import './vendor/jquery.mb.browser';
@@ -15,6 +16,39 @@ $(document).ready(function () {
     const is_mobile = isMobile();
     if (is_mobile) {
         element.classList.add('is-mobile');
+    }
+
+    // smooth page scrolling
+    $('.scrollto').click(function () {
+        let elementClick = '#' + $(this).attr('href').split('#')[1];
+        let destination = $(elementClick).offset().top;
+        jQuery('html:not(:animated),body:not(:animated)').animate({scrollTop: destination - 50}, 800);
+        return false;
+    });
+
+    // sticky menu
+    let mainHeader = document.querySelector('.main-header');
+    let mainHeaderWrapper = document.querySelector('.main-header__wr');
+    let waypointOffset = 50;
+
+    if (mainHeaderWrapper) {
+        let waypoint = new Waypoint({
+            element: mainHeader,
+            handler: function (direction) {
+                if (direction === 'down') {
+                    mainHeader.style.height = mainHeaderWrapper.offsetHeight + 'px';
+                    mainHeaderWrapper.classList.add('main-header__wr--sticky');
+                    mainHeaderWrapper.classList.remove('main-header__wr--end-sticky');
+                } else {
+                    mainHeader.style.height = 'auto';
+                    mainHeaderWrapper.classList.remove('main-header__wr--sticky');
+                    mainHeaderWrapper.classList.add('main-header__wr--end-sticky');
+                }
+            },
+            offset: function() {
+                return -(this.element.clientHeight + waypointOffset);
+            }
+        });
     }
 
     // reviews slider

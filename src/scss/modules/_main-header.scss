@@ -1,9 +1,28 @@
 .main-header {
     position: absolute;
-    z-index: 3;
+    z-index: 5;
     top: 0;
     left: 0;
     width: 100%;
+}
+
+.main-header__wr {
+    position: relative;
+    z-index: 5;
+
+    &--sticky {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: $color-secondary;
+        box-shadow: 0 -2px 12px rgba(0, 0, 0, .3);
+        animation: smooth-scroll-down 1s forwards;
+    }
+
+    &--end-sticky {
+        animation: smooth-scroll-up 1s forwards;
+    }
 }
 
 .main-header .container {
@@ -16,6 +35,10 @@
     flex-shrink: 0;
     margin-right: 20px;
     padding: 10px 0;
+
+    .main-header__wr--sticky & {
+        width: 30px;
+    }
 }
 
 .main-header__nav {

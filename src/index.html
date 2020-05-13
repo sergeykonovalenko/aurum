@@ -32,47 +32,49 @@
 </head>
 <body class="home">
     <header class="main-header" id="js-main-header">
-        <div class="container">
-            <a class="main-header__logo">
-                <img src="img/base/logo.svg" width="66" height="72" alt="AURUM">
-            </a>
-            <nav class="main-header__nav main-nav">
-                <ul class="main-nav__list">
-                    <li><a href="#">Чому AURUM</a></li>
-                    <li><a href="#">Де купити</a></li>
-                    <li><a href="#">Характеристики</a></li>
-                    <li><a href="#">Модельний ряд</a></li>
-                    <li><a href="#">Інформаційній центр</a></li>
-                    <li><a href="#">Новини</a></li>
-                </ul>
-            </nav><!-- / .main-nav -->
-            <div class="main-header__feedback feedback-small">
-                <p class="feedback-small__schedule">Години роботи: 9:00 до 17:00</p>
-                <a class="feedback-small__phone" href="tel:380500754824">+38 (050) 075-48-24</a>
-                <a class="feedback-small__button" href="#"><span>Передзвоніть мені</span></a>
-            </div><!-- / .feedback-small -->
-            <ul class="main-header__language-switch language-switch">
-                <li class="menu-item-has-children">
-                    <a href="#">
-                        <img src="img/base/uk.svg" title="UA" alt="UA">
-                        <span>UA</span>
-                    </a>
-                    <ul class="sub-menu">
-                        <li>
-                            <a href="#">
-                                <img src="img/base/ru_RU.svg" title="RU" alt="RU">
-                                <span>RU</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="img/base/en_GB.svg" title="EN" alt="EN">
-                                <span>EN</span>
-                            </a>
-                        </li>
+        <div class="main-header__wr">
+            <div class="container">
+                <a class="main-header__logo">
+                    <img src="img/base/logo.svg" width="66" height="72" alt="AURUM">
+                </a>
+                <nav class="main-header__nav main-nav">
+                    <ul class="main-nav__list">
+                        <li><a class="scrollto" href="#js-advantages">Чому AURUM</a></li>
+                        <li><a class="scrollto" href="#js-dealers-map">Де купити</a></li>
+                        <li><a class="scrollto" href="#js-description-clothes">Характеристики</a></li>
+                        <li><a class="scrollto" href="#js-model-line">Модельний ряд</a></li>
+                        <li><a class="scrollto" href="#js-contacts">Інформаційній центр</a></li>
+                        <li><a class="scrollto" href="#js-news">Новини</a></li>
                     </ul>
-                </li>
-            </ul><!-- / .language-switch -->
+                </nav><!-- / .main-nav -->
+                <div class="main-header__feedback feedback-small">
+                    <p class="feedback-small__schedule">Години роботи: 9:00 до 17:00</p>
+                    <a class="feedback-small__phone" href="tel:380500754824">+38 (050) 075-48-24</a>
+                    <a class="feedback-small__button" href="#"><span>Передзвоніть мені</span></a>
+                </div><!-- / .feedback-small -->
+                <ul class="main-header__language-switch language-switch">
+                    <li class="menu-item-has-children">
+                        <a href="#">
+                            <img src="img/base/uk.svg" title="UA" alt="UA">
+                            <span>UA</span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="#">
+                                    <img src="img/base/ru_RU.svg" title="RU" alt="RU">
+                                    <span>RU</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/base/en_GB.svg" title="EN" alt="EN">
+                                    <span>EN</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul><!-- / .language-switch -->
+            </div>
         </div>
     </header><!-- / .main-header -->
 
@@ -95,9 +97,9 @@
             </section><!-- / .main-offer -->
         </div>
 
-        <section class="advantages" id="js-advantages">
+        <section class="advantages">
             <div class="container">
-                <p class="advantages__title heading-2 heading-2--gray">Переваги <strong>AURUM</strong></p>
+                <p class="advantages__title heading-2 heading-2--gray" id="js-advantages">Переваги <strong>AURUM</strong></p>
                 <div class="advantages__info-box info-box info-box--1 info-box--1--1">
                     <div class="info-box__wr">
                         <div class="info-box__txt content">
@@ -199,9 +201,9 @@
             </div>
         </section><!-- / .advantages -->
 
-        <section class="model-line" id="js-model-line">
+        <section class="model-line">
             <div class="container">
-                <p class="model-line__title heading-2">Модельний ряд <strong>AURUM</strong></p>
+                <p class="model-line__title heading-2" id="js-model-line">Модельний ряд <strong>AURUM</strong></p>
                 <ul class="model-line__list models-list">
                     <li class="models-list__item">
                         <p class="models-list__title model-title model-title--antistat">
@@ -365,9 +367,9 @@
             </div>
         </section><!-- / .model-line -->
 
-        <section class="description-clothes" id="js-description-clothes">
+        <section class="description-clothes">
             <div class="container">
-                <p class="description-clothes__title heading-2 heading-2--gray">Опис одягу <strong>AURUM</strong></p>
+                <p class="description-clothes__title heading-2 heading-2--gray" id="js-description-clothes">Опис одягу <strong>AURUM</strong></p>
                 <ul class="description-clothes__list">
                     <li class="description-clothes__item">
                         <p class="description-clothes__subtitle-box">
@@ -672,9 +674,9 @@
             </div>
         </section><!-- / .description-clothes -->
 
-        <section class="work-stages" id="js-work-stages">
+        <section class="work-stages">
             <div class="container">
-                <p class="work-stages__title heading-2">Етапи роботи з <strong>AURUM</strong></p>
+                <p class="work-stages__title heading-2" id="js-work-stages">Етапи роботи з <strong>AURUM</strong></p>
                 <ul class="work-stages__list">
                     <li class="work-stages__item stage-item">
                         <span class="stage-item__number">1</span>
@@ -704,9 +706,9 @@
             </div>
         </section><!-- / .work-stages -->
 
-        <section class="get-description-section" id="js-get-description-section">
+        <section class="get-description-section">
             <div class="container">
-                <div class="get-description-section__box get-description">
+                <div class="get-description-section__box get-description" id="js-get-description">
                     <div class="get-description__head content">
                         <p>Отримати повний опис спецодягу <strong>AURUM</strong></p>
                         <p>Введіть свою електронну адресу для отримання повного опису</p>
@@ -799,9 +801,9 @@
             </div>
         </div><!-- / .certificates-and-feedback -->
 
-        <section class="customers" id="js-customers">
+        <section class="customers">
             <div class="container">
-                <p class="customers__title heading-2">Спецодяг <strong>AURUM</strong> <br><span>вже використовують</span></p>
+                <p class="customers__title heading-2" id="js-customers">Спецодяг <strong>AURUM</strong> <br><span>вже використовують</span></p>
                 <ul class="customers__list">
                     <li class="customers__item">
                         <picture class="customers__img-box">
@@ -849,9 +851,9 @@
             </div>
         </section><!-- / .customers -->
 
-        <section class="reviews" id="js-reviews">
+        <section class="reviews">
             <div class="container">
-                <p class="reviews__title heading-2 heading-2--gray">Відгуки <strong>AURUM</strong></p>
+                <p class="reviews__title heading-2 heading-2--gray" id="js-reviews">Відгуки <strong>AURUM</strong></p>
                 <div class="reviews__slider reviews-slider">
                     <div class="reviews-slider__item review">
                         <div class="review__wr">
@@ -930,18 +932,6 @@
                             <div class="review__right js-custom-scroller-dark">
                                 <p class="review__author">Денис</p>
                                 <div class="review__txt content">
-                                    <p>
-                                        Очень удивлён работой с этой компанией! Заказал две куртки AURUM по б/н, связались через 30 c, профессионально все рассказали,
-                                        менеджер оставил свой личный номер и постоянно был на связи, быстро сделали счёт. Через 30 минут после того, как я сообщил что
-                                        мы оплатим товар, они сделали отправку.
-                                    </p>
-                                    <p>
-                                        Сами куртки приехали очень качественно упакованы, аккуратно слаженные. Прислали ещё брошюру. Ощущения очень приятные, раньше
-                                        заказывали спец.одежду, и ее будто шьют в каких-то швейных цехах в гаражах,  или вообще перепродают, а тут ощущение что купил
-                                        у профильного производства.
-                                    </p>
-                                    <p>Очень рекомендую! И буду работать с ними дальше.</p>
-
                                     <p>
                                         Очень удивлён работой с этой компанией! Заказал две куртки AURUM по б/н, связались через 30 c, профессионально все рассказали,
                                         менеджер оставил свой личный номер и постоянно был на связи, быстро сделали счёт. Через 30 минут после того, как я сообщил что
@@ -1063,9 +1053,9 @@
             </div>
         </section><!-- / .reviews -->
 
-        <section class="news" id="js-news">
+        <section class="news">
             <div class="container">
-                <p class="news__title heading-2">Новини <strong>AURUM</strong></p>
+                <p class="news__title heading-2" id="js-news">Новини <strong>AURUM</strong></p>
                 <div class="news-slider">
                     <div class="news-slider__wr">
                         <div class="news-slider__item">
@@ -1561,12 +1551,12 @@
                     <img src="img/base/logo.svg" width="66" height="72" alt="AURUM">
                 </a>
                 <ul class="footer-bottom__nav">
-                    <li><a href="#js-advantages">Чому AURUM</a></li>
-                    <li><a href="#js-dealers-map">Де купити</a></li>
-                    <li><a href="#js-description-clothes">Характеристики</a></li>
-                    <li><a href="#js-model-line">Модельний ряд</a></li>
-                    <li><a href="#js-contacts">Інформаційній центр</a></li>
-                    <li><a href="#js-news">Новини</a></li>
+                    <li><a class="scrollto" href="#js-advantages">Чому AURUM</a></li>
+                    <li><a class="scrollto" href="#js-dealers-map">Де купити</a></li>
+                    <li><a class="scrollto" href="#js-description-clothes">Характеристики</a></li>
+                    <li><a class="scrollto" href="#js-model-line">Модельний ряд</a></li>
+                    <li><a class="scrollto" href="#js-contacts">Інформаційній центр</a></li>
+                    <li><a class="scrollto" href="#js-news">Новини</a></li>
                 </ul>
                 <div class="footer-bottom__social">
                     <p class="footer-bottom__social-title">Ми в соціальних<br> мережах:</p>
