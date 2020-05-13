@@ -365,7 +365,7 @@
             </div>
         </section><!-- / .model-line -->
 
-        <section class="description-clothes">
+        <section class="description-clothes" id="js-description-clothes">
             <div class="container">
                 <p class="description-clothes__title heading-2 heading-2--gray">Опис одягу <strong>AURUM</strong></p>
                 <ul class="description-clothes__list">
@@ -672,7 +672,7 @@
             </div>
         </section><!-- / .description-clothes -->
 
-        <section class="work-stages">
+        <section class="work-stages" id="js-work-stages">
             <div class="container">
                 <p class="work-stages__title heading-2">Етапи роботи з <strong>AURUM</strong></p>
                 <ul class="work-stages__list">
@@ -704,7 +704,7 @@
             </div>
         </section><!-- / .work-stages -->
 
-        <section class="get-description-section">
+        <section class="get-description-section" id="js-get-description-section">
             <div class="container">
                 <div class="get-description-section__box get-description">
                     <div class="get-description__head content">
@@ -740,7 +740,7 @@
 
         <div class="certificates-and-feedback">
             <div class="container">
-                <section class="certificates-and-feedback__certificates certificates">
+                <section class="certificates-and-feedback__certificates certificates" id="js-certificates">
                     <p class="certificates__title heading-2">Сертифікати <strong>AURUM</strong></p>
                     <ul class="certificates__list">
                         <li class="certificates__item">
@@ -762,7 +762,7 @@
                     </ul>
                 </section><!-- / .certificates -->
 
-                <section class="certificates-and-feedback__feedback feedback">
+                <section class="certificates-and-feedback__feedback feedback" id="js-feedback">
                     <div class="feedback__head content">
                         <p><strong>Залишилися питання?</strong></p>
                         <p>Залиште заявку і наш експерт зв'яжеться з Вами</p>
@@ -799,7 +799,7 @@
             </div>
         </div><!-- / .certificates-and-feedback -->
 
-        <section class="customers">
+        <section class="customers" id="js-customers">
             <div class="container">
                 <p class="customers__title heading-2">Спецодяг <strong>AURUM</strong> <br><span>вже використовують</span></p>
                 <ul class="customers__list">
@@ -849,7 +849,7 @@
             </div>
         </section><!-- / .customers -->
 
-        <section class="reviews">
+        <section class="reviews" id="js-reviews">
             <div class="container">
                 <p class="reviews__title heading-2 heading-2--gray">Відгуки <strong>AURUM</strong></p>
                 <div class="reviews__slider reviews-slider">
@@ -1063,7 +1063,7 @@
             </div>
         </section><!-- / .reviews -->
 
-        <section class="news">
+        <section class="news" id="js-news">
             <div class="container">
                 <p class="news__title heading-2">Новини <strong>AURUM</strong></p>
                 <div class="news-slider">
@@ -1204,7 +1204,7 @@
 
     <footer class="main-footer">
         <div class="container">
-            <section class="main-footer__dealers-map dealers-map">
+            <section class="main-footer__dealers-map dealers-map" id="js-dealers-map">
                 <div class="dealers">
                     <div class="dealers__wr">
                         <ul class="dealers__head head-dealers">
@@ -1499,7 +1499,7 @@
                 </div><!-- / .map -->
             </section><!-- / .dealers-map -->
 
-            <section class="main-footer__contacts contacts">
+            <section class="main-footer__contacts contacts" id="js-contacts">
                 <img class="contacts__logo" width="87" height="96" src="img/base/logo.svg" alt="AURUM">
                 <p class="contacts__title">Інформаційний центр</p>
                 <ul class="contacts__list contacts-list">
@@ -1556,10 +1556,39 @@
                 </p>
             </section><!-- / .contacts -->
 
-            <section class="main-footer__bottom footer-bottom">
+            <section class="main-footer__bottom footer-bottom" id="js-footer-bottom">
                 <a class="footer-bottom__logo">
                     <img src="img/base/logo.svg" width="66" height="72" alt="AURUM">
                 </a>
+                <ul class="footer-bottom__nav">
+                    <li><a href="#js-advantages">Чому AURUM</a></li>
+                    <li><a href="#js-dealers-map">Де купити</a></li>
+                    <li><a href="#js-description-clothes">Характеристики</a></li>
+                    <li><a href="#js-model-line">Модельний ряд</a></li>
+                    <li><a href="#js-contacts">Інформаційній центр</a></li>
+                    <li><a href="#js-news">Новини</a></li>
+                </ul>
+                <div class="footer-bottom__social">
+                    <p class="footer-bottom__social-title">Ми в соціальних<br> мережах:</p>
+                    <ul class="footer-bottom__social-list social-links">
+                        <li class="social-links__item">
+                            <a class="social-links__link" href="https://www.instagram.com/steeluz.workwear" rel="noopener nofollow" target="_blank" title="Наш Інстаграм">
+                                <span class="visually-hidden">Наша сторінка в Instagram</span>
+                                <svg width="29" height="29">
+                                    <use xlink:href="#icon-instagram"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social-links__item">
+                            <a class="social-links__link" href="https://www.facebook.com/steeluz.workwear1" rel="noopener nofollow" target="_blank" title="Наш Фейсбук">
+                                <span class="visually-hidden">Наша група в Facebook</span>
+                                <svg width="29" height="29">
+                                    <use xlink:href="#icon-facebook"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul><!-- / .social-links -->
+                </div>
             </section><!-- / .footer-bottom -->
         </div>
     </footer><!-- / .dealers-map-and-contacts -->

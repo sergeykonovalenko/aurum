@@ -1,0 +1,28 @@
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    list-style: none;
+}
+
+.social-links__item {
+    margin-right: 10px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.social-links__link {
+    display: block;
+    transition: all .6s ease;
+
+    svg {
+        display: block;
+    }
+    
+    &:hover,
+    &:focus {
+        transform: rotate(360deg);
+    }
+}

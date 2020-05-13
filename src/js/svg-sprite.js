@@ -12,3 +12,5 @@ import '../img/svg-sprite/icon-phone-gradient.svg';
 import '../img/svg-sprite/icon-envelope-gradient.svg';
 import '../img/svg-sprite/icon-marker-gradient.svg';
 import '../img/svg-sprite/icon-clock-gradient.svg';
+import '../img/svg-sprite/icon-instagram.svg';
+import '../img/svg-sprite/icon-facebook.svg';

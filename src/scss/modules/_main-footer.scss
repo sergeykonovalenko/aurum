@@ -1,8 +1,10 @@
 .main-footer {
     padding-top: calc(145px + 195px);
+    padding-bottom: 30px;
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
+    overflow: hidden;
 
     .no-js &,
     .no-webp & {
@@ -20,5 +22,5 @@
 
 .main-footer__contacts {
     width: 790px;
-    margin: 0 auto;
+    margin: 0 auto 120px;
 }
