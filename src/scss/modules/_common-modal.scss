@@ -1,0 +1,32 @@
+.common-modal {
+    width: 720px;
+    border-radius: 4px;
+    overflow: visible;
+}
+
+.fancybox-slide--html .common-modal__close {
+    top: -15px;
+    right: -45px;
+    width: 45px;
+    height: 45px;
+    padding: 15px;
+    color: #fff;
+    opacity: .5;
+    transition: all .15s ease-out;
+
+    //svg {
+    //    fill: #fff;
+    //}
+
+    &:hover,
+    &:focus {
+        opacity: .9;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .common-modal {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}

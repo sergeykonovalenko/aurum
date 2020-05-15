@@ -32,7 +32,7 @@
 @import "modules/scene";
 @import "modules/model-line";
 @import "modules/models-list";
-@import "modules/model-title";
+@import "modules/model-name";
 @import "modules/products-list";
 @import "modules/product-item";
 @import "modules/description-clothes";
@@ -69,3 +69,14 @@
 @import "modules/contacts-list";
 @import "modules/footer-bottom";
 @import "modules/social-links";
+
+/* PRODUCT MODAL
+   ========================================================================== */
+@import "modules/common-modal";
+@import "modules/product-modal";
+@import "modules/product-tabs";
+@import "modules/rating-and-review";
+@import "modules/rating";
+@import "modules/body-product-tabs";
+@import "modules/product-gallery";
+@import "modules/product-gallery-side";

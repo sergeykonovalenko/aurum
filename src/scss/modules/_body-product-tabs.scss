@@ -1,0 +1,17 @@
+.body-product-tabs {
+    display: flex;
+}
+
+.body-product-tabs__left {
+    flex-shrink: 0;
+    width: calc(36.9685767098% - 30px);
+    margin-right: 30px;
+}
+
+.body-product-tabs__product-gallery {
+    margin-bottom: 4px;
+}
+
+.body-product-tabs__right {
+    width: calc(100% - 36.9685767098%);
+}

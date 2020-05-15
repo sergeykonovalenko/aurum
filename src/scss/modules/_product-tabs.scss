@@ -1,0 +1,69 @@
+.product-tabs {
+
+}
+
+.product-tabs__head {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+.product-tabs__head-left {
+    flex-shrink: 0;
+    width: 370px;
+    margin-right: 30px;
+    padding-top: 10px;
+}
+
+.product-tabs__model-name {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.product-tabs__logo {
+    margin-left: auto;
+}
+
+.product-tabs__nav {
+    margin: 0 30px 0 0;
+    padding: 10px 0 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product-tabs__nav li {
+
+}
+
+.product-tabs__nav a {
+    display: block;
+    padding: 13px 20px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.25;
+    font-family: "Ubuntu", Tahoma, sans-serif;
+    text-transform: uppercase;
+    color: #b1b1b0;
+    border-radius: 4px;
+    transition: color .15s ease-out;
+
+    &:hover {
+        color: #6f92b7;
+        //transition: all .15s ease-out;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.product-tabs__nav .ui-tabs-active a {
+    color: #6f92b7;
+    background-image: linear-gradient(-93deg, #fff 0%, #f4f3f3 70%, #e8e7e7 100%);
+    box-shadow: inset 0 2px 9px rgba(169, 169, 168, .26);
+
+    &:hover {
+        color: #6f92b7;
+    }
+}
