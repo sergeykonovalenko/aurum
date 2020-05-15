@@ -20,7 +20,7 @@ body {
     padding: 0;
     font-size: 16px;
     line-height: 1.5;
-    font-family: "Noto Sans", Tahoma, sans-serif;
+    font-family: "Ubuntu", Tahoma, sans-serif;
     color: $color-secondary;
     word-wrap: break-word;
     background-color: #fff;
@@ -51,6 +51,7 @@ textarea {
     display: block;
     width: 100%;
     padding: 14px 15px;
+    line-height: 1.25;
     font-family: inherit;
     color: $color-secondary;
     background-color: #e6e6e6;
@@ -102,6 +103,7 @@ h6,
 .heading-6 {
     font-weight: 700;
     line-height: 1.25;
+    font-family: "Noto Sans", Tahoma, sans-serif;
     text-transform: uppercase;
     text-align: center;
 }

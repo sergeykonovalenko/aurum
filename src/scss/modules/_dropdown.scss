@@ -1,0 +1,41 @@
+.dropdown {
+    position: relative;
+    display: flex;
+    padding: 0;
+    list-style: none;
+}
+
+.dropdown__item {
+    margin-right: 50px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.dropdown__button {
+    padding: 12px 0;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.25;
+    background: 0 0;
+    border: none;
+    cursor: pointer;
+    transition: all .15s ease-out;
+
+    &:hover {
+        //color: $color-main--dark;
+        color: #8ea8c5;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.dropdown__box {
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 0;
+}

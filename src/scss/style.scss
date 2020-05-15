@@ -5,6 +5,7 @@
 @import "~@fancyapps/fancybox/dist/jquery.fancybox.min.css";
 @import "~slick-carousel/slick/slick.css";
 @import "~malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css";
+@import "./vendor/listbox.css";
 
 /* ==========================================================================
    SPECIFICATION
@@ -77,6 +78,9 @@
 @import "modules/product-tabs";
 @import "modules/rating-and-review";
 @import "modules/rating";
-@import "modules/body-product-tabs";
+@import "modules/product-card";
 @import "modules/product-gallery";
 @import "modules/product-gallery-side";
+@import "modules/get-description-small";
+@import "modules/dropdown";
+@import "modules/list-box";

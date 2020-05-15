@@ -3,9 +3,7 @@
 }
 
 .product-gallery-side__wr {
-    //width: calc(100% + 4px);
-    //margin-right: -2px;
-    //margin-left: -2px;
+    @include slider-fix(92.5px);
 }
 
 .product-gallery-side__item {
@@ -45,11 +43,11 @@
     cursor: pointer;
 
     &--prev {
-        left: -44px;
+        left: -36px;
     }
 
     &--next {
-        right: -44px;
+        right: -36px;
     }
 
     svg {

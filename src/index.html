@@ -1601,9 +1601,9 @@
                 </ul>
                 <img class="product-tabs__logo" src="img/base/logo.svg" width="66" height="72" alt="AURUM">
             </div>
-            <div class="product-tabs__body body-product-tabs" id="product-tabs-1">
-                <div class="body-product-tabs__left">
-                    <div class="body-product-tabs__product-gallery product-gallery">
+            <div class="product-tabs__body product-card" id="product-tabs-1">
+                <div class="product-card__left">
+                    <div class="product-card__gallery product-gallery">
                         <div class="product-gallery__item">
                             <a class="product-gallery__link" href="img/base/product-gallery-full.jpg" data-fancybox="product-gallery-1-1">
                                 <picture>
@@ -1645,7 +1645,7 @@
                             </a>
                         </div>
                     </div><!-- / .product-gallery -->
-                    <div class="product-gallery-side">
+                    <div class="product-card__gallery-side product-gallery-side">
                         <div class="product-gallery-side__wr">
                             <div class="product-gallery-side__item">
                                 <p class="product-gallery-side__img-box">
@@ -1689,30 +1689,118 @@
                             </div>
                         </div>
                     </div><!-- / .product-gallery-side -->
-                    <div class="get-description">
-
-                    </div><!-- / .get-description -->
+                    <div class="get-description-small">
+                        <p class="get-description-small__title">Отримати повний опис спецодягу <strong>AURUM</strong></p>
+                        <form class="get-description-small__form" action="#" method="post">
+                            <label class="visually-hidden" for="get-description-small-email">E-mail</label>
+                            <input class="get-description-small__field" id="get-description-small-email" type="email" name="email" placeholder="E-mail" required>
+                            <button class="get-description-small__button button button--with-icon">
+                                Отримати
+                                <span class="button__icon">
+                                    <svg width="28" height="22" fill="#be893d">
+                                        <use xlink:href="#icon-email"></use>
+                                    </svg>
+                                </span>
+                            </button>
+                        </form>
+                    </div><!-- / .get-description-small -->
                 </div>
-                <div class="body-product-tabs__right">
+                <div class="product-card__right">
+                    <div class="product-card__details">
+                        <div class="product-card__details-top">
+                            <div class="product-card__status-and-price">
+                                <span class="product-card__status">Є в наявності</span>
+                                <p class="product-card__price">Ціна <strong>1800</strong> грн.</p>
+                            </div>
+                            <a class="product-card__button button button--with-icon btn-modal" href="#">
+                                Придбати
+                                <span class="button__icon">
+                                    <svg width="30" height="27" fill="#be893d">
+                                        <use xlink:href="#icon-shopping-cart"></use>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                        <ul class="product-card__dropdown dropdown">
+                            <li class="dropdown__item">
+                                <button class="dropdown__button" type="button">Виберіть розмір</button>
+                                <div class="dropdown__box">
 
+                                </div>
+                            </li>
+                            <li class="dropdown__item">
+                                <button class="dropdown__button" id="ss_elem" type="button">Виберіть дилера</button>
+                                <div class="dropdown__box">
+                                    <ul class="list-box"
+                                        id="ss_elem_list"
+                                        tabindex="0"
+                                        role="listbox"
+                                        aria-labelledby="ss_elem">
+                                        <li class="list-box__item" id="ss_elem_1" role="option">
+                                            ООО "АНВИ ГРУПП"  Киев, ул. Новоконстантиновская, 1В
+                                        </li>
+                                        <li class="list-box__item" id="ss_elem_2" role="option">
+                                            ООО "ЕВРОСИЗ" Киев, ул. Гвардейская, 80-А
+                                        </li>
+                                        <li class="list-box__item" id="ss_elem_3" role="option">
+                                            ООО "ТРЕЙД  ВЕЙ" Киев, ул. Бориспольская, 7
+                                        </li>
+                                        <li class="list-box__item" id="ss_elem_4" role="option">
+                                            NG optics Киев, ул. П. Кайсарова, 2
+                                        </li>
+                                        <li class="list-box__item" id="ss_elem_5" role="option">
+                                            ЧП "ТК-Спецодежда" Киев, ул. Здолбуновская, 7д
+                                        </li>
+                                        <li class="list-box__item" id="ss_elem_6" role="option">
+                                            ООО "СВТ ЗИЗ ПЛЮС" Винница, ул. Добролюбова, 33
+                                        </li>
+                                        <li class="list-box__item" id="ss_elem_7" role="option">
+                                            ООО "АВИКОМ-СЕРВИС" Черкассы, ул. Вячеслава Черновола, 253
+                                        </li>
+                                        <li class="list-box__item" id="ss_elem_8" role="option">
+                                            ЧП «Днепр-Спец-СИЗ» Днепр, ул. Береговая, 200
+                                        </li>
+                                        <li class="list-box__item" id="ss_elem_9" role="option">
+                                            ЧП "ТОГ Трейд"  Днепр, пр. Александра Поля, 76
+                                        </li>
+                                        <li class="list-box__item" id="ss_elem_10" role="option">
+                                            ЧП Мальт Запорожье, ул. Брянская, 2
+                                        </li>
+                                        <li class="list-box__item" id="ss_elem_11" role="option">
+                                            ООО "Валтекс" Белая Церковь, пер. Гординского, 2
+                                        </li>
+                                        <li class="list-box__item" id="ss_elem_12" role="option">
+                                            ООО "Профиснаб" Кривой Рог, ул. Волгоградская, 1Д
+                                        </li>
+                                        <li class="list-box__item" id="ss_elem_13" role="option">
+                                            ПКФ "Комплект" Одесса, ул. Проценко, 23а
+                                        </li>
+                                        <li class="list-box__item" id="ss_elem_14" role="option">
+                                            ТОВ "МИК Альянс" Черкассы
+                                        </li>
+                                    </ul><!-- / .list-box -->
+                                </div>
+                            </li>
+                        </ul><!-- / .dropdown -->
+                    </div>
                 </div>
-            </div><!--  / .body-product-tabs -->
+            </div><!--  / .product-card -->
             <div class="product-tabs__body" id="product-tabs-2">
-                <div class="body-product-tabs__left">
+                <div class="product-card__left">
 
                 </div>
-                <div class="body-product-tabs__right">
+                <div class="product-card__right">
 
                 </div>
-            </div><!--  / .body-product-tabs -->
+            </div><!--  / .product-card -->
             <div class="product-tabs__body" id="product-tabs-3">
-                <div class="body-product-tabs__left">
+                <div class="product-card__left">
 
                 </div>
-                <div class="body-product-tabs__right">
+                <div class="product-card__right">
 
                 </div>
-            </div><!--  / .body-product-tabs -->
+            </div><!--  / .product-card -->
         </div><!-- / .product-tabs -->
     </div><!-- / .product-modal -->
 
@@ -1721,6 +1809,7 @@
         let validationForm = {"validationForm__nameRequired":"Поле обов'язкове для заповнення","validationForm__phoneRequired":"Поле обов'язкове для заповнення","validationForm__phoneRegex":"Будь ласка, перевірте свої дані","validationForm__emailRequired":"Поле обов'язкове для заповнення","validationForm__emailRegex":"Будь ласка, введіть корректний email адрес"};
         let templateUrl = 'https://steeluz.com/wp-content/themes/steeluz';
     </script>
+
     <script src="js/app.bundle.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1MIYMrv0deQB1gLkED9d3EnwacqsFleg&callback=initMap"></script>
 </body>

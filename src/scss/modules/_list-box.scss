@@ -1,0 +1,31 @@
+.list-box#ss_elem_list {
+    width: 500px;
+    max-height: none;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: #fbfbfb;
+    border: 1px solid #efefef;
+    border-radius: 3px;
+    overflow-y: visible;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.list-box__item {
+    transition: all .15s ease-out;
+    cursor: pointer;
+
+    &:hover {
+        color: $color-main--dark;
+    }
+
+    &.focused {
+        background-color: $color-main;
+
+        &:hover {
+            color: $color-secondary;
+        }
+    }
+}

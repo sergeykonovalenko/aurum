@@ -9,6 +9,13 @@ import 'malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min';
 import 'jquery.maskedinput/src/jquery.maskedinput';
 import './svg-sprite';
 import './google-maps';
+/////////////////////////////////////////////
+// Listbox - WAI-ARIA Authoring Practices 1.1
+// import './vendor/utils';
+// import './vendor/listbox';
+// import './vendor/listbox-collapsible';
+import './vendor/utils_listbox_listbox-collapsible';
+/////////////////////////////////////////////
 
 $(document).ready(function () {
     'use strict';
