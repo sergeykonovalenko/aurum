@@ -67,10 +67,27 @@ textarea {
     &:focus {
         box-shadow: 0 0 10px rgba(230, 230, 230, 1);
     }
+
+    &::placeholder {
+        color: #bbbaba;
+    }
+
+    &.error {
+        border-color: $color-warning !important;
+        background-color: $color-warning-bg !important;
+
+        &:focus {
+            box-shadow: 0 0 10px $color-warning-shadow !important;
+        }
+
+        &::placeholder {
+            color: $color-warning !important;
+        }
+    }
 }
 
-::placeholder {
-    color: #bbbaba;
+label.error {
+    display: none !important;
 }
 
 /* Remove shadow from fields for WebKit browsers */

@@ -33,14 +33,9 @@
 }
 
 .work-stages__item {
-    position: relative;
-    min-height: 170px;
     margin-top: 20px;
     margin-right: 20px;
     width: calc((99.999% - 60px) / 4);
-    padding: 25px 60px 24px;
-    background-color: #f4f4f4;
-    border-radius: 10px;
 
     &--wide {
         width: 35%;
@@ -49,18 +44,6 @@
     &:nth-child(4n),
     &:last-child {
         margin-right: 0;
-    }
-
-    &::before {
-        content: "";
-        position: relative;
-        z-index: 2;
-        display: block;
-        height: 70px;
-        margin-bottom: 11px;
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: contain;
     }
 
     &:nth-child(1)::before {

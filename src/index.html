@@ -112,7 +112,7 @@
                             </ul>
                         </div>
                         <p class="info-box__button-box">
-                            <a class="info-box__button button button--with-icon" href="#">
+                            <a class="info-box__button button button--with-icon scrollto" href="#js-model-line">
                                 Придбати
                                 <span class="button__icon">
                                 <svg width="30" height="27" fill="#be893d">
@@ -135,7 +135,7 @@
                             </ul>
                         </div>
                         <p class="info-box__button-box">
-                            <a class="info-box__button button button--with-icon" href="#">
+                            <a class="info-box__button button button--with-icon scrollto" href="#js-model-line">
                                 Придбати
                                 <span class="button__icon">
                                 <svg width="30" height="27" fill="#be893d">
@@ -158,7 +158,7 @@
                             </ul>
                         </div>
                         <p class="info-box__button-box">
-                            <a class="info-box__button button button--with-icon" href="#">
+                            <a class="info-box__button button button--with-icon scrollto" href="#js-model-line">
                                 Придбати
                                 <span class="button__icon">
                                 <svg width="30" height="27" fill="#be893d">
@@ -181,7 +181,7 @@
                             </ul>
                         </div>
                         <p class="info-box__button-box">
-                            <a class="info-box__button button button--with-icon" href="#">
+                            <a class="info-box__button button button--with-icon scrollto" href="#js-model-line">
                                 Придбати
                                 <span class="button__icon">
                                 <svg width="30" height="27" fill="#be893d">
@@ -713,18 +713,18 @@
                         <p>Отримати повний опис спецодягу <strong>AURUM</strong></p>
                         <p>Введіть свою електронну адресу для отримання повного опису</p>
                     </div>
-                    <form class="get-description__form form" action="#" method="post">
+                    <form class="get-description__form form js-form" action="#" method="post">
                         <ul class="form__fields-list fields-list">
                             <li class="fields-list__item">
                                 <label class="visually-hidden" for="get-description-form-phone">Ваш телефон</label>
-                                <input class="fields-list__field" id="get-description-form-phone" type="tel" name="phone" placeholder="+38 (___) ___-__-__">
+                                <input class="fields-list__field" id="get-description-form-phone" type="tel" name="phone" placeholder="+38 (___) ___-__-__" required>
                             </li>
                             <li class="fields-list__item">
                                 <label class="visually-hidden" for="get-description-form-email">Ваш e-mail</label>
                                 <input class="fields-list__field" id="get-description-form-email" type="email" name="email" placeholder="Ваш e-mail" required>
                             </li>
                         </ul><!-- / .fields-list -->
-                        <button class="form__button button button--with-icon">
+                        <button class="form__button button button--with-icon" data-submit>
                             Надіслати
                             <span class="button__icon">
                                 <svg width="30" height="23" fill="#be893d">
@@ -769,7 +769,7 @@
                         <p><strong>Залишилися питання?</strong></p>
                         <p>Залиште заявку і наш експерт зв'яжеться з Вами</p>
                     </div>
-                    <form class="feedback__form form" action="#" method="post">
+                    <form class="feedback__form form js-form" action="#" method="post">
                         <ul class="form__fields-list fields-list fields-list--white">
                             <li class="fields-list__item">
                                 <label class="visually-hidden" for="feedback-form-name">Ваше ім’я</label>
@@ -788,7 +788,7 @@
                                 <textarea class="fields-list__field" id="feedback-form-comment" name="comment" placeholder="Залиште коментарій"></textarea>
                             </li>
                         </ul><!-- / .fields-list -->
-                        <button class="form__button button button--with-icon">
+                        <button class="form__button button button--with-icon" data-submit>
                             Надіслати
                             <span class="button__icon">
                                 <svg width="12" height="23" fill="#be893d">
@@ -1041,7 +1041,7 @@
                     </div><!-- / .review -->
                 </div><!-- / .reviews-slider -->
                 <p class="reviews__button-box">
-                    <a class="reviews__button button button--with-icon" href="#">
+                    <a class="reviews__button button button--with-icon btn-modal" href="#js-feedback-modal">
                         Залишити відгук
                         <span class="button__icon">
                         <svg class="" width="30" height="33" fill="#be893d">
@@ -1590,18 +1590,18 @@
             <p><strong>Залиште номер</strong></p>
             <p>Ми передзвонимо Вам найближчого часу</p>
         </div>
-        <form class="back-call-modal__form form" action="#" method="post">
+        <form class="form-modal__form form js-form" action="#" method="post">
             <ul class="form__fields-list fields-list">
                 <li class="fields-list__item">
                     <label class="visually-hidden" for="back-call-form-name">Ваше ім’я</label>
-                    <input class="fields-list__field" id="back-call-form-name" type="text" name="name" placeholder="Ваше ім’я" required>
+                    <input class="fields-list__field" id="back-call-form-name" type="text" name="name" placeholder="Ваше ім’я">
                 </li>
                 <li class="fields-list__item">
                     <label class="visually-hidden" for="back-call-form-phone">Ваш телефон</label>
                     <input class="fields-list__field" id="back-call-form-phone" type="tel" name="phone" placeholder="+38 (___) ___-__-__" required>
                 </li>
             </ul><!-- / .fields-list -->
-            <button class="form__button button">Надіслати</button>
+            <button class="form__button button" data-submit>Надіслати</button>
         </form><!-- / .form -->
     </div><!-- / .back-call-modal -->
 
@@ -1612,7 +1612,7 @@
             <p><strong>Залиште заявку</strong></p>
             <p>Наш експерт зв’яжеться з Вами</p>
         </div>
-        <form class="dealer-modal__form form" action="#" method="post">
+        <form class="form-modal__form form js-form" action="#" method="post">
             <ul class="form__fields-list fields-list">
                 <li class="fields-list__item">
                     <label class="visually-hidden" for="dealer-modal-form-name">Ваше ім’я</label>
@@ -1635,7 +1635,7 @@
                     <input class="fields-list__field" id="dealer-modal-form-city" type="text" name="city" placeholder="Місто" required>
                 </li>
             </ul><!-- / .fields-list -->
-            <button class="form__button button">Надіслати</button>
+            <button class="form__button button" data-submit>Надіслати</button>
         </form><!-- / .form -->
     </div><!-- / .dealer-modal -->
 

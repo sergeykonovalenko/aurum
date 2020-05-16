@@ -7,6 +7,7 @@ import Parallax from 'parallax-js';
 import './vendor/jquery.mb.browser';
 import 'malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min';
 import 'jquery.maskedinput/src/jquery.maskedinput';
+import 'jquery-validation';
 import './svg-sprite';
 import './google-maps';
 /////////////////////////////////////////////
@@ -225,6 +226,118 @@ $(document).ready(function () {
         // ]
     });
 
+    ////////////////////////////////////////////////////////////////////////////
+    // Send callback / Send request / Buy product
+    $('[data-submit]').on('click', function(e) {
+        e.preventDefault();
+        $(this).parent('form').submit();
+    });
+
+    $.validator.addMethod(
+        "regex",
+        function(value, element, regexp) {
+            let re = new RegExp(regexp);
+            return this.optional(element) || re.test(value);
+        },
+        "Пожалуйста, проверьте свои данные",
+    );
+
+    function valEl(el) {
+        let validator = el.validate({
+            rules:{
+                'phone': {
+                    required: true,
+                    regex: '^([\+]+)*[0-9\x20\x28\x29\-]{5,20}$'
+                },
+                'email': {
+                    required: true,
+                    email: true
+                },
+            },
+            messages:{
+                'phone': '',
+                'email': {
+                    required: '',
+                    email: ''
+                },
+            },
+            submitHandler: function (form) {
+
+                let submitBtn = $(form).find('button');
+                let submitBtnText = submitBtn.html();
+
+                // get url for redirection
+                let redirect_url = $(form).find('#redirect_url').val();
+
+                $.ajax({
+                    url: '/sys-send-request/',
+                    data: new FormData(form),
+                    type: 'POST',
+                    processData: false,
+                    contentType: false,
+                    beforeSend: function() {
+                        submitBtn.prop('disabled', true).html('Отправка...');
+                    },
+                    success: function (data) {
+
+                        // enable button
+                        submitBtn.prop('disabled', false).html(submitBtnText);
+
+                        if ( data == '1' ) {
+
+                            if ( redirect_url ) { // if need redirect
+                                window.location.replace( redirect_url );
+                            }
+
+                            $.fancybox.open({
+                                src: `<div class="modal-thanks modal-common">
+                                          <h4 class="modal-thanks__title">Спасибо, за Ваше обращение. Мы свяжемся с Вами в скором времени</h4>
+                                      </div>`,
+                                type : 'html',
+                                touch : false,
+                                btnTpl: {
+                                    smallBtn: `
+                                        <button class="modal-common__close fancybox-button fancybox-close-small" type="button" data-fancybox-close title="Закрыть">
+                                            <svg width="15" height="15" viewBox="0 0 320 320" fill="#000" xmlns="http://www.w3.org/2000/svg"><path d="M207.6 160L315.3 52.3c6.2-6.2 6.2-16.3 0-22.6l-25-25c-6.2-6.2-16.3-6.2-22.6 0L160 112.4 52.3 4.7c-6.2-6.2-16.3-6.2-22.6 0l-25 25c-6.2 6.2-6.2 16.3 0 22.6L112.4 160 4.7 267.7c-6.2 6.2-6.2 16.3 0 22.6l25 25c6.2 6.2 16.3 6.2 22.6 0L160 207.6l107.7 107.7c6.2 6.2 16.3 6.2 22.6 0l25-25c6.2-6.2 6.2-16.3 0-22.6L207.6 160z"/></svg>
+                                        </button>`
+                                },
+                                afterClose: function () {
+                                    $.fancybox.close();
+                                }
+                            });
+                            jQuery(form).find('.form__field').each(function(){ jQuery(this).val(''); });
+
+                        } else {
+                            $.fancybox.open({
+                                src: `<div class="modal-thanks modal-common">
+                                          <h4 class="modal-thanks__title">Произошла ошибка при отправке заявки. Повторите отправку или перезвоните нам!</h4>
+                                      </div>`,
+                                type : 'html',
+                                touch : false,
+                                btnTpl: {
+                                    smallBtn: `
+                                        <button class="modal-common__close fancybox-button fancybox-close-small" type="button" data-fancybox-close title="Закрыть">
+                                            <svg width="15" height="15" viewBox="0 0 320 320" fill="#000" xmlns="http://www.w3.org/2000/svg"><path d="M207.6 160L315.3 52.3c6.2-6.2 6.2-16.3 0-22.6l-25-25c-6.2-6.2-16.3-6.2-22.6 0L160 112.4 52.3 4.7c-6.2-6.2-16.3-6.2-22.6 0l-25 25c-6.2 6.2-6.2 16.3 0 22.6L112.4 160 4.7 267.7c-6.2 6.2-6.2 16.3 0 22.6l25 25c6.2 6.2 16.3 6.2 22.6 0L160 207.6l107.7 107.7c6.2 6.2 16.3 6.2 22.6 0l25-25c6.2-6.2 6.2-16.3 0-22.6L207.6 160z"/></svg>
+                                        </button>`
+                                },
+                                afterClose: function () {
+                                    $.fancybox.close();
+                                }
+                            });
+                        }
+                    }
+                });
+
+                return false;
+            }
+        });
+    }
+
+    $('.js-form').each(function() {
+        valEl( $(this) );
+    });
+    ////////////////////////////////////////////////////////////////////////////
+
     // show/hide dealers
     $('.dealers__btn-show-all').on('click', function () {
         $('.dealers').toggleClass('dealers--all-shown');
@@ -314,15 +427,15 @@ $(document).ready(function () {
         return $.browser.device = (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent.toLowerCase()));
     }
 
-    $.fancybox.open({
-        src: '#js-thanks-modal',
-        type : 'inline',
-        touch : false,
-        btnTpl: {
-            smallBtn: `
-                <button class="common-modal__close fancybox-button fancybox-close-small" type="button" data-fancybox-close title="Закрыть">
-                    <svg width="15" height="15" viewBox="0 0 320 320" fill="#000" xmlns="http://www.w3.org/2000/svg"><path d="M207.6 160L315.3 52.3c6.2-6.2 6.2-16.3 0-22.6l-25-25c-6.2-6.2-16.3-6.2-22.6 0L160 112.4 52.3 4.7c-6.2-6.2-16.3-6.2-22.6 0l-25 25c-6.2 6.2-6.2 16.3 0 22.6L112.4 160 4.7 267.7c-6.2 6.2-6.2 16.3 0 22.6l25 25c6.2 6.2 16.3 6.2 22.6 0L160 207.6l107.7 107.7c6.2 6.2 16.3 6.2 22.6 0l25-25c6.2-6.2 6.2-16.3 0-22.6L207.6 160z"/></svg>
-                </button>`
-        },
-    });
+    // $.fancybox.open({
+    //     src: '#js-back-call-modal',
+    //     type : 'inline',
+    //     touch : false,
+    //     btnTpl: {
+    //         smallBtn: `
+    //             <button class="common-modal__close fancybox-button fancybox-close-small" type="button" data-fancybox-close title="Закрыть">
+    //                 <svg width="15" height="15" viewBox="0 0 320 320" fill="#000" xmlns="http://www.w3.org/2000/svg"><path d="M207.6 160L315.3 52.3c6.2-6.2 6.2-16.3 0-22.6l-25-25c-6.2-6.2-16.3-6.2-22.6 0L160 112.4 52.3 4.7c-6.2-6.2-16.3-6.2-22.6 0l-25 25c-6.2 6.2-6.2 16.3 0 22.6L112.4 160 4.7 267.7c-6.2 6.2-6.2 16.3 0 22.6l25 25c6.2 6.2 16.3 6.2 22.6 0L160 207.6l107.7 107.7c6.2 6.2 16.3 6.2 22.6 0l25-25c6.2-6.2 6.2-16.3 0-22.6L207.6 160z"/></svg>
+    //             </button>`
+    //     },
+    // });
 }); // end ready
