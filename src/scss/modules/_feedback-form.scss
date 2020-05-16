@@ -1,0 +1,39 @@
+.feedback-form {
+
+}
+
+.feedback-form__row {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.feedback-form__col {
+
+    &:first-child {
+        flex-shrink: 0;
+        width: 29.86%;
+        margin-right: 30px;
+    }
+
+    &:last-child {
+        flex-grow: 1;
+    }
+}
+
+.feedback-form__fields-list {
+    margin: 0;
+}
+
+.feedback-form textarea {
+    height: 170px;
+}
+
+.feedback-form__bottom {
+    display: flex;
+}
+
+.feedback-form__button {
+    flex-shrink: 0;
+    min-width: 295px;
+    margin-left: auto;
+}

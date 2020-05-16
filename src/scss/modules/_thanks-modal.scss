@@ -1,0 +1,38 @@
+.thanks-modal {
+    width: 595px;
+
+    &::after {
+        content: "";
+        display: block;
+        width: 136px;
+        height: 117px;
+        margin: 0 auto;
+
+        .no-js &,
+        .no-webp & {
+            background-image: url("img/bg/thanks-modal.png");
+        }
+
+        .webp & {
+            background-image: url("img/bg/thanks-modal.webp");
+        }
+    }
+}
+
+.thanks-modal__head {
+    margin-bottom: 48px;
+    font-size: 18px;
+    line-height: 1.25;
+    text-align: center;
+    color: #8f8e8e;
+
+    strong {
+        font-weight: 700;
+        font-size: 24px;
+        font-family: "Noto Sans", Tahoma, sans-serif;
+    }
+
+    p {
+        margin: .7em 0;
+    }
+}

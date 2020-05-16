@@ -1590,7 +1590,7 @@
             <p><strong>Залиште номер</strong></p>
             <p>Ми передзвонимо Вам найближчого часу</p>
         </div>
-        <form class="dealer-modal__form form" action="#" method="post">
+        <form class="back-call-modal__form form" action="#" method="post">
             <ul class="form__fields-list fields-list">
                 <li class="fields-list__item">
                     <label class="visually-hidden" for="back-call-form-name">Ваше ім’я</label>
@@ -1601,14 +1601,7 @@
                     <input class="fields-list__field" id="back-call-form-phone" type="tel" name="phone" placeholder="+38 (___) ___-__-__" required>
                 </li>
             </ul><!-- / .fields-list -->
-            <button class="form__button button button--with-icon">
-                Надіслати
-                <span class="button__icon">
-                    <svg width="12" height="23" fill="#be893d">
-                                    <use xlink:href="#icon-question-mark"></use>
-                                </svg>
-                </span>
-            </button>
+            <button class="form__button button">Надіслати</button>
         </form><!-- / .form -->
     </div><!-- / .back-call-modal -->
 
@@ -1642,16 +1635,55 @@
                     <input class="fields-list__field" id="dealer-modal-form-city" type="text" name="city" placeholder="Місто" required>
                 </li>
             </ul><!-- / .fields-list -->
-            <button class="form__button button button--with-icon">
-                Надіслати
-                <span class="button__icon">
-                    <svg width="12" height="23" fill="#be893d">
-                                    <use xlink:href="#icon-question-mark"></use>
-                                </svg>
-                </span>
-            </button>
+            <button class="form__button button">Надіслати</button>
         </form><!-- / .form -->
     </div><!-- / .dealer-modal -->
+
+    <!-- Feedback modal -->
+    <div class="feedback-modal form-modal common-modal common-modal--has-border" id="js-feedback-modal" style="display: none">
+        <div class="form-modal__head">
+            <p><strong>Залишити відгук</strong></p>
+        </div>
+        <form class="feedback-modal__form feedback-form" action="#" method="post">
+            <div class="feedback-form__row">
+                <div class="feedback-form__col">
+                    <ul class="feedback-form__fields-list fields-list">
+                        <li class="fields-list__item">
+                            <label class="visually-hidden" for="feedback-modal-form-name">Ваше ім’я</label>
+                            <input class="fields-list__field" id="feedback-modal-form-name" type="text" name="name" placeholder="Ваше ім’я" required>
+                        </li>
+                        <li class="fields-list__item">
+                            <label class="visually-hidden" for="feedback-modal-form-phone">Ваш телефон</label>
+                            <input class="fields-list__field" id="feedback-modal-form-phone" type="tel" name="phone" placeholder="+38 (___) ___-__-__" required>
+                        </li>
+                        <li class="fields-list__item">
+                            <label class="visually-hidden" for="feedback-modal-form-email">Ваш e-mail</label>
+                            <input class="fields-list__field" id="feedback-modal-form-email" type="email" name="email" placeholder="Ваш e-mail" required>
+                        </li>
+                    </ul><!-- / .fields-list -->
+                </div>
+                <div class="feedback-form__col">
+                    <ul class="feedback-form__fields-list fields-list">
+                        <li class="fields-list__item">
+                            <label class="visually-hidden" for="feedback-modal-form-comment">Напишіть відгук</label>
+                            <textarea class="fields-list__field" id="feedback-modal-form-comment" name="comment" placeholder="Напишіть відгук" required></textarea>
+                        </li>
+                    </ul><!-- / .fields-list -->
+                </div>
+            </div>
+            <div class="feedback-form__bottom">
+                <button class="feedback-form__button button">Опублікувати</button>
+            </div>
+        </form><!-- / .form -->
+    </div><!-- / .feedback-modal -->
+
+    <!-- Thanks modal -->
+    <div class="thanks-modal common-modal common-modal--has-border" id="js-thanks-modal" style="display: none">
+        <div class="thanks-modal__head content">
+            <p><strong>Дякуємо! Ваша заявка відправлена</strong></p>
+            <p>Наш експерт зв’яжеться з Вами<br> найближчого часу</p>
+        </div>
+    </div><!-- / .thanks-modal -->
 
     <!-- Product modal -->
     <div class="product-modal common-modal" id="js-product-modal" style="display: none">
