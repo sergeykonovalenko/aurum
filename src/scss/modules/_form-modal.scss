@@ -1,0 +1,46 @@
+.form-modal {
+    width: 555px;
+    border: 12px solid transparent;
+    background-image: linear-gradient(90deg, #f9f9f9 0%, #f9f9f9 100%),
+                      linear-gradient(90deg, #e8e8e8 0%, #e8e8e8 100%);
+    background-origin: padding-box, border-box;
+    background-clip: padding-box, border-box;
+
+}
+
+.form-modal__logo {
+    margin: 0 auto 18px;
+}
+
+.form-modal__head {
+    margin-bottom: 30px;
+    font-size: 18px;
+    line-height: 1.25;
+    text-align: center;
+    color: #8f8e8e;
+
+    strong {
+        font-weight: 700;
+        font-size: 24px;
+        font-family: "Noto Sans", Tahoma, sans-serif;
+        color: $color-secondary;
+    }
+
+    p {
+        margin: .7em 0;
+    }
+}
+
+.form-modal__head *:first-child {
+    margin-top: 0;
+}
+
+.form-modal__head *:last-child {
+    margin-bottom: 0;
+}
+
+.dealer-modal__form {
+    //width: 300px;
+    width: 380px;
+    margin: 0 auto;
+}

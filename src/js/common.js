@@ -44,19 +44,6 @@ $(document).ready(function () {
         }
     });
 
-    $.fancybox.open({
-        src: '#js-product-modal',
-        type : 'inline',
-        touch : false,
-        backFocus : false,
-        btnTpl: {
-            smallBtn: `
-                <button class="common-modal__close fancybox-button fancybox-close-small" type="button" data-fancybox-close title="Закрыть">
-                    <svg width="15" height="15" viewBox="0 0 320 320" fill="#000" xmlns="http://www.w3.org/2000/svg"><path d="M207.6 160L315.3 52.3c6.2-6.2 6.2-16.3 0-22.6l-25-25c-6.2-6.2-16.3-6.2-22.6 0L160 112.4 52.3 4.7c-6.2-6.2-16.3-6.2-22.6 0l-25 25c-6.2 6.2-6.2 16.3 0 22.6L112.4 160 4.7 267.7c-6.2 6.2-6.2 16.3 0 22.6l25 25c6.2 6.2 16.3 6.2 22.6 0L160 207.6l107.7 107.7c6.2 6.2 16.3 6.2 22.6 0l25-25c6.2-6.2 6.2-16.3 0-22.6L207.6 160z"/></svg>
-                </button>`
-        },
-    });
-
     // smooth page scrolling
     $('.scrollto').click(function () {
         let elementClick = '#' + $(this).attr('href').split('#')[1];
@@ -326,5 +313,5 @@ $(document).ready(function () {
     function isMobile() {
         return $.browser.device = (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent.toLowerCase()));
     }
-
+    
 }); // end ready

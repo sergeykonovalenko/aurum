@@ -82,14 +82,14 @@
         <div class="main__offer-bg-wr">
             <section class="main-offer">
                 <div class="container">
-                    <a class="main-offer__btn-download-full-description" href="#">Скачайте повний опис</a>
+                    <a class="main-offer__btn-download-full-description scrollto" href="#js-get-description">Скачайте повний опис</a>
                     <div class="main-offer__txt content">
                         <h1><strong>AURUM</strong> - комфорт та надійність <strong><br>за доступною ціною!</strong></h1>
                         <p>Найстильніший робочий костюм в Україні!</p>
                     </div>
                     <div class="main-offer__buttons">
                         <a class="main-offer__button button button--inclined scrollto" href="#js-model-line"><span>Для себе</span></a>
-                        <a class="main-offer__button button button--inclined button--stroke" href="#">
+                        <a class="main-offer__button button button--inclined button--stroke btn-modal" href="#js-dealer-modal">
                             <span>Хочу стати дилером</span>
                         </a>
                     </div>
@@ -1582,6 +1582,76 @@
             </section><!-- / .footer-bottom -->
         </div>
     </footer><!-- / .dealers-map-and-contacts -->
+
+    <!-- Back call modal -->
+    <div class="back-call-modal form-modal common-modal common-modal--has-border" id="js-back-call-modal" style="display: none">
+        <img class="form-modal__logo" src="img/base/logo.svg" width="66" height="72" alt="AURUM">
+        <div class="form-modal__head">
+            <p><strong>Залиште номер</strong></p>
+            <p>Ми передзвонимо Вам найближчого часу</p>
+        </div>
+        <form class="dealer-modal__form form" action="#" method="post">
+            <ul class="form__fields-list fields-list">
+                <li class="fields-list__item">
+                    <label class="visually-hidden" for="back-call-form-name">Ваше ім’я</label>
+                    <input class="fields-list__field" id="back-call-form-name" type="text" name="name" placeholder="Ваше ім’я" required>
+                </li>
+                <li class="fields-list__item">
+                    <label class="visually-hidden" for="back-call-form-phone">Ваш телефон</label>
+                    <input class="fields-list__field" id="back-call-form-phone" type="tel" name="phone" placeholder="+38 (___) ___-__-__" required>
+                </li>
+            </ul><!-- / .fields-list -->
+            <button class="form__button button button--with-icon">
+                Надіслати
+                <span class="button__icon">
+                    <svg width="12" height="23" fill="#be893d">
+                                    <use xlink:href="#icon-question-mark"></use>
+                                </svg>
+                </span>
+            </button>
+        </form><!-- / .form -->
+    </div><!-- / .back-call-modal -->
+
+    <!-- Dealer modal -->
+    <div class="dealer-modal form-modal common-modal common-modal--has-border" id="js-dealer-modal" style="display: none">
+        <img class="form-modal__logo" src="img/base/logo.svg" width="66" height="72" alt="AURUM">
+        <div class="form-modal__head">
+            <p><strong>Залиште заявку</strong></p>
+            <p>Наш експерт зв’яжеться з Вами</p>
+        </div>
+        <form class="dealer-modal__form form" action="#" method="post">
+            <ul class="form__fields-list fields-list">
+                <li class="fields-list__item">
+                    <label class="visually-hidden" for="dealer-modal-form-name">Ваше ім’я</label>
+                    <input class="fields-list__field" id="dealer-modal-form-name" type="text" name="name" placeholder="Ваше ім’я" required>
+                </li>
+                <li class="fields-list__item">
+                    <label class="visually-hidden" for="dealer-modal-form-phone">Ваш телефон</label>
+                    <input class="fields-list__field" id="dealer-modal-form-phone" type="tel" name="phone" placeholder="+38 (___) ___-__-__" required>
+                </li>
+                <li class="fields-list__item">
+                    <label class="visually-hidden" for="dealer-modal-form-email">Ваш e-mail</label>
+                    <input class="fields-list__field" id="dealer-modal-form-email" type="email" name="email" placeholder="Ваш e-mail" required>
+                </li>
+                <li class="fields-list__item">
+                    <label class="visually-hidden" for="dealer-modal-form-company-name">Назва компанії</label>
+                    <input class="fields-list__field" id="dealer-modal-form-company-name" type="text" name="company-name" placeholder="Назва компанії" required>
+                </li>
+                <li class="fields-list__item">
+                    <label class="visually-hidden" for="dealer-modal-form-city">Місто</label>
+                    <input class="fields-list__field" id="dealer-modal-form-city" type="text" name="city" placeholder="Місто" required>
+                </li>
+            </ul><!-- / .fields-list -->
+            <button class="form__button button button--with-icon">
+                Надіслати
+                <span class="button__icon">
+                    <svg width="12" height="23" fill="#be893d">
+                                    <use xlink:href="#icon-question-mark"></use>
+                                </svg>
+                </span>
+            </button>
+        </form><!-- / .form -->
+    </div><!-- / .dealer-modal -->
 
     <!-- Product modal -->
     <div class="product-modal common-modal" id="js-product-modal" style="display: none">

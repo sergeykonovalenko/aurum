@@ -165,6 +165,10 @@
     line-height: 1.25;
     font-family: "Noto Sans", Tahoma, sans-serif;
     text-transform: uppercase;
+
+    strong {
+        font-weight: 700;
+    }
 }
 
 .info-box--1--1 ul {

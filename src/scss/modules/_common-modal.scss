@@ -1,7 +1,12 @@
 .common-modal {
     width: 720px;
+    background-color: #f9f9f9;
     border-radius: 4px;
     overflow: visible;
+
+    &--has-border {
+        box-shadow: inset 2px 2px 7px -1px rgba(0, 0, 0, .25);
+    }
 }
 
 .fancybox-slide--html .common-modal__close {
@@ -14,14 +19,15 @@
     opacity: .5;
     transition: all .15s ease-out;
 
-    //svg {
-    //    fill: #fff;
-    //}
-
     &:hover,
     &:focus {
         opacity: .9;
     }
+}
+
+.fancybox-slide--html .common-modal--has-border .common-modal__close {
+    top: -27px;
+    right: -57px;
 }
 
 @media screen and (max-width: 576px) {
