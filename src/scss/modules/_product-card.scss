@@ -21,7 +21,7 @@
 }
 
 .product-card__details {
-
+    margin-bottom: 30px;
 }
 
 .product-card__details-top {
@@ -31,7 +31,7 @@
 }
 
 .product-card__status-and-price {
-    margin-right: 30px;
+    margin-right: 55px;
 }
 
 .product-card__status {
@@ -49,6 +49,7 @@
     color: #b3b3b3;
 
     strong {
+        margin: 0 5px;
         font-weight: 400;
         font-size: 36px;
         color: $color-secondary;
@@ -57,7 +58,6 @@
 
 .product-card__button {
     flex-shrink: 0;
-    margin-left: auto;
 }
 
 .product-card__dropdown {

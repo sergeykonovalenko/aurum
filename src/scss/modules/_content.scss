@@ -40,11 +40,11 @@
 .content strong,
 .content b {
     font-weight: 500;
-    color: $color-main;
+    color: $color-main--dark;
 }
 
 .content a {
-    color: $color-main;
+    color: $color-main--dark;
 
     &:hover,
     &:focus {

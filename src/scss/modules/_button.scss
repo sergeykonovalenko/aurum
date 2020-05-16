@@ -41,6 +41,7 @@
     &:hover,
     &:focus {
         background-image: linear-gradient(to bottom, #e8a005 30%, #d26105 100%);
+        outline: none;
         transform: translateY(2px);
 
         &::before {
@@ -100,6 +101,12 @@
             animation: .6s shake-custom;
         }
     }
+
+    &--small {
+        font-size: 15px;
+        padding-top: 13px;
+        padding-bottom: 13px;
+    }
 }
 
 .button__icon {
@@ -107,5 +114,9 @@
     align-items: center;
     height: 27px;
     margin-left: 15px;
+
+    .button--small &{
+        height: 18px;
+    }
 }
 

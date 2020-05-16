@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="ru">
+<html class="no-js" lang="uk">
 <head>
     <!-- Meta -->
     <meta charset="UTF-8">
@@ -929,7 +929,7 @@
                                     </div>
                                 </div><!-- / .review-small-slider -->
                             </div>
-                            <div class="review__right js-custom-scroller-dark">
+                            <div class="review__right js-custom-scroller-dark-y">
                                 <p class="review__author">Денис</p>
                                 <div class="review__txt content">
                                     <p>
@@ -1203,7 +1203,7 @@
                             <li class="head-dealers__item">Телефон</li>
                             <li class="head-dealers__item">Сайт</li>
                         </ul><!-- / .head-dealers -->
-                        <div class="dealers__body js-custom-scroller-light">
+                        <div class="dealers__body js-custom-scroller-light-y">
                             <table class="dealer-table">
                                 <tbody>
                                 <tr>
@@ -1585,23 +1585,23 @@
 
     <!-- Product modal -->
     <div class="product-modal common-modal" id="js-product-modal" style="display: none">
-        <div class="product-modal__tabs product-tabs">
-            <div class="product-tabs__head">
-                <div class="product-tabs__head-left">
-                    <p class="product-tabs__model-name model-name model-name--antistat">AURUM <strong>ANTISTAT</strong></p>
+        <div class="product-modal__tabs product-types-tabs">
+            <div class="product-types-tabs__head">
+                <div class="product-types-tabs__head-left">
+                    <p class="product-types-tabs__model-name model-name model-name--antistat">AURUM <strong>ANTISTAT</strong></p>
                     <div class="rating-and-review">
                         <div class="rating-and-review__rating rating js-rating--read-only--true" data-rate-value=5></div>
                         <a class="rating-and-review__btn-review" href="#">Залишити відгук</a>
                     </div><!-- / .rating-and-review -->
                 </div>
-                <ul class="product-tabs__nav">
-                    <li><a href="#product-tabs-1">Куртка</a></li>
-                    <li><a href="#product-tabs-2">Штани</a></li>
-                    <li><a href="#product-tabs-3">Напівкомбінезон</a></li>
+                <ul class="product-types-tabs__nav">
+                    <li><a href="#product-types-tabs-1">Куртка</a></li>
+                    <li><a href="#product-types-tabs-2">Штани</a></li>
+                    <li><a href="#product-types-tabs-3">Напівкомбінезон</a></li>
                 </ul>
-                <img class="product-tabs__logo" src="img/base/logo.svg" width="66" height="72" alt="AURUM">
+                <img class="product-types-tabs__logo" src="img/base/logo.svg" width="66" height="72" alt="AURUM">
             </div>
-            <div class="product-tabs__body product-card" id="product-tabs-1">
+            <div class="product-types-tabs__body product-card" id="product-types-tabs-1">
                 <div class="product-card__left">
                     <div class="product-card__gallery product-gallery">
                         <div class="product-gallery__item">
@@ -1692,12 +1692,12 @@
                     <div class="get-description-small">
                         <p class="get-description-small__title">Отримати повний опис спецодягу <strong>AURUM</strong></p>
                         <form class="get-description-small__form" action="#" method="post">
-                            <label class="visually-hidden" for="get-description-small-email">E-mail</label>
-                            <input class="get-description-small__field" id="get-description-small-email" type="email" name="email" placeholder="E-mail" required>
-                            <button class="get-description-small__button button button--with-icon">
+                            <label class="visually-hidden" for="get-description-small-email-1-1">E-mail</label>
+                            <input class="get-description-small__field" id="get-description-small-email-1-1" type="email" name="email" placeholder="E-mail" required>
+                            <button class="get-description-small__button button button--small button--with-icon">
                                 Отримати
                                 <span class="button__icon">
-                                    <svg width="28" height="22" fill="#be893d">
+                                    <svg width="23" height="18" fill="#be893d">
                                         <use xlink:href="#icon-email"></use>
                                     </svg>
                                 </span>
@@ -1710,7 +1710,7 @@
                         <div class="product-card__details-top">
                             <div class="product-card__status-and-price">
                                 <span class="product-card__status">Є в наявності</span>
-                                <p class="product-card__price">Ціна <strong>1800</strong> грн.</p>
+                                <p class="product-card__price">Ціна <strong>1 800</strong> грн.</p>
                             </div>
                             <a class="product-card__button button button--with-icon btn-modal" href="#">
                                 Придбати
@@ -1723,59 +1723,159 @@
                         </div>
                         <ul class="product-card__dropdown dropdown">
                             <li class="dropdown__item">
-                                <button class="dropdown__button" type="button">Виберіть розмір</button>
-                                <div class="dropdown__box">
-
-                                </div>
+                                <button class="dropdown__button" type="button">
+                                    Виберіть розмір
+                                    <svg class="dropdown__button-icon" width="14" height="9" fill="#1d1d1d">
+                                        <use xlink:href="#icon-arrow-down"></use>
+                                    </svg>
+                                </button>
+                                <div class="dropdown__box dropdown__box--custom-scroller-x parameters js-custom-scroller-dark-x">
+                                    <table class="parameters__table parameters-table">
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th>Розмір</th>
+                                                <th>Обхват грудей</th>
+                                                <th>Обхват талії</th>
+                                                <th>Зріст</th>
+                                                <th>Кількість</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th>XS</th>
+                                                <td>40-42</td>
+                                                <td>82-90</td>
+                                                <td>68-80</td>
+                                                <td>170-176</td>
+                                                <td>
+                                                    <label>
+                                                        <input class="parameters-table__field" type="number" name="quantity-xs" min="1">
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>S</th>
+                                                <td>40-42</td>
+                                                <td>82-90</td>
+                                                <td>68-80</td>
+                                                <td>170-176</td>
+                                                <td>
+                                                    <label>
+                                                        <input class="parameters-table__field" type="number" name="quantity-s" min="1">
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>M</th>
+                                                <td>40-42</td>
+                                                <td>82-90</td>
+                                                <td>68-80</td>
+                                                <td>170-176</td>
+                                                <td>
+                                                    <label>
+                                                        <input class="parameters-table__field" type="number" name="quantity-m" min="1">
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>L</th>
+                                                <td>40-42</td>
+                                                <td>82-90</td>
+                                                <td>68-80</td>
+                                                <td>170-176</td>
+                                                <td>
+                                                    <label>
+                                                        <input class="parameters-table__field" type="number" name="quantity-l" min="1">
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>XL</th>
+                                                <td>40-42</td>
+                                                <td>82-90</td>
+                                                <td>68-80</td>
+                                                <td>170-176</td>
+                                                <td>
+                                                    <label>
+                                                        <input class="parameters-table__field" type="number" name="quantity-xl" min="1">
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>2XL</th>
+                                                <td>40-42</td>
+                                                <td>82-90</td>
+                                                <td>68-80</td>
+                                                <td>170-176</td>
+                                                <td>
+                                                    <label>
+                                                        <input class="parameters-table__field" type="number" name="quantity-2xl" min="1">
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table><!-- / .parameters-table -->
+                                    <p class="parameters__button-box">
+                                        <button class="parameters__button button button--small" type="button">Вибрати</button>
+                                    </p>
+                                </div><!-- / .parameters -->
                             </li>
                             <li class="dropdown__item">
-                                <button class="dropdown__button" id="ss_elem" type="button">Виберіть дилера</button>
-                                <div class="dropdown__box">
+                                <button class="dropdown__button" id="ss_elem-1-1" type="button">
+                                    Виберіть дилера
+                                    <svg class="dropdown__button-icon" width="14" height="9" fill="#1d1d1d">
+                                        <use xlink:href="#icon-arrow-down"></use>
+                                    </svg>
+                                </button>
+                                <div class="dropdown__box dropdown__box--custom-scroller-y js-custom-scroller-dark-y">
                                     <ul class="list-box"
-                                        id="ss_elem_list"
                                         tabindex="0"
                                         role="listbox"
-                                        aria-labelledby="ss_elem">
-                                        <li class="list-box__item" id="ss_elem_1" role="option">
+                                        aria-labelledby="ss_elem-1-1">
+                                        <li class="list-box__item" id="ss_elem_1-1" role="option">
+                                            Без дилера
+                                        </li>
+                                        <li class="list-box__item" id="ss_elem_1-2" role="option">
                                             ООО "АНВИ ГРУПП"  Киев, ул. Новоконстантиновская, 1В
                                         </li>
-                                        <li class="list-box__item" id="ss_elem_2" role="option">
+                                        <li class="list-box__item" id="ss_elem_1-3" role="option">
                                             ООО "ЕВРОСИЗ" Киев, ул. Гвардейская, 80-А
                                         </li>
-                                        <li class="list-box__item" id="ss_elem_3" role="option">
+                                        <li class="list-box__item" id="ss_elem_1-4" role="option">
                                             ООО "ТРЕЙД  ВЕЙ" Киев, ул. Бориспольская, 7
                                         </li>
-                                        <li class="list-box__item" id="ss_elem_4" role="option">
+                                        <li class="list-box__item" id="ss_elem_1-5" role="option">
                                             NG optics Киев, ул. П. Кайсарова, 2
                                         </li>
-                                        <li class="list-box__item" id="ss_elem_5" role="option">
+                                        <li class="list-box__item" id="ss_elem_1-6" role="option">
                                             ЧП "ТК-Спецодежда" Киев, ул. Здолбуновская, 7д
                                         </li>
-                                        <li class="list-box__item" id="ss_elem_6" role="option">
+                                        <li class="list-box__item" id="ss_elem_1-7" role="option">
                                             ООО "СВТ ЗИЗ ПЛЮС" Винница, ул. Добролюбова, 33
                                         </li>
-                                        <li class="list-box__item" id="ss_elem_7" role="option">
+                                        <li class="list-box__item" id="ss_elem_1-8" role="option">
                                             ООО "АВИКОМ-СЕРВИС" Черкассы, ул. Вячеслава Черновола, 253
                                         </li>
-                                        <li class="list-box__item" id="ss_elem_8" role="option">
+                                        <li class="list-box__item" id="ss_elem_1-9" role="option">
                                             ЧП «Днепр-Спец-СИЗ» Днепр, ул. Береговая, 200
                                         </li>
-                                        <li class="list-box__item" id="ss_elem_9" role="option">
+                                        <li class="list-box__item" id="ss_elem_1-10" role="option">
                                             ЧП "ТОГ Трейд"  Днепр, пр. Александра Поля, 76
                                         </li>
-                                        <li class="list-box__item" id="ss_elem_10" role="option">
+                                        <li class="list-box__item" id="ss_elem_1-11" role="option">
                                             ЧП Мальт Запорожье, ул. Брянская, 2
                                         </li>
-                                        <li class="list-box__item" id="ss_elem_11" role="option">
+                                        <li class="list-box__item" id="ss_elem_1-12" role="option">
                                             ООО "Валтекс" Белая Церковь, пер. Гординского, 2
                                         </li>
-                                        <li class="list-box__item" id="ss_elem_12" role="option">
+                                        <li class="list-box__item" id="ss_elem_1-13" role="option">
                                             ООО "Профиснаб" Кривой Рог, ул. Волгоградская, 1Д
                                         </li>
-                                        <li class="list-box__item" id="ss_elem_13" role="option">
+                                        <li class="list-box__item" id="ss_elem_1-14" role="option">
                                             ПКФ "Комплект" Одесса, ул. Проценко, 23а
                                         </li>
-                                        <li class="list-box__item" id="ss_elem_14" role="option">
+                                        <li class="list-box__item" id="ss_elem_1-15" role="option">
                                             ТОВ "МИК Альянс" Черкассы
                                         </li>
                                     </ul><!-- / .list-box -->
@@ -1783,25 +1883,685 @@
                             </li>
                         </ul><!-- / .dropdown -->
                     </div>
+                    <div class="product__tabs product-tabs">
+                        <ul class="product-tabs__nav">
+                            <li><a href="#product-tabs-1-1">Характеристики</a></li>
+                            <li><a href="#product-tabs-1-2">Опис</a></li>
+                        </ul>
+                        <div class="product-tabs__body content" id="product-tabs-1-1">
+                            <p>
+                                <strong>Матеріал основи:</strong> антистатична тканина з карбоновою ниткою ProCott
+                                Carbon-Antistat Oil/W-R з масло-водовідштовхувальним просоченням, армовані надміцні
+                                нитки TM ZUKI.
+                            </p>
+                            <p><strong>Щільність:</strong> 260 г/м.кв.</p>
+                            <p><strong>Матеріал накладок:</strong> тканина ProCott Carbon-Antistat Oil/W-R</p>
+                            <p><strong>Колір:</strong> синій</p>
+                            <p><strong>Склад тканини:</strong> 60% бавовна, 39% поліестер, 1% Carbon</p>
+                            <p><strong>Температурний діапазон:</strong> від +10 °C до +35 °C</p>
+                        </div>
+                        <div class="product-tabs__body content" id="product-tabs-1-2">
+                            <p>
+                                Універсальна, стильна і комфортна Куртка AURUM ANTISTAT BLUE підвищеного ресурсу експлуатації
+                                захистить Вас від виробничих забруднень і механічних пошкоджень. Дизайнерське та кольорове рішення
+                                Куртки AURUM підкреслює унікальне поєднання робочого стилю та нарядного зовнішнього вигляду.
+                            </p>
+                            <p>
+                                Антистатичні властивості тканини дають Вам можливість експлуатації куртки AURUMANTISTAT BLUE в
+                                роботі з електронікою, паливно-мастильними матеріалами, вибуховими та легкозаймистими речовинами,
+                                в роботі, що вимагає відсутність статичного заряду на робочому одязі.
+                            </p>
+                            <p>
+                                Вентиляційні клапани під руками, регульовані блискавкою, дають можливість терморегуляції під час
+                                роботи. А обшивна складка на спинці забезпечує свободу руху плечового суглоба та додатковий комфорт.
+                                Посилені шви подвійною строчкою та оверлоком, 34 зигзагоподібні закріпки, захисні накладки на ліктях
+                                куртки AURUM ANTISTAT BLUE гарантують Вам захист і тривалий термін експлуатації.
+                            </p>
+                        </div>
+                    </div><!-- / .product-tabs -->
                 </div>
             </div><!--  / .product-card -->
-            <div class="product-tabs__body" id="product-tabs-2">
+            <div class="product-types-tabs__body product-card" id="product-types-tabs-2">
                 <div class="product-card__left">
-
+                    <div class="product-card__gallery product-gallery">
+                        <div class="product-gallery__item">
+                            <a class="product-gallery__link" href="img/base/product-gallery-full.jpg" data-fancybox="product-gallery-1-1">
+                                <picture>
+                                    <source srcset="img/base/product-gallery-thumb.webp" type="image/webp">
+                                    <img class="product-gallery__img" src="img/base/product-gallery-thumb.jpg" alt="">
+                                </picture>
+                            </a>
+                        </div>
+                        <div class="product-gallery__item">
+                            <a class="product-gallery__link" href="img/base/product-gallery-full.jpg" data-fancybox="product-gallery-1-1">
+                                <picture>
+                                    <source srcset="img/base/product-gallery-thumb.webp" type="image/webp">
+                                    <img class="product-gallery__img" src="img/base/product-gallery-thumb.jpg" alt="">
+                                </picture>
+                            </a>
+                        </div>
+                        <div class="product-gallery__item">
+                            <a class="product-gallery__link" href="img/base/product-gallery-full.jpg" data-fancybox="product-gallery-1-1">
+                                <picture>
+                                    <source srcset="img/base/product-gallery-thumb.webp" type="image/webp">
+                                    <img class="product-gallery__img" src="img/base/product-gallery-thumb.jpg" alt="">
+                                </picture>
+                            </a>
+                        </div>
+                        <div class="product-gallery__item">
+                            <a class="product-gallery__link" href="img/base/product-gallery-full.jpg" data-fancybox="product-gallery-1-1">
+                                <picture>
+                                    <source srcset="img/base/product-gallery-thumb.webp" type="image/webp">
+                                    <img class="product-gallery__img" src="img/base/product-gallery-thumb.jpg" alt="">
+                                </picture>
+                            </a>
+                        </div>
+                        <div class="product-gallery__item">
+                            <a class="product-gallery__link" href="img/base/product-gallery-full.jpg" data-fancybox="product-gallery-1-1">
+                                <picture>
+                                    <source srcset="img/base/product-gallery-thumb.webp" type="image/webp">
+                                    <img class="product-gallery__img" src="img/base/product-gallery-thumb.jpg" alt="">
+                                </picture>
+                            </a>
+                        </div>
+                    </div><!-- / .product-gallery -->
+                    <div class="product-card__gallery-side product-gallery-side">
+                        <div class="product-gallery-side__wr">
+                            <div class="product-gallery-side__item">
+                                <p class="product-gallery-side__img-box">
+                                    <picture>
+                                        <source srcset="img/base/product-gallery-thumb.webp" type="image/webp">
+                                        <img class="product-gallery-side__img" src="img/base/product-gallery-thumb.jpg" alt="">
+                                    </picture>
+                                </p>
+                            </div>
+                            <div class="product-gallery-side__item">
+                                <p class="product-gallery-side__img-box">
+                                    <picture>
+                                        <source srcset="img/base/product-gallery-thumb.webp" type="image/webp">
+                                        <img class="product-gallery-side__img" src="img/base/product-gallery-thumb.jpg" alt="">
+                                    </picture>
+                                </p>
+                            </div>
+                            <div class="product-gallery-side__item">
+                                <p class="product-gallery-side__img-box">
+                                    <picture>
+                                        <source srcset="img/base/product-gallery-thumb.webp" type="image/webp">
+                                        <img class="product-gallery-side__img" src="img/base/product-gallery-thumb.jpg" alt="">
+                                    </picture>
+                                </p>
+                            </div>
+                            <div class="product-gallery-side__item">
+                                <p class="product-gallery-side__img-box">
+                                    <picture>
+                                        <source srcset="img/base/product-gallery-thumb.webp" type="image/webp">
+                                        <img class="product-gallery-side__img" src="img/base/product-gallery-thumb.jpg" alt="">
+                                    </picture>
+                                </p>
+                            </div>
+                            <div class="product-gallery-side__item">
+                                <p class="product-gallery-side__img-box">
+                                    <picture>
+                                        <source srcset="img/base/product-gallery-thumb.webp" type="image/webp">
+                                        <img class="product-gallery-side__img" src="img/base/product-gallery-thumb.jpg" alt="">
+                                    </picture>
+                                </p>
+                            </div>
+                        </div>
+                    </div><!-- / .product-gallery-side -->
+                    <div class="get-description-small">
+                        <p class="get-description-small__title">Отримати повний опис спецодягу <strong>AURUM</strong></p>
+                        <form class="get-description-small__form" action="#" method="post">
+                            <label class="visually-hidden" for="get-description-small-email-1-2">E-mail</label>
+                            <input class="get-description-small__field" id="get-description-small-email-1-2" type="email" name="email" placeholder="E-mail" required>
+                            <button class="get-description-small__button button button--small button--with-icon">
+                                Отримати
+                                <span class="button__icon">
+                                    <svg width="23" height="18" fill="#be893d">
+                                        <use xlink:href="#icon-email"></use>
+                                    </svg>
+                                </span>
+                            </button>
+                        </form>
+                    </div><!-- / .get-description-small -->
                 </div>
                 <div class="product-card__right">
-
+                    <div class="product-card__details">
+                        <div class="product-card__details-top">
+                            <div class="product-card__status-and-price">
+                                <span class="product-card__status">Є в наявності</span>
+                                <p class="product-card__price">Ціна <strong>2 100</strong> грн.</p>
+                            </div>
+                            <a class="product-card__button button button--with-icon btn-modal" href="#">
+                                Придбати
+                                <span class="button__icon">
+                                    <svg width="30" height="27" fill="#be893d">
+                                        <use xlink:href="#icon-shopping-cart"></use>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                        <ul class="product-card__dropdown dropdown">
+                            <li class="dropdown__item">
+                                <button class="dropdown__button" type="button">
+                                    Виберіть розмір
+                                    <svg class="dropdown__button-icon" width="14" height="9" fill="#1d1d1d">
+                                        <use xlink:href="#icon-arrow-down"></use>
+                                    </svg>
+                                </button>
+                                <div class="dropdown__box dropdown__box--custom-scroller-x parameters js-custom-scroller-dark-x">
+                                    <table class="parameters__table parameters-table">
+                                        <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th>Розмір</th>
+                                            <th>Обхват грудей</th>
+                                            <th>Обхват талії</th>
+                                            <th>Зріст</th>
+                                            <th>Кількість</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <th>XS</th>
+                                            <td>40-42</td>
+                                            <td>82-90</td>
+                                            <td>68-80</td>
+                                            <td>170-176</td>
+                                            <td>
+                                                <label>
+                                                    <input class="parameters-table__field" type="number" name="quantity-xs" min="1">
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>S</th>
+                                            <td>40-42</td>
+                                            <td>82-90</td>
+                                            <td>68-80</td>
+                                            <td>170-176</td>
+                                            <td>
+                                                <label>
+                                                    <input class="parameters-table__field" type="number" name="quantity-s" min="1">
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>M</th>
+                                            <td>40-42</td>
+                                            <td>82-90</td>
+                                            <td>68-80</td>
+                                            <td>170-176</td>
+                                            <td>
+                                                <label>
+                                                    <input class="parameters-table__field" type="number" name="quantity-m" min="1">
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>L</th>
+                                            <td>40-42</td>
+                                            <td>82-90</td>
+                                            <td>68-80</td>
+                                            <td>170-176</td>
+                                            <td>
+                                                <label>
+                                                    <input class="parameters-table__field" type="number" name="quantity-l" min="1">
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>XL</th>
+                                            <td>40-42</td>
+                                            <td>82-90</td>
+                                            <td>68-80</td>
+                                            <td>170-176</td>
+                                            <td>
+                                                <label>
+                                                    <input class="parameters-table__field" type="number" name="quantity-xl" min="1">
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>2XL</th>
+                                            <td>40-42</td>
+                                            <td>82-90</td>
+                                            <td>68-80</td>
+                                            <td>170-176</td>
+                                            <td>
+                                                <label>
+                                                    <input class="parameters-table__field" type="number" name="quantity-2xl" min="1">
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table><!-- / .parameters-table -->
+                                    <p class="parameters__button-box">
+                                        <button class="parameters__button button button--small" type="button">Вибрати</button>
+                                    </p>
+                                </div><!-- / .parameters -->
+                            </li>
+                            <li class="dropdown__item">
+                                <button class="dropdown__button" id="ss_elem-1-2" type="button">
+                                    Виберіть дилера
+                                    <svg class="dropdown__button-icon" width="14" height="9" fill="#1d1d1d">
+                                        <use xlink:href="#icon-arrow-down"></use>
+                                    </svg>
+                                </button>
+                                <div class="dropdown__box dropdown__box--custom-scroller-y js-custom-scroller-dark-y">
+                                    <ul class="list-box ss_elem_list"
+                                        tabindex="0"
+                                        role="listbox"
+                                        aria-labelledby="ss_elem-1-2">
+                                        <li class="list-box__item" id="ss_elem_2-1" role="option">
+                                            Без дилера
+                                        </li>
+                                        <li class="list-box__item" id="ss_elem_2-2" role="option">
+                                            ООО "АНВИ ГРУПП"  Киев, ул. Новоконстантиновская, 1В
+                                        </li>
+                                        <li class="list-box__item" id="ss_elem_2-3" role="option">
+                                            ООО "ЕВРОСИЗ" Киев, ул. Гвардейская, 80-А
+                                        </li>
+                                        <li class="list-box__item" id="ss_elem_2-4" role="option">
+                                            ООО "ТРЕЙД  ВЕЙ" Киев, ул. Бориспольская, 7
+                                        </li>
+                                        <li class="list-box__item" id="ss_elem_2-5" role="option">
+                                            NG optics Киев, ул. П. Кайсарова, 2
+                                        </li>
+                                        <li class="list-box__item" id="ss_elem_2-6" role="option">
+                                            ЧП "ТК-Спецодежда" Киев, ул. Здолбуновская, 7д
+                                        </li>
+                                        <li class="list-box__item" id="ss_elem_2-7" role="option">
+                                            ООО "СВТ ЗИЗ ПЛЮС" Винница, ул. Добролюбова, 33
+                                        </li>
+                                        <li class="list-box__item" id="ss_elem_2-8" role="option">
+                                            ООО "АВИКОМ-СЕРВИС" Черкассы, ул. Вячеслава Черновола, 253
+                                        </li>
+                                        <li class="list-box__item" id="ss_elem_2-9" role="option">
+                                            ЧП «Днепр-Спец-СИЗ» Днепр, ул. Береговая, 200
+                                        </li>
+                                        <li class="list-box__item" id="ss_elem_2-10" role="option">
+                                            ЧП "ТОГ Трейд"  Днепр, пр. Александра Поля, 76
+                                        </li>
+                                        <li class="list-box__item" id="ss_elem_2-11" role="option">
+                                            ЧП Мальт Запорожье, ул. Брянская, 2
+                                        </li>
+                                        <li class="list-box__item" id="ss_elem_2-12" role="option">
+                                            ООО "Валтекс" Белая Церковь, пер. Гординского, 2
+                                        </li>
+                                        <li class="list-box__item" id="ss_elem_2-13" role="option">
+                                            ООО "Профиснаб" Кривой Рог, ул. Волгоградская, 1Д
+                                        </li>
+                                        <li class="list-box__item" id="ss_elem_2-14" role="option">
+                                            ПКФ "Комплект" Одесса, ул. Проценко, 23а
+                                        </li>
+                                        <li class="list-box__item" id="ss_elem_2-15" role="option">
+                                            ТОВ "МИК Альянс" Черкассы
+                                        </li>
+                                    </ul><!-- / .list-box -->
+                                </div>
+                            </li>
+                        </ul><!-- / .dropdown -->
+                    </div>
+                    <div class="product__tabs product-tabs">
+                        <ul class="product-tabs__nav">
+                            <li><a href="#product-tabs-2-1">Характеристики</a></li>
+                            <li><a href="#product-tabs-2-2">Опис</a></li>
+                        </ul>
+                        <div class="product-tabs__body content" id="product-tabs-2-1">
+                            <p>
+                                <strong>Матеріал основи:</strong> антистатична тканина з карбоновою ниткою ProCott
+                                Carbon-Antistat Oil/W-R з масло-водовідштовхувальним просоченням, армовані надміцні
+                                нитки TM ZUKI.
+                            </p>
+                            <p><strong>Щільність:</strong> 260 г/м.кв.</p>
+                            <p><strong>Матеріал накладок:</strong> тканина ProCott Carbon-Antistat Oil/W-R</p>
+                            <p><strong>Колір:</strong> синій</p>
+                            <p><strong>Склад тканини:</strong> 60% бавовна, 39% поліестер, 1% Carbon</p>
+                            <p><strong>Температурний діапазон:</strong> від +10 °C до +35 °C</p>
+                        </div>
+                        <div class="product-tabs__body content" id="product-tabs-2-2">
+                            <p>
+                                Універсальна, стильна і комфортна Куртка AURUM ANTISTAT BLUE підвищеного ресурсу експлуатації
+                                захистить Вас від виробничих забруднень і механічних пошкоджень. Дизайнерське та кольорове рішення
+                                Куртки AURUM підкреслює унікальне поєднання робочого стилю та нарядного зовнішнього вигляду.
+                            </p>
+                            <p>
+                                Антистатичні властивості тканини дають Вам можливість експлуатації куртки AURUMANTISTAT BLUE в
+                                роботі з електронікою, паливно-мастильними матеріалами, вибуховими та легкозаймистими речовинами,
+                                в роботі, що вимагає відсутність статичного заряду на робочому одязі.
+                            </p>
+                            <p>
+                                Вентиляційні клапани під руками, регульовані блискавкою, дають можливість терморегуляції під час
+                                роботи. А обшивна складка на спинці забезпечує свободу руху плечового суглоба та додатковий комфорт.
+                                Посилені шви подвійною строчкою та оверлоком, 34 зигзагоподібні закріпки, захисні накладки на ліктях
+                                куртки AURUM ANTISTAT BLUE гарантують Вам захист і тривалий термін експлуатації.
+                            </p>
+                        </div>
+                    </div><!-- / .product-tabs -->
                 </div>
             </div><!--  / .product-card -->
-            <div class="product-tabs__body" id="product-tabs-3">
+            <div class="product-types-tabs__body product-card" id="product-types-tabs-3">
                 <div class="product-card__left">
-
+                    <div class="product-card__gallery product-gallery">
+                        <div class="product-gallery__item">
+                            <a class="product-gallery__link" href="img/base/product-gallery-full.jpg" data-fancybox="product-gallery-1-1">
+                                <picture>
+                                    <source srcset="img/base/product-gallery-thumb.webp" type="image/webp">
+                                    <img class="product-gallery__img" src="img/base/product-gallery-thumb.jpg" alt="">
+                                </picture>
+                            </a>
+                        </div>
+                        <div class="product-gallery__item">
+                            <a class="product-gallery__link" href="img/base/product-gallery-full.jpg" data-fancybox="product-gallery-1-1">
+                                <picture>
+                                    <source srcset="img/base/product-gallery-thumb.webp" type="image/webp">
+                                    <img class="product-gallery__img" src="img/base/product-gallery-thumb.jpg" alt="">
+                                </picture>
+                            </a>
+                        </div>
+                        <div class="product-gallery__item">
+                            <a class="product-gallery__link" href="img/base/product-gallery-full.jpg" data-fancybox="product-gallery-1-1">
+                                <picture>
+                                    <source srcset="img/base/product-gallery-thumb.webp" type="image/webp">
+                                    <img class="product-gallery__img" src="img/base/product-gallery-thumb.jpg" alt="">
+                                </picture>
+                            </a>
+                        </div>
+                        <div class="product-gallery__item">
+                            <a class="product-gallery__link" href="img/base/product-gallery-full.jpg" data-fancybox="product-gallery-1-1">
+                                <picture>
+                                    <source srcset="img/base/product-gallery-thumb.webp" type="image/webp">
+                                    <img class="product-gallery__img" src="img/base/product-gallery-thumb.jpg" alt="">
+                                </picture>
+                            </a>
+                        </div>
+                        <div class="product-gallery__item">
+                            <a class="product-gallery__link" href="img/base/product-gallery-full.jpg" data-fancybox="product-gallery-1-1">
+                                <picture>
+                                    <source srcset="img/base/product-gallery-thumb.webp" type="image/webp">
+                                    <img class="product-gallery__img" src="img/base/product-gallery-thumb.jpg" alt="">
+                                </picture>
+                            </a>
+                        </div>
+                    </div><!-- / .product-gallery -->
+                    <div class="product-card__gallery-side product-gallery-side">
+                        <div class="product-gallery-side__wr">
+                            <div class="product-gallery-side__item">
+                                <p class="product-gallery-side__img-box">
+                                    <picture>
+                                        <source srcset="img/base/product-gallery-thumb.webp" type="image/webp">
+                                        <img class="product-gallery-side__img" src="img/base/product-gallery-thumb.jpg" alt="">
+                                    </picture>
+                                </p>
+                            </div>
+                            <div class="product-gallery-side__item">
+                                <p class="product-gallery-side__img-box">
+                                    <picture>
+                                        <source srcset="img/base/product-gallery-thumb.webp" type="image/webp">
+                                        <img class="product-gallery-side__img" src="img/base/product-gallery-thumb.jpg" alt="">
+                                    </picture>
+                                </p>
+                            </div>
+                            <div class="product-gallery-side__item">
+                                <p class="product-gallery-side__img-box">
+                                    <picture>
+                                        <source srcset="img/base/product-gallery-thumb.webp" type="image/webp">
+                                        <img class="product-gallery-side__img" src="img/base/product-gallery-thumb.jpg" alt="">
+                                    </picture>
+                                </p>
+                            </div>
+                            <div class="product-gallery-side__item">
+                                <p class="product-gallery-side__img-box">
+                                    <picture>
+                                        <source srcset="img/base/product-gallery-thumb.webp" type="image/webp">
+                                        <img class="product-gallery-side__img" src="img/base/product-gallery-thumb.jpg" alt="">
+                                    </picture>
+                                </p>
+                            </div>
+                            <div class="product-gallery-side__item">
+                                <p class="product-gallery-side__img-box">
+                                    <picture>
+                                        <source srcset="img/base/product-gallery-thumb.webp" type="image/webp">
+                                        <img class="product-gallery-side__img" src="img/base/product-gallery-thumb.jpg" alt="">
+                                    </picture>
+                                </p>
+                            </div>
+                        </div>
+                    </div><!-- / .product-gallery-side -->
+                    <div class="get-description-small">
+                        <p class="get-description-small__title">Отримати повний опис спецодягу <strong>AURUM</strong></p>
+                        <form class="get-description-small__form" action="#" method="post">
+                            <label class="visually-hidden" for="get-description-small-email-1-3">E-mail</label>
+                            <input class="get-description-small__field" id="get-description-small-email-1-3" type="email" name="email" placeholder="E-mail" required>
+                            <button class="get-description-small__button button button--small button--with-icon">
+                                Отримати
+                                <span class="button__icon">
+                                    <svg width="23" height="18" fill="#be893d">
+                                        <use xlink:href="#icon-email"></use>
+                                    </svg>
+                                </span>
+                            </button>
+                        </form>
+                    </div><!-- / .get-description-small -->
                 </div>
                 <div class="product-card__right">
-
+                    <div class="product-card__details">
+                        <div class="product-card__details-top">
+                            <div class="product-card__status-and-price">
+                                <span class="product-card__status">Є в наявності</span>
+                                <p class="product-card__price">Ціна <strong>2 500</strong> грн.</p>
+                            </div>
+                            <a class="product-card__button button button--with-icon btn-modal" href="#">
+                                Придбати
+                                <span class="button__icon">
+                                    <svg width="30" height="27" fill="#be893d">
+                                        <use xlink:href="#icon-shopping-cart"></use>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                        <ul class="product-card__dropdown dropdown">
+                            <li class="dropdown__item">
+                                <button class="dropdown__button" type="button">
+                                    Виберіть розмір
+                                    <svg class="dropdown__button-icon" width="14" height="9" fill="#1d1d1d">
+                                        <use xlink:href="#icon-arrow-down"></use>
+                                    </svg>
+                                </button>
+                                <div class="dropdown__box dropdown__box--custom-scroller-x parameters js-custom-scroller-dark-x">
+                                    <table class="parameters__table parameters-table">
+                                        <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th>Розмір</th>
+                                            <th>Обхват грудей</th>
+                                            <th>Обхват талії</th>
+                                            <th>Зріст</th>
+                                            <th>Кількість</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <th>XS</th>
+                                            <td>40-42</td>
+                                            <td>82-90</td>
+                                            <td>68-80</td>
+                                            <td>170-176</td>
+                                            <td>
+                                                <label>
+                                                    <input class="parameters-table__field" type="number" name="quantity-xs" min="1">
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>S</th>
+                                            <td>40-42</td>
+                                            <td>82-90</td>
+                                            <td>68-80</td>
+                                            <td>170-176</td>
+                                            <td>
+                                                <label>
+                                                    <input class="parameters-table__field" type="number" name="quantity-s" min="1">
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>M</th>
+                                            <td>40-42</td>
+                                            <td>82-90</td>
+                                            <td>68-80</td>
+                                            <td>170-176</td>
+                                            <td>
+                                                <label>
+                                                    <input class="parameters-table__field" type="number" name="quantity-m" min="1">
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>L</th>
+                                            <td>40-42</td>
+                                            <td>82-90</td>
+                                            <td>68-80</td>
+                                            <td>170-176</td>
+                                            <td>
+                                                <label>
+                                                    <input class="parameters-table__field" type="number" name="quantity-l" min="1">
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>XL</th>
+                                            <td>40-42</td>
+                                            <td>82-90</td>
+                                            <td>68-80</td>
+                                            <td>170-176</td>
+                                            <td>
+                                                <label>
+                                                    <input class="parameters-table__field" type="number" name="quantity-xl" min="1">
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>2XL</th>
+                                            <td>40-42</td>
+                                            <td>82-90</td>
+                                            <td>68-80</td>
+                                            <td>170-176</td>
+                                            <td>
+                                                <label>
+                                                    <input class="parameters-table__field" type="number" name="quantity-2xl" min="1">
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table><!-- / .parameters-table -->
+                                    <p class="parameters__button-box">
+                                        <button class="parameters__button button button--small" type="button">Вибрати</button>
+                                    </p>
+                                </div><!-- / .parameters -->
+                            </li>
+                            <li class="dropdown__item">
+                                <button class="dropdown__button" id="ss_elem-1-3" type="button">
+                                    Виберіть дилера
+                                    <svg class="dropdown__button-icon" width="14" height="9" fill="#1d1d1d">
+                                        <use xlink:href="#icon-arrow-down"></use>
+                                    </svg>
+                                </button>
+                                <div class="dropdown__box dropdown__box--custom-scroller-y js-custom-scroller-dark-y">
+                                    <ul class="list-box"
+                                        tabindex="0"
+                                        role="listbox"
+                                        aria-labelledby="ss_elem-1-3">
+                                        <li class="list-box__item" id="ss_elem_3-1" role="option">
+                                            Без дилера
+                                        </li>
+                                        <li class="list-box__item" id="ss_elem_3-2" role="option">
+                                            ООО "АНВИ ГРУПП"  Киев, ул. Новоконстантиновская, 1В
+                                        </li>
+                                        <li class="list-box__item" id="ss_elem_3-3" role="option">
+                                            ООО "ЕВРОСИЗ" Киев, ул. Гвардейская, 80-А
+                                        </li>
+                                        <li class="list-box__item" id="ss_elem_3-4" role="option">
+                                            ООО "ТРЕЙД  ВЕЙ" Киев, ул. Бориспольская, 7
+                                        </li>
+                                        <li class="list-box__item" id="ss_elem_3-5" role="option">
+                                            NG optics Киев, ул. П. Кайсарова, 2
+                                        </li>
+                                        <li class="list-box__item" id="ss_elem_3-6" role="option">
+                                            ЧП "ТК-Спецодежда" Киев, ул. Здолбуновская, 7д
+                                        </li>
+                                        <li class="list-box__item" id="ss_elem_3-7" role="option">
+                                            ООО "СВТ ЗИЗ ПЛЮС" Винница, ул. Добролюбова, 33
+                                        </li>
+                                        <li class="list-box__item" id="ss_elem_3-8" role="option">
+                                            ООО "АВИКОМ-СЕРВИС" Черкассы, ул. Вячеслава Черновола, 253
+                                        </li>
+                                        <li class="list-box__item" id="ss_elem_3-9" role="option">
+                                            ЧП «Днепр-Спец-СИЗ» Днепр, ул. Береговая, 200
+                                        </li>
+                                        <li class="list-box__item" id="ss_elem_3-10" role="option">
+                                            ЧП "ТОГ Трейд"  Днепр, пр. Александра Поля, 76
+                                        </li>
+                                        <li class="list-box__item" id="ss_elem_3-11" role="option">
+                                            ЧП Мальт Запорожье, ул. Брянская, 2
+                                        </li>
+                                        <li class="list-box__item" id="ss_elem_3-12" role="option">
+                                            ООО "Валтекс" Белая Церковь, пер. Гординского, 2
+                                        </li>
+                                        <li class="list-box__item" id="ss_elem_3-13" role="option">
+                                            ООО "Профиснаб" Кривой Рог, ул. Волгоградская, 1Д
+                                        </li>
+                                        <li class="list-box__item" id="ss_elem_3-14" role="option">
+                                            ПКФ "Комплект" Одесса, ул. Проценко, 23а
+                                        </li>
+                                        <li class="list-box__item" id="ss_elem_3-15" role="option">
+                                            ТОВ "МИК Альянс" Черкассы
+                                        </li>
+                                    </ul><!-- / .list-box -->
+                                </div>
+                            </li>
+                        </ul><!-- / .dropdown -->
+                    </div>
+                    <div class="product__tabs product-tabs">
+                        <ul class="product-tabs__nav">
+                            <li><a href="#product-tabs-3-1">Характеристики</a></li>
+                            <li><a href="#product-tabs-3-2">Опис</a></li>
+                        </ul>
+                        <div class="product-tabs__body content" id="product-tabs-3-1">
+                            <p>
+                                <strong>Матеріал основи:</strong> антистатична тканина з карбоновою ниткою ProCott
+                                Carbon-Antistat Oil/W-R з масло-водовідштовхувальним просоченням, армовані надміцні
+                                нитки TM ZUKI.
+                            </p>
+                            <p><strong>Щільність:</strong> 260 г/м.кв.</p>
+                            <p><strong>Матеріал накладок:</strong> тканина ProCott Carbon-Antistat Oil/W-R</p>
+                            <p><strong>Колір:</strong> синій</p>
+                            <p><strong>Склад тканини:</strong> 60% бавовна, 39% поліестер, 1% Carbon</p>
+                            <p><strong>Температурний діапазон:</strong> від +10 °C до +35 °C</p>
+                        </div>
+                        <div class="product-tabs__body content" id="product-tabs-3-2">
+                            <p>
+                                Універсальна, стильна і комфортна Куртка AURUM ANTISTAT BLUE підвищеного ресурсу експлуатації
+                                захистить Вас від виробничих забруднень і механічних пошкоджень. Дизайнерське та кольорове рішення
+                                Куртки AURUM підкреслює унікальне поєднання робочого стилю та нарядного зовнішнього вигляду.
+                            </p>
+                            <p>
+                                Антистатичні властивості тканини дають Вам можливість експлуатації куртки AURUMANTISTAT BLUE в
+                                роботі з електронікою, паливно-мастильними матеріалами, вибуховими та легкозаймистими речовинами,
+                                в роботі, що вимагає відсутність статичного заряду на робочому одязі.
+                            </p>
+                            <p>
+                                Вентиляційні клапани під руками, регульовані блискавкою, дають можливість терморегуляції під час
+                                роботи. А обшивна складка на спинці забезпечує свободу руху плечового суглоба та додатковий комфорт.
+                                Посилені шви подвійною строчкою та оверлоком, 34 зигзагоподібні закріпки, захисні накладки на ліктях
+                                куртки AURUM ANTISTAT BLUE гарантують Вам захист і тривалий термін експлуатації.
+                            </p>
+                        </div>
+                    </div><!-- / .product-tabs -->
                 </div>
             </div><!--  / .product-card -->
-        </div><!-- / .product-tabs -->
+        </div><!-- / .product-types-tabs -->
     </div><!-- / .product-modal -->
 
     <script>

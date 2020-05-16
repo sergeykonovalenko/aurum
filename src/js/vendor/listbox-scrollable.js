@@ -9,5 +9,11 @@
  */
 
 window.addEventListener('load', function () {
-  var exListbox = new aria.Listbox(document.getElementById('ss_elem_list'));
+  /*var exListbox = new aria.Listbox(document.getElementById('ss_elem_list'));*/
+
+    let listBoxAll = document.querySelectorAll('.list-box');
+
+    listBoxAll.forEach(function (item, index, array) {
+        new aria.Listbox(item);
+    });
 });

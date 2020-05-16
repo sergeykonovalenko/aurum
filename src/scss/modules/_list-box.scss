@@ -1,12 +1,8 @@
-.list-box#ss_elem_list {
-    width: 500px;
-    max-height: none;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    background-color: #fbfbfb;
-    border: 1px solid #efefef;
-    border-radius: 3px;
-    overflow-y: visible;
+.list-box {
+    //max-height: none;
+    background: 0 0;
+    border: none;
+    //overflow-y: visible;
 
     &:focus {
         outline: none;
@@ -14,6 +10,10 @@
 }
 
 .list-box__item {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-weight: 500;
+    line-height: 1.25;
     transition: all .15s ease-out;
     cursor: pointer;
 
