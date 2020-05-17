@@ -73,3 +73,28 @@
 .description-clothes__callouts {
     margin: 0;
 }
+
+@media screen and (max-width: 1510px) {
+    .description-clothes__img {
+
+        &--jacket {
+            width: 575px;
+        }
+
+        &--pants {
+            width: 458px;
+        }
+
+        &--half-bombardment {
+            width: 442px;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .description-clothes__box {
+        width: 962px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

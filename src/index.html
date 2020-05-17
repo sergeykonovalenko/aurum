@@ -378,7 +378,7 @@
                         <div class="description-clothes__box">
                             <picture>
                                 <source srcset="img/base/description-1.webp" type="image/webp">
-                                <img class="description-clothes__img" src="img/base/description-1.png" width="676" height="678" alt="">
+                                <img class="description-clothes__img description-clothes__img--jacket" src="img/base/description-1.png" width="676" height="678" alt="">
                             </picture>
                             <ul class="description-clothes__callouts callouts">
                                 <li class="callouts__item callouts__item--jacket--1">
@@ -471,7 +471,7 @@
                         <div class="description-clothes__box">
                             <picture>
                                 <source srcset="img/base/description-2.webp" type="image/webp">
-                                <img class="description-clothes__img" src="img/base/description-2.png" width="537" height="1061" alt="">
+                                <img class="description-clothes__img description-clothes__img--pants" src="img/base/description-2.png" width="537" height="1061" alt="">
                             </picture>
                             <ul class="description-clothes__callouts callouts">
                                 <li class="callouts__item callouts__item--pants--1">
@@ -574,7 +574,7 @@
                         <div class="description-clothes__box">
                             <picture>
                                 <source srcset="img/base/description-3.webp" type="image/webp">
-                                <img class="description-clothes__img" src="img/base/description-3.png" width="519" height="1468" alt="">
+                                <img class="description-clothes__img description-clothes__img--half-bombardment" src="img/base/description-3.png" width="519" height="1468" alt="">
                             </picture>
                             <ul class="description-clothes__callouts callouts">
                                 <li class="callouts__item callouts__item--half-bombardment--1">
@@ -1535,7 +1535,7 @@
                     </li>
                 </ul><!-- / .contacts-list -->
                 <p class="contacts__button-box">
-                    <a class="contacts__button button button--with-icon" href="#">
+                    <a class="contacts__button button button--with-icon btn-modal" href="#js-back-call-modal">
                         Отримати консультацію
                         <span class="button__icon">
                         <svg width="26" height="27" fill="#be893d">
@@ -1677,6 +1677,32 @@
         </form><!-- / .form -->
     </div><!-- / .feedback-modal -->
 
+    <!-- Order modal -->
+    <div class="order-modal form-modal common-modal common-modal--has-border" id="js-order-modal" style="display: none">
+        <img class="form-modal__logo" src="img/base/logo.svg" width="66" height="72" alt="AURUM">
+        <div class="form-modal__head">
+            <p><strong>Залиште заявку</strong></p>
+            <p>Наш експерт зв’яжеться з Вами</p>
+        </div>
+        <form class="form-modal__form form js-form" action="#" method="post">
+            <ul class="form__fields-list fields-list">
+                <li class="fields-list__item">
+                    <label class="visually-hidden" for="order-modal-form-name">Ваше ім’я</label>
+                    <input class="fields-list__field" id="order-modal-form-name" type="text" name="name" placeholder="Ваше ім’я">
+                </li>
+                <li class="fields-list__item">
+                    <label class="visually-hidden" for="order-modal-form-phone">Ваш телефон</label>
+                    <input class="fields-list__field" id="order-modal-form-phone" type="tel" name="phone" placeholder="+38 (___) ___-__-__" required>
+                </li>
+                <li class="fields-list__item">
+                    <label class="visually-hidden" for="order-modal-form-email">Ваш e-mail</label>
+                    <input class="fields-list__field" id="order-modal-form-email" type="email" name="email" placeholder="Ваш e-mail">
+                </li>
+            </ul><!-- / .fields-list -->
+            <button class="form__button button" data-submit>Надіслати</button>
+        </form><!-- / .form -->
+    </div><!-- / .order-modal -->
+
     <!-- Thanks modal -->
     <div class="thanks-modal common-modal common-modal--has-border" id="js-thanks-modal" style="display: none">
         <div class="thanks-modal__head content">
@@ -1814,7 +1840,7 @@
                                 <span class="product-card__status">Є в наявності</span>
                                 <p class="product-card__price">Ціна <strong>1 800</strong> грн.</p>
                             </div>
-                            <a class="product-card__button button button--with-icon btn-modal" href="#">
+                            <a class="product-card__button button button--with-icon btn-modal" href="#js-order-modal">
                                 Придбати
                                 <span class="button__icon">
                                     <svg width="30" height="27" fill="#be893d">
