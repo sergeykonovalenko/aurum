@@ -4,3 +4,11 @@
     padding: 25px 44px 44px;
     background-color: #fff;
 }
+
+@media screen and (max-width: 1270px) {
+    .product-modal .common-modal__close {
+        top: 0;
+        right: 0;
+        color: #000;
+    }
+}
