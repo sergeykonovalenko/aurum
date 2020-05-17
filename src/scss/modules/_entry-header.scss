@@ -1,0 +1,27 @@
+.entry-header {
+    display: flex;
+    //align-items: center;
+    min-height: 350px;
+    padding-top: calc(95px + 30px);
+    padding-bottom: 30px;
+    color: #fff;
+    background-color: $color-secondary;
+    background-repeat: repeat, no-repeat;
+    background-position: center center;
+    background-size: auto, cover;
+}
+
+.entry-header .container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.entry-header__title {
+    margin-top: auto;
+    margin-bottom: 30px;
+}
+
+.entry-header__meta {
+    margin: auto 0 0;
+}

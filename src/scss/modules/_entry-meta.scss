@@ -1,0 +1,52 @@
+.entry-meta {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+    list-style: none;
+}
+
+.entry-meta__item {
+    position: relative;
+    margin-right: 35px;
+    padding-left: 20px;
+    font-size: 13px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 13px;
+        height: 16px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        transform: translate(0, -50%);
+    }
+
+
+    &--published {
+
+        &::before {
+            background-image: url("img/bg/calendar--white.svg");
+        }
+    }
+
+    &--reading-time {
+
+        &::before {
+            background-image: url("img/bg/clock--white.svg");
+        }
+    }
+
+    &--views {
+
+        &::before {
+            background-image: url("img/bg/eye--white.svg");
+        }
+    }
+}

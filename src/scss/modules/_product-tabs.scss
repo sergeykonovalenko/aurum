@@ -16,10 +16,12 @@
 
 .product-tabs__nav a {
     display: block;
+    min-width: 115px;
     padding: 13px 20px;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.25;
+    text-align: center;
     text-transform: uppercase;
     color: #b1b1b0;
     border-radius: 4px;
@@ -46,5 +48,6 @@
 
 .product-tabs__body {
     //font-size: 20px;
+    font-size: 18px;
     color: #6a6868;
 }
