@@ -186,14 +186,14 @@ $(document).ready(function () {
                         <span class="visually-hidden">Вперед</span>  
                         <svg width="34" height="23" viewBox="0 0 512 341.3" fill="#c3c3c3" xmlns="http://www.w3.org/2000/svg"><path d="M508.9 163.1l-160-160C344.7-1 338-1 333.8 3.1c-4.2 4.2-4.2 10.9 0 15.1L475.6 160H10.7C4.8 160 0 164.8 0 170.7s4.8 10.7 10.7 10.7h464.9L333.8 323.1c-4.2 4.2-4.2 10.9 0 15.1 2.1 2.1 4.8 3.1 7.5 3.1s5.5-1 7.5-3.1l160-160c4.2-4.2 4.2-10.9.1-15.1z"/></svg>
                     </button>`,
-        // responsive: [
-        //     {
-        //         breakpoint: 993,
-        //         settings: {
-        //             slidesToShow: 3,
-        //         }
-        //     },
-        // ]
+        responsive: [
+            {
+                breakpoint: 993,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+        ]
     });
 
     // slider product gallery

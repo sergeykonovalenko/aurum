@@ -80,3 +80,18 @@
         width: 750px;
     }
 }
+
+@media screen and (max-width: 992px) {
+    .main-offer {
+        background-position: calc(50% - 70px) top;
+    }
+
+    .main-offer__txt {
+        width: 72%;
+        font-size: 32px;
+    }
+
+    .main-offer__txt h1 {
+        font-size: 36px;
+    }
+}

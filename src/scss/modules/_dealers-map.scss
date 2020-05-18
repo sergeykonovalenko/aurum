@@ -1,3 +1,31 @@
 .dealers-map {
     position: relative;
 }
+
+.dealers-map__map {
+    width: calc(50vw - (var(--scrollbar-width) / 2) + 25px);
+}
+
+@media screen and (max-width: 1200px) {
+    .dealers-map__map {
+        width: calc(100vw - var(--scrollbar-width) - 575px); // 560px + 15px = 575px
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .dealers-map {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .dealers-map__map {
+        order: 1;
+        width: auto;
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+
+    .dealers-map__dealers {
+        order: 2;
+    }
+}

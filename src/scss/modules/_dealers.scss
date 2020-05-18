@@ -71,3 +71,23 @@
         outline: none;
     }
 }
+
+@media screen and (max-width: 992px) {
+    .dealers {
+        width: 100%;
+        height: auto;
+        padding-right: 0;
+    }
+
+    .dealers__wr {
+        width: 100%;
+    }
+
+    .dealers__body {
+        max-height: 400px;
+    }
+
+    .dealers__btn-show-all {
+        display: none;
+    }
+}

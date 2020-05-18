@@ -102,15 +102,7 @@
 
 @media screen and (max-width: 1350px) {
     .news-slider__arrow {
-        //position: absolute;
-        //top: 50%;
-        //z-index: 1;
-        //padding: 15px;
-        //background: 0 0;
-        //border: none;
-        //cursor: pointer;
-        //transform: translate(0, -50%);
-        top: 20%;
+        top: 14.2vw;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -122,7 +114,6 @@
         box-shadow: 1px 1px 3px rgba(0, 0, 0, .15);
 
         svg {
-            //width: 18px;
             height: auto;
         }
 
@@ -133,5 +124,11 @@
         &--next {
             right: 0;
         }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .news-slider__arrow {
+        top: 21.2vw;
     }
 }

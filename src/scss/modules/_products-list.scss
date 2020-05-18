@@ -17,3 +17,22 @@
         margin-top: 50px;
     }
 }
+
+@media screen and (max-width: 992px) {
+    .products-list__item {
+        width: calc((99.999% - 20px) / 2);
+
+        &:nth-child(3n) {
+            margin-right: 20px;
+        }
+
+        &:nth-child(2n) {
+            margin-right: 0;
+        }
+
+
+        &:nth-child(n + 3) {
+            margin-top: 50px;
+        }
+    }
+}

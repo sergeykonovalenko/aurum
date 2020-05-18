@@ -32,3 +32,9 @@
 .customers__img {
 
 }
+
+@media screen and (max-width: 992px) {
+    .customers__item {
+        width: calc(99.999% / 3);
+    }
+}

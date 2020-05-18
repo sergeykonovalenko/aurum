@@ -98,3 +98,26 @@
         margin-right: auto;
     }
 }
+
+@media screen and (max-width: 992px) {
+    .description-clothes__box {
+        width: 739px;
+    }
+
+    @media screen and (max-width: 1510px) {
+        .description-clothes__img {
+
+            &--jacket {
+                width: 420px;
+            }
+
+            &--pants {
+                width: 334px;
+            }
+
+            &--half-bombardment {
+                width: 323px;
+            }
+        }
+    }
+}

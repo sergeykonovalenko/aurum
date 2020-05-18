@@ -6,7 +6,6 @@
 }
 
 .map__box {
-    width: calc(50vw - (var(--scrollbar-width) / 2) + 25px);
     height: 655px;
 }
 
@@ -14,8 +13,10 @@
     .map {
         left: 560px;
     }
+}
 
-    .map__box {
-        width: calc(100vw - var(--scrollbar-width) - 575px); // 560px + 15px = 575px
+@media screen and (max-width: 992px) {
+    .map {
+        position: static;
     }
 }

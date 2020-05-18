@@ -45,3 +45,16 @@
         color: $color-main;
     }
 }
+
+@media screen and (max-width: 992px) {
+    .dealer-table tr:first-child td {
+
+        &:nth-child(2) {
+            width: 31%;
+        }
+
+        &:nth-child(3) {
+            width: 22%;
+        }
+    }
+}

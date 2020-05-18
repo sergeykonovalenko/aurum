@@ -44,3 +44,12 @@
 .certificates-and-feedback__feedback {
     margin: 0 auto;
 }
+
+@media screen and (max-width: 992px) {
+    .certificates-and-feedback .container {
+
+        &::after {
+            display: none;
+        }
+    }
+}
