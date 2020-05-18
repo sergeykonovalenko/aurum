@@ -1,5 +1,6 @@
 .model-line {
     position: relative;
+    z-index: 1;
     margin-bottom: -120px;
     padding-top: calc(50px + 130px);
     padding-bottom: calc(110px + 120px);
@@ -24,4 +25,23 @@
 
 .model-line__list {
     margin: 0;
+}
+
+@media screen and (max-width: 992px) {
+    .model-line {
+        margin-bottom: -220px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .model-line {
+        padding-top: 215px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .model-line {
+        margin-bottom: -350px;
+        padding-bottom: 360px;
+    }
 }

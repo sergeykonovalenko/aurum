@@ -35,3 +35,20 @@
 .reviews__button {
     min-width: 380px;
 }
+
+@media screen and (max-width: 768px) {
+    .reviews {
+        margin-bottom: -230px;
+        padding-bottom: 310px;
+    }
+
+    .reviews__slider {
+        margin-bottom: 95px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .reviews__button {
+        min-width: 100%;
+    }
+}

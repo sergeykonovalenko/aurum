@@ -26,6 +26,20 @@ $(document).ready(function () {
     const is_mobile = isMobile();
     if (is_mobile) {
         element.classList.add('is-mobile');
+
+        // show/hide languages
+        $('.language-switch .menu-item-has-children > a').on('click', function (e) {
+            e.preventDefault();
+            $(this).closest('.language-switch').toggleClass('language-switch--show');
+        });
+
+        $(document).mouseup(function (e){
+            let div = $('.language-switch');
+            if (!div.is(e.target)
+                && div.has(e.target).length === 0) {
+                $('.language-switch').removeClass('language-switch--show');
+            }
+        });
     }
 
     // init modal
@@ -87,7 +101,7 @@ $(document).ready(function () {
         $('html').removeClass('show-mobile-menu');
     });
 
-    // Reviews slider
+    // reviews slider
     let $reviewsSlider = $('.reviews-slider'),
         reviewsSlider = $reviewsSlider[0];
 
@@ -98,6 +112,7 @@ $(document).ready(function () {
         pauseOnFocus: false,
         pauseOnHover: false,
         // focusOnSelect: true,
+        adaptiveHeight: true,
         swipe: true,
         prevArrow: `<button class="reviews-slider__arrow reviews-slider__arrow--prev" type="button">
                         <span class="visually-hidden">Назад</span> 
@@ -107,11 +122,19 @@ $(document).ready(function () {
                         <span class="visually-hidden">Вперед</span>  
                         <svg width="34" height="23" viewBox="0 0 512 341.3" fill="#c3c3c3" xmlns="http://www.w3.org/2000/svg"><path d="M508.9 163.1l-160-160C344.7-1 338-1 333.8 3.1c-4.2 4.2-4.2 10.9 0 15.1L475.6 160H10.7C4.8 160 0 164.8 0 170.7s4.8 10.7 10.7 10.7h464.9L333.8 323.1c-4.2 4.2-4.2 10.9 0 15.1 2.1 2.1 4.8 3.1 7.5 3.1s5.5-1 7.5-3.1l160-160c4.2-4.2 4.2-10.9.1-15.1z"/></svg>
                     </button>`,
+        responsive: [
+            {
+                breakpoint: 769,
+                settings: {
+                    dots: true,
+                }
+            },
+        ]
     });
 
     $('.review-big-slider').on('mousedown', function(){
         reviewsSlider.slick.setOption({
-            swipe: false
+            swipe: false,
         });
     });
 
@@ -133,6 +156,22 @@ $(document).ready(function () {
                         <span class="visually-hidden">Вперед</span> 
                             <svg width="13" height="15" viewBox="0 0 447.99 490.652" fill="#c3c3c3" xmlns="http://www.w3.org/2000/svg"><path d="M422.236 245.335L195.121 472.449a10.665 10.665 0 0 0 15.083 15.083L444.87 252.865a10.674 10.674 0 0 0 0-15.083L210.203 3.115A10.716 10.716 0 0 0 202.651 0a10.562 10.562 0 0 0-7.531 3.136 10.674 10.674 0 0 0 0 15.083z"/><path d="M230.236 245.335L3.121 472.449a10.665 10.665 0 0 0 15.083 15.083L252.87 252.865a10.674 10.674 0 0 0 0-15.083L18.203 3.115A10.716 10.716 0 0 0 10.651 0 10.562 10.562 0 0 0 3.12 3.136a10.674 10.674 0 0 0 0 15.083z"/></svg>
                     </button>`,
+        responsive: [
+            {
+                breakpoint: 769,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                }
+            },
+            {
+                breakpoint: 577,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            },
+        ]
     }).on('afterChange', function(event, slick){
         reviewsSlider.slick.setOption({
             swipe: true
@@ -191,6 +230,14 @@ $(document).ready(function () {
                 breakpoint: 993,
                 settings: {
                     slidesToShow: 2,
+                    slidesToScroll: 2,
+                }
+            },
+            {
+                breakpoint: 577,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
                 }
             },
         ]
@@ -225,14 +272,6 @@ $(document).ready(function () {
                         <span class="visually-hidden">Вперед</span> 
                         <svg width="14" viewBox="0 0 149 256.1" fill="#999999" xmlns="http://www.w3.org/2000/svg"><path d="M145.4 136.5l-117.8 116c-4.7 4.7-12.3 4.7-17 0l-7.1-7.1c-4.7-4.7-4.7-12.3 0-17L105.8 128 3.6 27.6c-4.7-4.7-4.7-12.3 0-17l7.1-7.1c4.7-4.7 12.3-4.7 17 0l117.8 116c4.6 4.7 4.6 12.3-.1 17z"/></svg>
                     </button>`,
-        // responsive: [
-        //     {
-        //         breakpoint: 993,
-        //         settings: {
-        //             slidesToShow: 3,
-        //         }
-        //     },
-        // ]
     });
 
     ////////////////////////////////////////////////////////////////////////////
@@ -377,6 +416,20 @@ $(document).ready(function () {
         let div = $('.dropdown__item--open');
         if (!div.is(e.target) && div.has(e.target).length === 0) {
             $('.dropdown__item').removeClass('dropdown__item--open');
+        }
+    });
+
+    // show/hide callouts image
+    $('.callouts__item').on('click', function () {
+        $('.callouts__item').not($(this)).removeClass('callouts__item--open');
+        $(this).toggleClass('callouts__item--open');
+    });
+
+    $(document).mouseup(function (e){
+        let div = $('.callouts__item--open');
+        if (!div.is(e.target)
+            && div.has(e.target).length === 0) {
+            $('.callouts__item').removeClass('callouts__item--open');
         }
     });
 

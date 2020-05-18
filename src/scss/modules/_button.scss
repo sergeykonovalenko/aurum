@@ -112,6 +112,7 @@
 .button__icon {
     display: flex;
     align-items: center;
+    flex-shrink: 0;
     height: 27px;
     margin-left: 15px;
 
@@ -119,4 +120,3 @@
         height: 18px;
     }
 }
-

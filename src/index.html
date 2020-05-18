@@ -34,54 +34,66 @@
     <header class="main-header" id="js-main-header">
         <div class="main-header__wr">
             <div class="container">
-                <a class="main-header__hamburger" title="Главное меню">
-                    <b></b>
-                    <b></b>
-                    <b></b>
-                </a>
-                <a class="main-header__logo scrollto" href="#js-main-header">
-                    <img src="img/base/logo.svg" width="66" height="72" alt="AURUM">
-                </a>
-                <a class="main-header__btn-download-description download-description download-description--no-icon scrollto" href="#js-get-description">
-                    Скачайте повний опис
-                </a><!-- / .download-description -->
-                <nav class="main-header__nav main-nav">
-                    <ul class="main-nav__list">
-                        <li><a class="scrollto" href="#js-advantages">Чому AURUM</a></li>
-                        <li><a class="scrollto" href="#js-dealers-map">Де купити</a></li>
-                        <li><a class="scrollto" href="#js-description-clothes">Характеристики</a></li>
-                        <li><a class="scrollto" href="#js-model-line">Модельний ряд</a></li>
-                        <li><a class="scrollto" href="#js-news">Новини</a></li>
-                        <li><a class="scrollto" href="#js-contacts">Інформаційній центр</a></li>
-                    </ul>
-                </nav><!-- / .main-nav -->
-                <div class="main-header__feedback feedback-small">
-                    <p class="feedback-small__schedule">Години роботи: 9:00 до 17:00</p>
-                    <a class="feedback-small__phone" href="tel:380500754824">+38 (050) 075-48-24</a>
-                    <a class="feedback-small__button" href="#"><span>Передзвоніть мені</span></a>
-                </div><!-- / .feedback-small -->
-                <ul class="main-header__language-switch language-switch">
-                    <li class="menu-item-has-children">
-                        <a href="#">
-                            <img src="img/base/uk.svg" title="UA" alt="UA">
-                            <span>UA</span>
-                        </a>
-                        <ul class="sub-menu">
-                            <li>
-                                <a href="#">
-                                    <img src="img/base/ru_RU.svg" title="RU" alt="RU">
-                                    <span>RU</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img src="img/base/en_GB.svg" title="EN" alt="EN">
-                                    <span>EN</span>
-                                </a>
-                            </li>
+                <div class="main-header__top-only-mobile header-top-mobile">
+                    <a class="header-top-mobile__btn-download-description download-description download-description--no-icon scrollto" href="#js-get-description">
+                        Скачайте повний опис
+                    </a><!-- / .download-description -->
+                    <a class="header-top-mobile__phone phone" href="tel:380500754824">
+                        +38 (050) 075-48-24
+                    </a><!-- / .phone -->
+                </div><!-- / .header-top-mobile -->
+                <div class="main-header__bottom">
+                    <a class="main-header__hamburger" title="Главное меню">
+                        <b></b>
+                        <b></b>
+                        <b></b>
+                    </a>
+                    <a class="main-header__logo scrollto" href="#js-main-header">
+                        <img src="img/base/logo.svg" width="66" height="72" alt="AURUM">
+                    </a>
+                    <a class="main-header__btn-download-description download-description download-description--no-icon scrollto" href="#js-get-description">
+                        Скачайте повний опис
+                    </a><!-- / .download-description -->
+                    <nav class="main-header__nav main-nav">
+                        <ul class="main-nav__list">
+                            <li><a class="scrollto" href="#js-advantages">Чому AURUM</a></li>
+                            <li><a class="scrollto" href="#js-dealers-map">Де купити</a></li>
+                            <li><a class="scrollto" href="#js-description-clothes">Характеристики</a></li>
+                            <li><a class="scrollto" href="#js-model-line">Модельний ряд</a></li>
+                            <li><a class="scrollto" href="#js-news">Новини</a></li>
+                            <li><a class="scrollto" href="#js-contacts">Інформаційній центр</a></li>
                         </ul>
-                    </li>
-                </ul><!-- / .language-switch -->
+                    </nav><!-- / .main-nav -->
+                    <div class="main-header__feedback feedback-small">
+                        <p class="feedback-small__schedule">Години роботи: 9:00 до 17:00</p>
+                        <a class="feedback-small__phone phone" href="tel:380500754824">
+                            +38 (050) 075-48-24
+                        </a><!-- / .phone -->
+                        <a class="feedback-small__button" href="#"><span>Передзвоніть мені</span></a>
+                    </div><!-- / .feedback-small -->
+                    <ul class="main-header__language-switch language-switch">
+                        <li class="menu-item-has-children">
+                            <a href="#">
+                                <img src="img/base/uk.svg" title="UA" alt="UA">
+                                <span>UA</span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="#">
+                                        <img src="img/base/ru_RU.svg" title="RU" alt="RU">
+                                        <span>RU</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="img/base/en_GB.svg" title="EN" alt="EN">
+                                        <span>EN</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul><!-- / .language-switch -->
+                </div>
             </div>
         </div>
         <div class="mobile-menu">
@@ -96,7 +108,9 @@
                 </a>
                 <div class="mobile-menu__feedback feedback-small">
                     <p class="feedback-small__schedule">Години роботи: 9:00 до 17:00</p>
-                    <a class="feedback-small__phone" href="tel:380500754824">+38 (050) 075-48-24</a>
+                    <a class="feedback-small__phone phone" href="tel:380500754824">
+                        +38 (050) 075-48-24
+                    </a><!-- / .phone -->
                     <a class="feedback-small__button feedback-small__button--no-border" href="#"><span>Передзвоніть мені</span></a>
                 </div><!-- / .feedback-small -->
                 <ul class="mobile-menu__list">
@@ -838,7 +852,7 @@
 
         <section class="customers">
             <div class="container">
-                <p class="customers__title heading-2" id="js-customers">Спецодяг <strong>AURUM</strong> <br><span>вже використовують</span></p>
+                <p class="customers__title heading-2" id="js-customers">Спецодяг <strong>AURUM</strong> <br><span>вже використо&shy;вують</span></p>
                 <ul class="customers__list">
                     <li class="customers__item">
                         <picture class="customers__img-box">
@@ -1227,7 +1241,7 @@
         </section><!-- / .news -->
     </main><!-- / .main -->
 
-    <footer class="main-footer">
+    <footer class="main-footer main-footer--home">
         <div class="container">
             <section class="main-footer__dealers-map dealers-map" id="js-dealers-map">
                 <div class="dealers-map__dealers dealers">
@@ -1754,7 +1768,7 @@
                     <p class="product-types-tabs__model-name model-name model-name--antistat">AURUM <strong>ANTISTAT</strong></p>
                     <div class="rating-and-review">
                         <div class="rating-and-review__rating rating js-rating--read-only--true" data-rate-value=5></div>
-                        <a class="rating-and-review__btn-review" href="#">Залишити відгук</a>
+                        <a class="rating-and-review__btn-review btn-modal" href="#js-feedback-modal">Залишити відгук</a>
                     </div><!-- / .rating-and-review -->
                 </div>
                 <ul class="product-types-tabs__nav">
@@ -1872,7 +1886,7 @@
                     <div class="product-card__details">
                         <div class="product-card__details-top">
                             <div class="product-card__status-and-price">
-                                <span class="product-card__status">Є в наявності</span>
+                                <span class="product-card__status">В наявності</span>
                                 <p class="product-card__price">Ціна <strong>1 800</strong> грн.</p>
                             </div>
                             <a class="product-card__button button button--with-icon btn-modal" href="#js-order-modal">
@@ -1892,7 +1906,7 @@
                                         <use xlink:href="#icon-arrow-down"></use>
                                     </svg>
                                 </button>
-                                <div class="dropdown__box dropdown__box--custom-scroller-x parameters js-custom-scroller-dark-x">
+                                <div class="dropdown__box dropdown__box--sizes dropdown__box--custom-scroller-x parameters js-custom-scroller-dark-x">
                                     <table class="parameters__table parameters-table">
                                         <thead>
                                             <tr>
@@ -2192,7 +2206,7 @@
                     <div class="product-card__details">
                         <div class="product-card__details-top">
                             <div class="product-card__status-and-price">
-                                <span class="product-card__status">Є в наявності</span>
+                                <span class="product-card__status">В наявності</span>
                                 <p class="product-card__price">Ціна <strong>2 100</strong> грн.</p>
                             </div>
                             <a class="product-card__button button button--with-icon btn-modal" href="#">
@@ -2512,7 +2526,7 @@
                     <div class="product-card__details">
                         <div class="product-card__details-top">
                             <div class="product-card__status-and-price">
-                                <span class="product-card__status">Є в наявності</span>
+                                <span class="product-card__status">В наявності</span>
                                 <p class="product-card__price">Ціна <strong>2 500</strong> грн.</p>
                             </div>
                             <a class="product-card__button button button--with-icon btn-modal" href="#">

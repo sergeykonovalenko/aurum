@@ -100,3 +100,10 @@
         transition: all .15s ease-out;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .news-item__body {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}

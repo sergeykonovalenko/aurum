@@ -28,3 +28,19 @@
     right: -25px;
     bottom: -120px;
 }
+
+@media screen and (max-width: 768px) {
+    .get-description-section {
+        padding-bottom: 300px;
+    }
+
+    .get-description-section__scene {
+        bottom: -170px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .get-description-section {
+        padding-top: 215px;
+    }
+}

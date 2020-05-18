@@ -1,0 +1,19 @@
+.header-top-mobile {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-top-mobile__btn-download-description {
+    margin-right: 15px;
+}
+
+.header-top-mobile__phone {
+    flex-shrink: 0;
+}
+
+@media screen and (max-width: 576px) {
+    .header-top-mobile .header-top-mobile__btn-download-description {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}

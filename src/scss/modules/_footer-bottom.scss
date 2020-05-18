@@ -6,7 +6,9 @@
 }
 
 .footer-bottom__logo {
+    display: block;
     flex-shrink: 0;
+    width: 66px;
     margin-right: 40px;
 }
 
@@ -37,6 +39,7 @@
 
 .footer-bottom__social {
     display: flex;
+    align-items: center;
     flex-shrink: 0;
     margin-left: auto;
 }
@@ -48,4 +51,30 @@
 
 .footer-bottom__social-list {
     margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .footer-bottom {
+        display: block;
+    }
+
+    .footer-bottom__logo {
+        margin: 0 auto 30px;
+    }
+
+    .footer-bottom__nav {
+        justify-content: center;
+        margin: 0 -10px 30px -10px;
+    }
+
+    .footer-bottom__social {
+        justify-content: center;
+    }
+
+    .footer-bottom__social-title {
+
+        br {
+            display: none;
+        }
+    }
 }

@@ -21,12 +21,14 @@
 }
 
 .product-item__name {
+    max-width: calc(100% - 66px);
     margin: 0 15px 0 0;
     font-weight: 500;
     font-size: 20px;
     line-height: 1.25;
     text-transform: uppercase;
     color: #9d9c9c;
+    hyphens: auto;
 }
 
 .product-item__logo {

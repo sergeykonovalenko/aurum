@@ -37,9 +37,24 @@
 
 .contacts__list {
     margin: 0 0 60px 0;
+    padding: 0 0 0 60px;
 }
 
 .contacts__button-box {
     margin: 0;
     text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .contacts__list {
+        padding-left: 0;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .contacts {
+        border-width: 15px;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
 }

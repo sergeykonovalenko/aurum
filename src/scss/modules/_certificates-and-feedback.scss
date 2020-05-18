@@ -53,3 +53,15 @@
         }
     }
 }
+
+@media screen and (max-width: 768px) {
+    .certificates-and-feedback {
+        padding-top: 130px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .certificates-and-feedback {
+        margin-bottom: -50px;
+    }
+}

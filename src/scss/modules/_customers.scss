@@ -38,3 +38,22 @@
         width: calc(99.999% / 3);
     }
 }
+
+@media screen and (max-width: 768px) {
+    .customers__item {
+        width: calc(99.999% / 2);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .customers__title {
+
+        br {
+            display: none;
+        }
+
+        span {
+            font-size: 36px;
+        }
+    }
+}

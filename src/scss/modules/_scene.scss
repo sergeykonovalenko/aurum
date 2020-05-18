@@ -51,3 +51,12 @@
         }
     }
 }
+
+@media screen and (max-width: 576px) {
+    .scene__item {
+
+        &--1 {
+            display: none;
+        }
+    }
+}

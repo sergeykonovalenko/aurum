@@ -81,6 +81,7 @@
 
     .dealers__wr {
         width: 100%;
+        padding-bottom: 35px;
     }
 
     .dealers__body {
@@ -88,6 +89,12 @@
     }
 
     .dealers__btn-show-all {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .dealers .dealers__head {
         display: none;
     }
 }

@@ -1,0 +1,25 @@
+.phone {
+    position: relative;
+    padding-left: 20px;
+    font-size: 15px;
+    color: #f8efe4;
+
+    &::before {
+        content: "";
+        position: absolute;
+        //top: 5px;
+        top: 50%;
+        left: 0;
+        width: 13px;
+        height: 13px;
+        margin-top: -6.5px;
+        background: url("img/bg/phone-alt--solid.svg");
+    }
+
+    &:hover {
+
+        &::before {
+            animation: shake-custom .6s;
+        }
+    }
+}

@@ -1,7 +1,7 @@
 .description-clothes {
     margin-bottom: -130px;
-    padding-bottom: calc(70px + 130px);
     padding-top: calc(56px + 120px);
+    padding-bottom: calc(70px + 130px);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -119,5 +119,30 @@
                 width: 323px;
             }
         }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .description-clothes {
+        padding-top: 205px;
+    }
+
+    .description-clothes__item {
+        margin-bottom: 100px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .description-clothes {
+        margin-bottom: -200px;
+    }
+
+    .description-clothes__subtitle {
+        font-size: 21px;
+        padding: 18px 30px;
     }
 }

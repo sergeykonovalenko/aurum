@@ -7,6 +7,7 @@
         position: absolute;
         bottom: 36px;
         z-index: 1;
+        display: block;
         background-repeat: no-repeat;
         background-position: center center;
         background-size: contain;
@@ -204,6 +205,7 @@
 
 .info-box__button {
     min-width: 270px;
+    max-width: 100%;
 }
 
 .info-box > *:last-child {
@@ -225,13 +227,11 @@
 
         &--1--1::before {
             left: -90px;
-            //width: 464px;
             width: 325px;
             height: 480px;
         }
 
         &--1--2::before {
-            //left: 0;
             width: 298px;
             height: 471px;
         }
@@ -250,15 +250,9 @@
     }
 
     .info-box__wr {
-        //padding-top: 80px;
-        //padding-bottom: 70px;
 
         .info-box--1 & {
             padding-right: 50px;
-        }
-
-        .info-box--1--1 & {
-            //padding-left: 235px;
         }
 
         .info-box--1--2 & {
@@ -279,11 +273,67 @@
 
     }
 
-    .info-box--1--1 ul {
-        padding-left: 0;
-    }
-
+    .info-box--1--1 ul,
     .info-box--1--2 ul {
         padding-left: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .info-box {
+
+        &::before {
+            position: static;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        &--1--1::before {
+            margin-bottom: -120px;
+        }
+
+        &--2--1::before {
+            margin-bottom: -180px;
+        }
+    }
+
+    .info-box__wr {
+        padding-top: 50px;
+        padding-bottom: 53px;
+
+        .info-box & {
+            padding-right: 30px;
+            padding-left: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .info-box {
+
+        &--2--2::before {
+            width: calc(100vw - 30px);
+            height: 0;
+            padding-bottom: 61vw;
+        }
+    }
+
+    .info-box__wr {
+        padding-top: 30px;
+        padding-bottom: 33px;
+        border-width: 15px 15px 51px;
+
+        .info-box & {
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+    }
+
+    .info-box__txt {
+        font-size: 21px;
+    }
+
+    .info-box__button {
+        min-width: 100%;
     }
 }

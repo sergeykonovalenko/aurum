@@ -1,7 +1,6 @@
 .contacts-list {
     display: flex;
     flex-wrap: wrap;
-    padding: 0 0 0 60px;
     list-style: none;
 }
 
@@ -49,4 +48,20 @@
     background-color: #2c2c2f;
     border-radius: 50%;
     box-shadow: 2px 2px 5px -2px rgba(0, 0, 0, .2);
+}
+
+@media screen and (max-width: 576px) {
+    .contacts-list {
+        flex-direction: column;
+        align-content: center;
+    }
+
+    .contacts-list__item {
+        width: auto;
+        margin-right: 0;
+
+        &:nth-child(n + 2) {
+            margin-top: 25px;
+        }
+    }
 }

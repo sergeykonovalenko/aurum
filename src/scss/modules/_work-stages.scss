@@ -106,6 +106,10 @@
 }
 
 @media screen and (max-width: 992px) {
+    .work-stages {
+        margin-bottom: -150px;
+    }
+
     .work-stages__item {
         width: calc((99.999% - 20px) / 2);
 
@@ -114,6 +118,23 @@
         }
 
         &:nth-child(2n) {
+            margin-right: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .work-stages {
+        margin-bottom: -250px;
+        padding-top: 245px;
+        padding-bottom: 300px;
+    }
+
+    .work-stages__item {
+        width: 100%;
+        margin-right: 0;
+
+        &:nth-child(3n) {
             margin-right: 0;
         }
     }

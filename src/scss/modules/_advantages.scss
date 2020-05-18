@@ -1,6 +1,6 @@
 .advantages {
     position: relative;
-    z-index: 1;
+    z-index: 2;
     margin-bottom: -130px;
     padding-top: calc(110px + 75px);
     padding-bottom: calc(150px + 130px);
@@ -34,5 +34,11 @@
 @media screen and (max-width: 1200px) {
     .advantages__title {
         margin-bottom: 90px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .advantages {
+        margin-bottom: -230px;
     }
 }

@@ -7,7 +7,8 @@
     text-align: center;
     cursor: pointer;
 
-    body:not(.js-is-mobile) &:hover .sub-menu {
+    html:not(.is-mobile) &:hover .sub-menu,
+    &--show ul.sub-menu {
         margin: 0;
         opacity: 1;
         visibility: visible;
@@ -43,7 +44,12 @@
         background: url("img/bg/angle-down--regular.svg") no-repeat center;
         background-size: contain;
         transform: translate(0, -50%);
+        transition: all .15s ease-out;
     }
+}
+
+.language-switch--show .menu-item-has-children > a::after {
+    transform: translate(0, -50%) rotate(-180deg);
 }
 
 .language-switch img {

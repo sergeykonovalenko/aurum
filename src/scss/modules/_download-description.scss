@@ -6,6 +6,7 @@
     font-weight: 700;
     font-size: 9px;
     text-transform: uppercase;
+    text-align: center;
     color: #c1c1c1;
     background: linear-gradient(to left, #575757, #bebebe, #e4e4e4, #575757, #bebebe 80%, #e4e4e4);
     -webkit-background-clip: text;
@@ -36,8 +37,12 @@
         }
     }
 
-    &--no-icon::before {
-        display: none;
+    &--no-icon {
+        padding-left: 20px;
+
+        &::before {
+            display: none;
+        }
     }
 
     &:hover {

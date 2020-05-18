@@ -1,7 +1,7 @@
 .product-modal {
     width: 1170px;
     //width: 1310px;
-    padding: 25px 44px 44px;
+    padding-top: 25px;
     background-color: #fff;
 }
 
@@ -10,5 +10,11 @@
         top: 0;
         right: 0;
         color: #000;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .product-modal {
+        padding-top: 44px;
     }
 }

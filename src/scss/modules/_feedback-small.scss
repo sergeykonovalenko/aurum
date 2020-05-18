@@ -10,39 +10,10 @@
     margin-bottom: 4px;
     font-size: 11px;
     color: #afafae;
-
-    .main-header__wr--sticky & {
-        display: none;
-    }
 }
 
 .feedback-small__phone {
-    position: relative;
     margin-bottom: -10px;
-    padding-left: 20px;
-    font-size: 15px;
-    color: #f8efe4;
-
-    .main-header__wr--sticky & {
-        margin-bottom: 0;
-    }
-
-    &::before {
-        content: "";
-        position: absolute;
-        top: 5px;
-        left: 0;
-        width: 13px;
-        height: 13px;
-        background: url("img/bg/phone-alt--solid.svg");
-    }
-
-    &:hover {
-
-        &::before {
-            animation: shake-custom .6s;
-        }
-    }
 }
 
 .feedback-small__button {
@@ -64,10 +35,6 @@
 
     &--no-border {
         background-image: none;
-    }
-
-    .main-header__wr--sticky & {
-        display: none;
     }
 
     &:hover span::after {

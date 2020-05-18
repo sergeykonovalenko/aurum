@@ -1,5 +1,5 @@
 .review-big-slider {
-    @include slider-fix(100%);
+    @include slider-fix(259px);
 }
 
 .review-big-slider__item {
@@ -54,5 +54,29 @@
 
     &:focus {
         outline: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .review-big-slider__item {
+        padding: 0 10px;
+    }
+
+    .review-big-slider__img-link {
+        padding-bottom: 120.816%;
+    }
+
+    .review-big-slider__arrow {
+        top: 50%;
+        bottom: auto;
+        transform: translate(0, -50%);
+
+        &--prev {
+            left: 10px;
+        }
+
+        &--next {
+            right: 10px;
+        }
     }
 }

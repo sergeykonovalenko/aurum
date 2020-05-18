@@ -10,21 +10,24 @@
     cursor: pointer;
 
     &:hover {
-        z-index: 3;
 
-        .callouts__txt {
-            color: $color-main;
-        }
+        @media screen and (min-width: 769px) {
+            z-index: 3;
 
-        .callouts__pointer::after {
-            transform: translate(0, -50%) scale(1.7);
-            transform-origin: center;
-        }
+            .callouts__txt {
+                color: $color-main;
+            }
 
-        .callouts__img-box {
-            opacity: 1;
-            visibility: visible;
-            transition: opacity .3s ease-in;
+            .callouts__pointer::after {
+                transform: translate(0, -50%) scale(1.7);
+                transform-origin: center;
+            }
+
+            .callouts__img-box {
+                opacity: 1;
+                visibility: visible;
+                transition: opacity .3s ease-in;
+            }
         }
     }
 
@@ -2059,6 +2062,74 @@
         &--half-bombardment--9 {
             bottom: -91px;
             left: -338px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .description-clothes__box {
+        width: 100%;
+    }
+
+    .description-clothes__img {
+        margin-bottom: 30px;
+    }
+
+    .callouts__item {
+        position: relative;
+        top: auto;
+        right: auto;
+        bottom: auto;
+        left: auto;
+        margin-bottom: 5px;
+        padding: 15px 15px 15px 47px;
+        background-color: #0e0f0f;
+        background-image: linear-gradient(to left, #040201 0%, #0e0d0c 70%, #181717 100%);
+        border-radius: 2px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            width: 17px;
+            height: 17px;
+            background: url("img/bg/zoom-in.svg") no-repeat center center;
+            background-size: contain;
+            transform: translate(0, -50%);
+        }
+
+        &--open {
+            
+            &::before {
+                background-image: url("img/bg/zoom-in--color-main.svg");
+            }
+        }
+    }
+
+    .callouts__txt {
+        width: 100%;
+        padding: 0;
+    }
+
+    .callouts__pointer {
+        display: none;
+    }
+
+    .callouts__img-box {
+        top: auto;
+        right: auto;
+        bottom: 100%;
+        left: 50%;
+        transform: translate(-50%, 0);
+
+        .callouts__item--open & {
+            opacity: 1;
+            visibility: visible;
         }
     }
 }

@@ -25,3 +25,13 @@
     max-width: 100%;
     margin: 0 auto 120px;
 }
+
+@media screen and (max-width: 576px) {
+    .main-footer {
+
+        &--home {
+            margin-top: -90px;
+            padding-top: 300px;
+        }
+    }
+}

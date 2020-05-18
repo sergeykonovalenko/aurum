@@ -88,3 +88,18 @@
     object-position: center center;
     transition: transform .3s ease-out;
 }
+
+@media screen and (max-width: 576px) {
+    .certificates__list {
+        display: block;
+    }
+
+    .certificates__item {
+        width: 100%;
+        margin-right: 0;
+
+        &:nth-child(n + 2) {
+            margin-top: 15px;
+        }
+    }
+}

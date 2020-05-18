@@ -36,3 +36,27 @@
 .review__txt {
     color: #6c6b6a;
 }
+
+@media screen and (max-width: 768px) {
+    .review__wr {
+        flex-direction: column;
+    }
+
+    .review__right {
+        order: 1;
+        max-height: none;
+        margin-bottom: 30px;
+    }
+
+    .review__left {
+        order: 2;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .review__big-slider {
+        margin-right: -10px;
+        margin-bottom: 0;
+        margin-left: -10px;
+    }
+}
