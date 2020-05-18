@@ -34,9 +34,17 @@
     <header class="main-header" id="js-main-header">
         <div class="main-header__wr">
             <div class="container">
-                <a class="main-header__logo">
+                <a class="main-header__hamburger" title="Главное меню">
+                    <b></b>
+                    <b></b>
+                    <b></b>
+                </a>
+                <a class="main-header__logo scrollto" href="#js-main-header">
                     <img src="img/base/logo.svg" width="66" height="72" alt="AURUM">
                 </a>
+                <a class="main-header__btn-download-description download-description download-description--no-icon scrollto" href="#js-get-description">
+                    Скачайте повний опис
+                </a><!-- / .download-description -->
                 <nav class="main-header__nav main-nav">
                     <ul class="main-nav__list">
                         <li><a class="scrollto" href="#js-advantages">Чому AURUM</a></li>
@@ -82,22 +90,24 @@
                     <use xlink:href="#icon-close-light"></use>
                 </svg>
             </button>
-            <a class="mobile-menu__logo">
-                <img src="img/base/logo.svg" width="43" height="47" alt="AURUM">
-            </a>
-            <div class="mobile-menu__feedback feedback-small">
-                <p class="feedback-small__schedule">Години роботи: 9:00 до 17:00</p>
-                <a class="feedback-small__phone" href="tel:380500754824">+38 (050) 075-48-24</a>
-                <a class="feedback-small__button feedback-small__button--no-border" href="#"><span>Передзвоніть мені</span></a>
-            </div><!-- / .feedback-small -->
-            <ul class="mobile-menu__list">
-                <li><a class="scrollto" href="#js-advantages">Чому AURUM</a></li>
-                <li><a class="scrollto" href="#js-dealers-map">Де купити</a></li>
-                <li><a class="scrollto" href="#js-description-clothes">Характеристики</a></li>
-                <li><a class="scrollto" href="#js-model-line">Модельний ряд</a></li>
-                <li><a class="scrollto" href="#js-contacts">Інформаційній центр</a></li>
-                <li><a class="scrollto" href="#js-news">Новини</a></li>
-            </ul>
+            <div class="mobile-menu__wr js-custom-scroller-light-y">
+                <a class="mobile-menu__logo scrollto" href="#js-main-header">
+                    <img src="img/base/logo.svg" width="43" height="47" alt="AURUM">
+                </a>
+                <div class="mobile-menu__feedback feedback-small">
+                    <p class="feedback-small__schedule">Години роботи: 9:00 до 17:00</p>
+                    <a class="feedback-small__phone" href="tel:380500754824">+38 (050) 075-48-24</a>
+                    <a class="feedback-small__button feedback-small__button--no-border" href="#"><span>Передзвоніть мені</span></a>
+                </div><!-- / .feedback-small -->
+                <ul class="mobile-menu__list">
+                    <li><a class="scrollto" href="#js-advantages">Чому AURUM</a></li>
+                    <li><a class="scrollto" href="#js-dealers-map">Де купити</a></li>
+                    <li><a class="scrollto" href="#js-description-clothes">Характеристики</a></li>
+                    <li><a class="scrollto" href="#js-model-line">Модельний ряд</a></li>
+                    <li><a class="scrollto" href="#js-contacts">Інформаційній центр</a></li>
+                    <li><a class="scrollto" href="#js-news">Новини</a></li>
+                </ul>
+            </div>
         </div><!-- / .mobile-menu -->
     </header><!-- / .main-header -->
 
@@ -105,7 +115,9 @@
         <div class="main__offer-bg-wr">
             <section class="main-offer">
                 <div class="container">
-                    <a class="main-offer__btn-download-full-description scrollto" href="#js-get-description">Скачайте повний опис</a>
+                    <a class="main-offer__btn-download-description download-description scrollto" href="#js-get-description">
+                        Скачайте повний опис
+                    </a><!-- / .download-description -->
                     <div class="main-offer__txt content">
                         <h1><strong>AURUM</strong> - комфорт та надійність <strong><br>за доступною ціною!</strong></h1>
                         <p>Найстильніший робочий костюм в Україні!</p>

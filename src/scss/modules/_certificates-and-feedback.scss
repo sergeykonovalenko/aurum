@@ -20,7 +20,7 @@
     &::after {
         content: "";
         position: absolute;
-        right: -12px;
+        left: calc(50% + 285px);
         bottom: 13px;
         z-index: 1;
         width: 329px;

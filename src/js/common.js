@@ -78,7 +78,16 @@ $(document).ready(function () {
         });
     }
 
-    // reviews slider
+    // Show/hide mobile menu
+    $('.main-header__hamburger').on('click', function () {
+        $('html').toggleClass('show-mobile-menu');
+    });
+
+    $('.mobile-menu__close, .mobile-menu__list a, .mobile-menu__logo').on('click', function () {
+        $('html').removeClass('show-mobile-menu');
+    });
+
+    // Reviews slider
     let $reviewsSlider = $('.reviews-slider'),
         reviewsSlider = $reviewsSlider[0];
 

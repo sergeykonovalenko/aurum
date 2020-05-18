@@ -21,52 +21,9 @@
     background-image: url("img/bg/offer.webp");
 }
 
-.main-offer__btn-download-full-description {
-    display: inline-block;
-    vertical-align: middle;
-    position: relative;
+.main-offer__btn-download-description {
     margin-left: 58%;
     margin-bottom: 95px;
-    padding: 8px 20px 8px 30px;
-    font-weight: 700;
-    font-size: 9px;
-    text-transform: uppercase;
-    color: #c1c1c1;
-    background: linear-gradient(to left, #575757, #bebebe, #e4e4e4, #575757, #bebebe 80%, #e4e4e4);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    border-width: 2px;
-    border-style: solid;
-    border-image-source: linear-gradient(to left, #575757, #bebebe, #e4e4e4, #575757, #bebebe 80%, #e4e4e4);
-    border-image-slice: 1;
-
-    &::before {
-        content: "";
-        position: absolute;
-        left: -18px;
-        bottom: -18px;
-        width: 50px;
-        height: 40px;
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: contain;
-
-        .no-js &,
-        .no-webp & {
-            background-image: url("img/bg/book.png");
-        }
-
-        .webp & {
-            background-image: url("img/bg/book.webp");
-        }
-    }
-
-    &:hover {
-        background: linear-gradient(to right, #575757, #bebebe, #e4e4e4, #575757, #bebebe 80%, #e4e4e4);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        border-image-source: linear-gradient(to right, #575757, #bebebe, #e4e4e4, #575757, #bebebe 80%, #e4e4e4);
-    }
 }
 
 .main-offer__txt {
@@ -106,5 +63,20 @@
 
     &:last-child {
         z-index: 1;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .main-offer {
+        min-height: 745px;
+        padding-top: calc(93px + 50px);
+    }
+
+    .main-offer .main-offer__btn-download-description {
+        display: none;
+    }
+
+    .main-offer__txt {
+        width: 750px;
     }
 }

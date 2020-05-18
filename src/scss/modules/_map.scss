@@ -9,3 +9,13 @@
     width: calc(50vw - (var(--scrollbar-width) / 2) + 25px);
     height: 655px;
 }
+
+@media screen and (max-width: 1200px) {
+    .map {
+        left: 560px;
+    }
+
+    .map__box {
+        width: calc(100vw - var(--scrollbar-width) - 575px); // 560px + 15px = 575px
+    }
+}

@@ -1,0 +1,49 @@
+.download-description {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    padding: 8px 20px 8px 30px;
+    font-weight: 700;
+    font-size: 9px;
+    text-transform: uppercase;
+    color: #c1c1c1;
+    background: linear-gradient(to left, #575757, #bebebe, #e4e4e4, #575757, #bebebe 80%, #e4e4e4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-width: 2px;
+    border-style: solid;
+    border-image-source: linear-gradient(to left, #575757, #bebebe, #e4e4e4, #575757, #bebebe 80%, #e4e4e4);
+    border-image-slice: 1;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: -18px;
+        bottom: -18px;
+        width: 50px;
+        height: 40px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+
+        .no-js &,
+        .no-webp & {
+            background-image: url("img/bg/book.png");
+        }
+
+        .webp & {
+            background-image: url("img/bg/book.webp");
+        }
+    }
+
+    &--no-icon::before {
+        display: none;
+    }
+
+    &:hover {
+        background: linear-gradient(to right, #575757, #bebebe, #e4e4e4, #575757, #bebebe 80%, #e4e4e4);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        border-image-source: linear-gradient(to right, #575757, #bebebe, #e4e4e4, #575757, #bebebe 80%, #e4e4e4);
+    }
+}
