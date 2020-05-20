@@ -125,7 +125,7 @@ $(document).ready(function () {
                     </button>`,
     });
 
-    $('.review-big-slider').on('mousedown', function(){
+    $('.review-big-slider').on('mousedown touchstart', function(){
         reviewsSlider.slick.setOption({
             swipe: false,
         });
@@ -147,7 +147,7 @@ $(document).ready(function () {
                     </button>`,
         nextArrow: `<button class="review-big-slider__arrow review-big-slider__arrow--next" type="button">
                         <span class="visually-hidden">Вперед</span>
-                            <svg width="13" height="15" viewBox="0 0 447.99 490.652" fill="#c3c3c3" xmlns="http://www.w3.org/2000/svg"><path d="M422.236 245.335L195.121 472.449a10.665 10.665 0 0 0 15.083 15.083L444.87 252.865a10.674 10.674 0 0 0 0-15.083L210.203 3.115A10.716 10.716 0 0 0 202.651 0a10.562 10.562 0 0 0-7.531 3.136 10.674 10.674 0 0 0 0 15.083z"/><path d="M230.236 245.335L3.121 472.449a10.665 10.665 0 0 0 15.083 15.083L252.87 252.865a10.674 10.674 0 0 0 0-15.083L18.203 3.115A10.716 10.716 0 0 0 10.651 0 10.562 10.562 0 0 0 3.12 3.136a10.674 10.674 0 0 0 0 15.083z"/></svg>
+                        <svg width="13" height="15" viewBox="0 0 447.99 490.652" fill="#c3c3c3" xmlns="http://www.w3.org/2000/svg"><path d="M422.236 245.335L195.121 472.449a10.665 10.665 0 0 0 15.083 15.083L444.87 252.865a10.674 10.674 0 0 0 0-15.083L210.203 3.115A10.716 10.716 0 0 0 202.651 0a10.562 10.562 0 0 0-7.531 3.136 10.674 10.674 0 0 0 0 15.083z"/><path d="M230.236 245.335L3.121 472.449a10.665 10.665 0 0 0 15.083 15.083L252.87 252.865a10.674 10.674 0 0 0 0-15.083L18.203 3.115A10.716 10.716 0 0 0 10.651 0 10.562 10.562 0 0 0 3.12 3.136a10.674 10.674 0 0 0 0 15.083z"/></svg>
                     </button>`,
         responsive: [
             {
@@ -171,7 +171,7 @@ $(document).ready(function () {
         })
     });
 
-    $('.review-small-slider__wr').on('mousedown', function(){
+    $('.review-small-slider__wr').on('mousedown touchstart', function(){
         reviewsSlider.slick.setOption({
             swipe: false
         });
@@ -188,14 +188,6 @@ $(document).ready(function () {
         pauseOnHover: false,
         focusOnSelect: true,
         swipe: true,
-        // responsive: [
-        //     {
-        //         breakpoint: 993,
-        //         settings: {
-        //             slidesToShow: 3,
-        //         }
-        //     },
-        // ]
     }).on('afterChange', function(event, slick){
         reviewsSlider.slick.setOption({
             swipe: true
@@ -485,15 +477,4 @@ $(document).ready(function () {
         return $.browser.device = (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent.toLowerCase()));
     }
 
-    $.fancybox.open({
-        src: '#js-thanks-modal',
-        type : 'inline',
-        touch : false,
-        btnTpl: {
-            smallBtn: `
-                <button class="common-modal__close fancybox-button fancybox-close-small" type="button" data-fancybox-close title="Закрыть">
-                    <svg width="15" height="15" viewBox="0 0 320 320" fill="#000" xmlns="http://www.w3.org/2000/svg"><path d="M207.6 160L315.3 52.3c6.2-6.2 6.2-16.3 0-22.6l-25-25c-6.2-6.2-16.3-6.2-22.6 0L160 112.4 52.3 4.7c-6.2-6.2-16.3-6.2-22.6 0l-25 25c-6.2 6.2-6.2 16.3 0 22.6L112.4 160 4.7 267.7c-6.2 6.2-6.2 16.3 0 22.6l25 25c6.2 6.2 16.3 6.2 22.6 0L160 207.6l107.7 107.7c6.2 6.2 16.3 6.2 22.6 0l25-25c6.2-6.2 6.2-16.3 0-22.6L207.6 160z"/></svg>
-                </button>`
-        },
-    });
 }); // end ready

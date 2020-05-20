@@ -57,10 +57,11 @@
     bottom: -55px;
     left: 50%;
     z-index: 1;
-    display: none;
     list-style: none;
+    display: flex;
     margin: 0;
     padding: 0;
+    visibility: hidden;
     transform: translate(-50%, 0);
 }
 
@@ -115,7 +116,7 @@
     }
 
     .reviews-slider .slick-dots {
-        display: flex;
+        visibility: visible;
     }
 }
 
