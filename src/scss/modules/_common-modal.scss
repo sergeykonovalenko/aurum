@@ -35,6 +35,15 @@
     right: -57px;
 }
 
+@media screen and (max-width: 1200px) {
+    .fancybox-slide--html .common-modal__close,
+    .fancybox-slide--html .common-modal--has-border .common-modal__close  {
+        top: 0;
+        right: 0;
+        color: #000;
+    }
+}
+
 @media screen and (max-width: 576px) {
     .common-modal {
         padding-right: 15px;

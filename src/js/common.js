@@ -106,7 +106,8 @@ $(document).ready(function () {
         reviewsSlider = $reviewsSlider[0];
 
     $reviewsSlider.slick({
-        dots: false,
+        dots: true,
+        arrows: true,
         slidesToShow: 1,
         slidesToScroll: 1,
         pauseOnFocus: false,
@@ -122,14 +123,6 @@ $(document).ready(function () {
                         <span class="visually-hidden">Вперед</span>  
                         <svg width="34" height="23" viewBox="0 0 512 341.3" fill="#c3c3c3" xmlns="http://www.w3.org/2000/svg"><path d="M508.9 163.1l-160-160C344.7-1 338-1 333.8 3.1c-4.2 4.2-4.2 10.9 0 15.1L475.6 160H10.7C4.8 160 0 164.8 0 170.7s4.8 10.7 10.7 10.7h464.9L333.8 323.1c-4.2 4.2-4.2 10.9 0 15.1 2.1 2.1 4.8 3.1 7.5 3.1s5.5-1 7.5-3.1l160-160c4.2-4.2 4.2-10.9.1-15.1z"/></svg>
                     </button>`,
-        responsive: [
-            {
-                breakpoint: 769,
-                settings: {
-                    dots: true,
-                }
-            },
-        ]
     });
 
     $('.review-big-slider').on('mousedown', function(){
@@ -149,11 +142,11 @@ $(document).ready(function () {
         // focusOnSelect: true,
         swipe: true,
         prevArrow: `<button class="review-big-slider__arrow review-big-slider__arrow--prev" type="button">
-                        <span class="visually-hidden">Назад</span>  
+                        <span class="visually-hidden">Назад</span>
                         <svg width="13" height="15" viewBox="0 0 448 490.7" fill="#c3c3c3" xmlns="http://www.w3.org/2000/svg"><path d="M25.8 245.3L252.9 18.2c4.2-4.2 4.2-10.9 0-15.1s-10.9-4.2-15.1 0L3.1 237.8c-4.2 4.2-4.2 10.9 0 15.1l234.7 234.7c2.1 2.1 4.8 3.1 7.6 3.1s5.5-1 7.5-3.1c4.2-4.2 4.2-10.9 0-15.1L25.8 245.3z"/><path d="M217.8 245.3L444.9 18.2c4.2-4.2 4.2-10.9 0-15.1s-10.9-4.2-15.1 0L195.1 237.8c-4.2 4.2-4.2 10.9 0 15.1l234.7 234.7c2.1 2.1 4.8 3.1 7.6 3.1s5.5-1 7.5-3.1c4.2-4.2 4.2-10.9 0-15.1L217.8 245.3z"/></svg>
                     </button>`,
         nextArrow: `<button class="review-big-slider__arrow review-big-slider__arrow--next" type="button">
-                        <span class="visually-hidden">Вперед</span> 
+                        <span class="visually-hidden">Вперед</span>
                             <svg width="13" height="15" viewBox="0 0 447.99 490.652" fill="#c3c3c3" xmlns="http://www.w3.org/2000/svg"><path d="M422.236 245.335L195.121 472.449a10.665 10.665 0 0 0 15.083 15.083L444.87 252.865a10.674 10.674 0 0 0 0-15.083L210.203 3.115A10.716 10.716 0 0 0 202.651 0a10.562 10.562 0 0 0-7.531 3.136 10.674 10.674 0 0 0 0 15.083z"/><path d="M230.236 245.335L3.121 472.449a10.665 10.665 0 0 0 15.083 15.083L252.87 252.865a10.674 10.674 0 0 0 0-15.083L18.203 3.115A10.716 10.716 0 0 0 10.651 0 10.562 10.562 0 0 0 3.12 3.136a10.674 10.674 0 0 0 0 15.083z"/></svg>
                     </button>`,
         responsive: [
@@ -218,11 +211,11 @@ $(document).ready(function () {
         pauseOnHover: false,
         // focusOnSelect: true,
         prevArrow: `<button class="news-slider__arrow news-slider__arrow--prev" type="button">
-                        <span class="visually-hidden">Назад</span> 
+                        <span class="visually-hidden">Назад</span>
                         <svg width="34" height="23" viewBox="0 0 512 341.333" fill="#c3c3c3" xmlns="http://www.w3.org/2000/svg"><path d="M3.124 178.208l160 160a10.666 10.666 0 1 0 15.084-15.083L36.416 181.335h464.917a10.667 10.667 0 1 0 0-21.335H36.416L178.208 18.208a10.665 10.665 0 1 0-15.083-15.083l-160 160a10.663 10.663 0 0 0 0 15.083z"/></svg>
                     </button>`,
         nextArrow: `<button class="news-slider__arrow news-slider__arrow--next" type="button">
-                        <span class="visually-hidden">Вперед</span>  
+                        <span class="visually-hidden">Вперед</span>
                         <svg width="34" height="23" viewBox="0 0 512 341.3" fill="#c3c3c3" xmlns="http://www.w3.org/2000/svg"><path d="M508.9 163.1l-160-160C344.7-1 338-1 333.8 3.1c-4.2 4.2-4.2 10.9 0 15.1L475.6 160H10.7C4.8 160 0 164.8 0 170.7s4.8 10.7 10.7 10.7h464.9L333.8 323.1c-4.2 4.2-4.2 10.9 0 15.1 2.1 2.1 4.8 3.1 7.5 3.1s5.5-1 7.5-3.1l160-160c4.2-4.2 4.2-10.9.1-15.1z"/></svg>
                     </button>`,
         responsive: [
@@ -265,11 +258,11 @@ $(document).ready(function () {
         pauseOnHover: false,
         focusOnSelect: true,
         prevArrow: `<button class="product-gallery-side__arrow product-gallery-side__arrow--prev" type="button">
-                        <span class="visually-hidden">Назад</span> 
+                        <span class="visually-hidden">Назад</span>
                         <svg width="14" viewBox="0 0 149 256.1" fill="#999999" xmlns="http://www.w3.org/2000/svg"><path d="M3.5 119.5l117.8-116c4.7-4.7 12.3-4.7 17 0l7.1 7.1c4.7 4.7 4.7 12.3 0 17L43.1 128l102.2 100.4c4.7 4.7 4.7 12.3 0 17l-7.1 7.1c-4.7 4.7-12.3 4.7-17 0L3.4 136.5c-4.6-4.7-4.6-12.3.1-17z"/></svg>
                     </button>`,
         nextArrow: `<button class="product-gallery-side__arrow product-gallery-side__arrow--next" type="button">
-                        <span class="visually-hidden">Вперед</span> 
+                        <span class="visually-hidden">Вперед</span>
                         <svg width="14" viewBox="0 0 149 256.1" fill="#999999" xmlns="http://www.w3.org/2000/svg"><path d="M145.4 136.5l-117.8 116c-4.7 4.7-12.3 4.7-17 0l-7.1-7.1c-4.7-4.7-4.7-12.3 0-17L105.8 128 3.6 27.6c-4.7-4.7-4.7-12.3 0-17l7.1-7.1c4.7-4.7 12.3-4.7 17 0l117.8 116c4.6 4.7 4.6 12.3-.1 17z"/></svg>
                     </button>`,
     });
@@ -439,15 +432,18 @@ $(document).ready(function () {
     // custom scroller
     $('.js-custom-scroller-dark-y').mCustomScrollbar({
         theme: 'dark',
+        scrollButtons: { enable: true }
     });
 
     $('.js-custom-scroller-dark-x').mCustomScrollbar({
         theme: 'dark',
         axis: 'x',
+        scrollButtons: { enable: true }
     });
 
     $('.js-custom-scroller-light-y').mCustomScrollbar({
         theme: 'light',
+        scrollButtons: { enable: true }
     });
 
     // init tabs
@@ -489,15 +485,15 @@ $(document).ready(function () {
         return $.browser.device = (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent.toLowerCase()));
     }
 
-    // $.fancybox.open({
-    //     src: '#js-back-call-modal',
-    //     type : 'inline',
-    //     touch : false,
-    //     btnTpl: {
-    //         smallBtn: `
-    //             <button class="common-modal__close fancybox-button fancybox-close-small" type="button" data-fancybox-close title="Закрыть">
-    //                 <svg width="15" height="15" viewBox="0 0 320 320" fill="#000" xmlns="http://www.w3.org/2000/svg"><path d="M207.6 160L315.3 52.3c6.2-6.2 6.2-16.3 0-22.6l-25-25c-6.2-6.2-16.3-6.2-22.6 0L160 112.4 52.3 4.7c-6.2-6.2-16.3-6.2-22.6 0l-25 25c-6.2 6.2-6.2 16.3 0 22.6L112.4 160 4.7 267.7c-6.2 6.2-6.2 16.3 0 22.6l25 25c6.2 6.2 16.3 6.2 22.6 0L160 207.6l107.7 107.7c6.2 6.2 16.3 6.2 22.6 0l25-25c6.2-6.2 6.2-16.3 0-22.6L207.6 160z"/></svg>
-    //             </button>`
-    //     },
-    // });
+    $.fancybox.open({
+        src: '#js-thanks-modal',
+        type : 'inline',
+        touch : false,
+        btnTpl: {
+            smallBtn: `
+                <button class="common-modal__close fancybox-button fancybox-close-small" type="button" data-fancybox-close title="Закрыть">
+                    <svg width="15" height="15" viewBox="0 0 320 320" fill="#000" xmlns="http://www.w3.org/2000/svg"><path d="M207.6 160L315.3 52.3c6.2-6.2 6.2-16.3 0-22.6l-25-25c-6.2-6.2-16.3-6.2-22.6 0L160 112.4 52.3 4.7c-6.2-6.2-16.3-6.2-22.6 0l-25 25c-6.2 6.2-6.2 16.3 0 22.6L112.4 160 4.7 267.7c-6.2 6.2-6.2 16.3 0 22.6l25 25c6.2 6.2 16.3 6.2 22.6 0L160 207.6l107.7 107.7c6.2 6.2 16.3 6.2 22.6 0l25-25c6.2-6.2 6.2-16.3 0-22.6L207.6 160z"/></svg>
+                </button>`
+        },
+    });
 }); // end ready

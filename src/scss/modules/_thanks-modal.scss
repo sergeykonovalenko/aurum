@@ -36,3 +36,12 @@
         margin: .7em 0;
     }
 }
+
+@media screen and (max-width: 576px) {
+    .thanks-modal__head {
+
+        br {
+            display: none;
+        }
+    }
+}

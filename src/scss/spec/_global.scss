@@ -188,3 +188,10 @@ h6,
     margin: 0 auto;
     padding: 0 15px;
 }
+
+@media screen and (max-width: 768px) {
+    h2,
+    .heading-2 {
+        font-size: 33px;
+    }
+}

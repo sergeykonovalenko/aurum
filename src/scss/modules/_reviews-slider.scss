@@ -57,7 +57,7 @@
     bottom: -55px;
     left: 50%;
     z-index: 1;
-    display: flex;
+    display: none;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -112,6 +112,10 @@
         width: 40px;
         height: 40px;
         padding: 10px;
+    }
+
+    .reviews-slider .slick-dots {
+        display: flex;
     }
 }
 

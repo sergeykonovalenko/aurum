@@ -37,3 +37,22 @@
     min-width: 295px;
     margin-left: auto;
 }
+
+@media screen and (max-width: 768px) {
+    .feedback-form__row {
+        display: block;
+    }
+
+    .feedback-form__col {
+        margin-bottom: 10px;
+
+        &:first-child {
+            width: auto;
+            margin-right: 0;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
