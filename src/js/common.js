@@ -2,7 +2,7 @@ import 'jquery-ui/ui/widgets/tabs';
 import 'rater-jquery';
 import '@fancyapps/fancybox/dist/jquery.fancybox.min';
 import 'waypoints/lib/noframework.waypoints.min';
-import 'slick-carousel/slick/slick.min';
+import 'slick-carousel';
 import Parallax from 'parallax-js';
 import './vendor/jquery.mb.browser';
 import 'malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min';

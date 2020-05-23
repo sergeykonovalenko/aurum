@@ -18,12 +18,16 @@
     height: inherit !important;
 }
 
-.slick-initialized .my-slider__item {
-    display: flex !important;
+.news-slider__wr.slick-initialized .slick-slide > div {
+    display: flex;
 }
 
 .news-slider__item {
     padding: 30px 10px;
+
+    .slick-initialized & {
+        display: flex !important;
+    }
 
     &:focus {
         outline: none;

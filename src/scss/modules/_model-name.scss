@@ -21,7 +21,7 @@
         font-weight: 500;
     }
 
-    &--antistat {
+    &--aurum-antistat {
 
         &::before {
             background-image: linear-gradient(to bottom, #95b4db 0%, #5688b6 70%, #175b90 100%);
@@ -33,7 +33,7 @@
         }
     }
 
-    &--grey {
+    &--aurum-grey {
 
         &::before {
             background-image: linear-gradient(to bottom, #bebebf 0%, #969697 70%, #6e6e6e 100%);

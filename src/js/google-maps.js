@@ -1,3 +1,5 @@
+'use strict';
+
 let myMap;
 let mapCenter = {lat: 49.038542, lng: 30.451260};
 let markers = [];
@@ -6,7 +8,9 @@ let markerCluster;
 
 import MarkerClusterer from "./vendor/markerclusterer";
 
-/******************* map initialization *******************/
+/**
+ * Map initialization
+ */
 function initMap() {
 
     let element = document.querySelector('.map__box');
@@ -392,37 +396,37 @@ function initMap() {
 
 window.initMap = initMap;
 
-/******************* add markers *******************/
+/**
+ * Add markers
+ */
 function addMarkers() {
-    let locations = storesData;
-    locations.forEach(function (location) {
+    let dealers = storesData;
+    dealers.forEach(function (dealer) {
         let marker = new google.maps.Marker({
             position: {
-                lat: +location.coords.lat,
-                lng: +location.coords.lng},
+                lat: +dealer.dealerLocation.lat,
+                lng: +dealer.dealerLocation.lng},
             map: myMap,
             animation: google.maps.Animation.DROP,
             icon: `${templateUrl}/img/map/marker.svg`,
-            // icon: '/wp-content/themes/steeluz/images/base/marker.png',
-            //visible: false,
-            // id: location.id,
-            loc: location.loc.name,
-            companyName: location.companyName,
-            address: location.adds,
-            phone: location.tel,
-            website: location.website,
+            // visible: false,
+            regionID: dealer.dealerRegion.term_id,
+            company: dealer.dealerCompany,
+            address: dealer.dealerAddress,
+            phones: dealer.dealerPhones,
+            site: dealer.dealerSite,
         });
 
         markers.push(marker);
 
-        // add info window
+        // Add info window
         infoWindow = new google.maps.InfoWindow();
         google.maps.event.addListener(marker, 'click', function() {
             infoWindow.setContent(`<div class="info-window">
-                                       <p class="info-window__title">${marker.companyName}</p>
+                                       <p class="info-window__title">${marker.company}</p>
                                        <p class="info-window__address">${marker.address}</p>
-                                       <a class="info-window__phone" href="tel:${marker.phone}">${marker.phone}</a><br>
-                                       <a class="info-window__site" href="${marker.website}" target="_blank">${marker.website}</a>
+                                       <a class="info-window__phone" href="tel:${marker.phones}">${marker.phones}</a><br>
+                                       <a class="info-window__site" href="${marker.site}" target="_blank">${marker.site}</a>
                                    </div>`);
             infoWindow.open(myMap, marker);
         });
@@ -453,48 +457,43 @@ function addMarkers() {
 
 }
 
-/******************* add controls *******************/
+/**
+ * Add Controls
+ */
 function addControls() {
-    $('#location-select').change(function() {
-        let selectedRegion = this.options[this.selectedIndex];
-        // let regionCenterLat = +selectedRegion.getAttribute("data-lat");
-        // let regionCenterLng = +selectedRegion.getAttribute("data-lng");
-        // let regionCurrentIndex = this.selectedIndex;
-        let regionName = $(this).val();
-        // let regionName = selectedRegion.text;
-        let allDealers = document.querySelectorAll('.js-dealer');
+    let mapFilterSelect = document.getElementById('map-filter-select');
+    let dealersList = document.querySelectorAll('.dealer-table tr');
 
-        allDealers.forEach(function (cell) {
-            let cellLocation = cell.getAttribute('data-loc');
+    mapFilterSelect.addEventListener('change', function () {
+        let currentRegionID = this.value;
 
-            cell.style.display = 'flex';
-            if (regionName === optionAllRegions) {
-                cell.style.display = 'flex';
-            } else if (cellLocation != regionName) {
-                cell.style.display = 'none';
-            }
+        dealersList.forEach(function (dealer) {
+            let dealerRegionID = dealer.getAttribute('data-region-id');
 
-            // if (cellLocation != regionName) {
-            //     cell.style.display = 'none';
-            // }
+           if ( dealerRegionID === currentRegionID || currentRegionID === 'all-regions' ) {
+               dealer.style.display = 'table-row';
+           } else {
+               dealer.style.display = 'none';
+           }
         });
 
-        /*markers.forEach(function (marker) {
-            if (regionCurrentIndex == 1) {
-                marker.setVisible(true);
-            } else if (marker.loc === regionName) {
+        markers.forEach(function (marker) {
+            let markerRegionID = marker.regionID;
+
+            if ( markerRegionID === +currentRegionID || currentRegionID === 'all-regions' ) {
                 marker.setVisible(true);
             } else {
                 marker.setVisible(false);
             }
-        });*/
+        });
 
-        /*myMap.panTo({lat: regionCenterLat, lng: regionCenterLng});
+        // myMap.panTo({lat: regionCenterLat, lng: regionCenterLng});
         markerCluster.repaint();
-        if (regionCurrentIndex == 1) {
-            myMap.setZoom(6);
-        } else {
-            myMap.setZoom(12);
-        }*/
+        myMap.setZoom(6);
+        // if (regionCurrentIndex == 1) {
+        //     myMap.setZoom(6);
+        // } else {
+        //     myMap.setZoom(12);
+        // }
     });
 }
