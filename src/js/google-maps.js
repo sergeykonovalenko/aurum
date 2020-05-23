@@ -402,7 +402,7 @@ function addMarkers() {
                 lng: +location.coords.lng},
             map: myMap,
             animation: google.maps.Animation.DROP,
-            icon: 'img/map/marker.svg',
+            icon: `${templateUrl}/img/map/marker.svg`,
             // icon: '/wp-content/themes/steeluz/images/base/marker.png',
             //visible: false,
             // id: location.id,
@@ -433,7 +433,7 @@ function addMarkers() {
                 // averageCenter: true,
                 ignoreHiddenMarkers: true,
                 styles: [{
-                    url: "img/map/cluster.svg",
+                    url: `${templateUrl}/img/map/cluster.svg`,
                     width: 44,
                     height: 57,
                     anchor: [-14, 0],
