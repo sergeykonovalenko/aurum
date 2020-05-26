@@ -70,6 +70,14 @@
 
         &:first-child td {
 
+            &:nth-child(2),
+            &:nth-child(3) {
+                width: 100%;
+            }
+        }
+
+        td {
+
             &:nth-child(1),
             &:nth-child(2),
             &:nth-child(3),

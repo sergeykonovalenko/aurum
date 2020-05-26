@@ -5,6 +5,10 @@
     left: 0;
     width: 100%;
     font-family: "Noto Sans", Tahoma, sans-serif;
+
+    &--static {
+        position: static;
+    }
 }
 
 .main-header__wr {

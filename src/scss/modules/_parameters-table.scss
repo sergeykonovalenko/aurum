@@ -15,7 +15,7 @@
 
 .parameters-table th,
 .parameters-table td {
-    padding: 2px 5px;
+    padding: 5px;
 }
 
 .parameters-table td {
@@ -29,17 +29,14 @@
     padding: 2px 5px;
     background-color: #fff;
     text-align: center;
-    //-moz-appearance: textfield;
-    //
-    //&::-webkit-inner-spin-button,
-    //&::-webkit-outer-spin-button {
-    //    -webkit-appearance: none;
-    //    margin: 0;
-    //}
-    //
+
     &:focus {
         box-shadow: 0 0 5px -1px rgba(0, 0, 0, .3);
     }
+}
+
+.parameters-table br {
+    display: none;
 }
 
 .parameters__button-box {

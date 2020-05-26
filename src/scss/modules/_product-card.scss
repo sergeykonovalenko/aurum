@@ -39,7 +39,10 @@
     margin-bottom: 3px;
     font-size: 18px;
     line-height: 1.25;
-    color: #b88a25;
+
+    &--in-stock {
+        color: #b88a25;
+    }
 }
 
 .product-card__price {

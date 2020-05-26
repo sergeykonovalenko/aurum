@@ -8,8 +8,12 @@
     //-webkit-mask-image: -webkit-radial-gradient(white, black);
 }
 
-.product-gallery__item {
+.product-gallery .slick-slide > div {
+    display: block !important;
+}
 
+.product-gallery__item {
+    display: block !important;
 }
 
 .product-gallery__link {

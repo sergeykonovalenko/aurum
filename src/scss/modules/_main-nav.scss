@@ -22,6 +22,14 @@
     color: #fff;
     transition: all .15s ease-out;
 
+    .main-header--light-bg & {
+        color: $color-secondary;
+    }
+
+    .main-header__wr--sticky & {
+        color: #fff;
+    }
+    
     &:hover {
         color: $color-main;
     }

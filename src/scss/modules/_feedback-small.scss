@@ -10,6 +10,10 @@
     margin-bottom: 4px;
     font-size: 11px;
     color: #afafae;
+
+    .main-header--light-bg & {
+        color: $color-secondary;
+    }
 }
 
 .feedback-small__phone {

@@ -4,6 +4,14 @@
     font-size: 15px;
     color: #f8efe4;
 
+    .main-header--light-bg & {
+        color: $color-secondary;
+    }
+    
+    .main-header__wr--sticky & {
+        color: #fff;
+    }
+
     &::before {
         content: "";
         position: absolute;
