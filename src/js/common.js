@@ -60,7 +60,7 @@ $(document).ready(function () {
     });
 
     // smooth page scrolling
-    $('.scrollto').click(function () {
+    $('.scrollto:not([href="#pll_switcher"])').on('click', function () {
         let elementClick = '#' + $(this).attr('href').split('#')[1];
         let destination = $(elementClick).offset().top;
         jQuery('html:not(:animated),body:not(:animated)').animate({scrollTop: destination - 50}, 800);
@@ -259,6 +259,47 @@ $(document).ready(function () {
                     </button>`,
     });
 
+    // activation of the requested product tab
+    let productItemLinks = document.querySelectorAll('.product-item__thumb-link');
+    productItemLinks.forEach(productItemLink => {
+        productItemLink.addEventListener('click', function () {
+            // let productTabs = this.querySelector('.product-modal__tabs');
+            // let productTabs = document.querySelector('.product-modal__tabs');
+            // $(productTabs).tabs({
+            //     active: 1
+            // });
+        });
+    });
+
+    // transfer of order parameters to the form
+    let productCardButtons = document.querySelectorAll('.product-card__button');
+    let orderModal = document.querySelector('.order-modal');
+
+    productCardButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            let productCard = this.closest('.product-card');
+            let target = this.getAttribute('data-extra-txt');
+            let parameters = productCard.querySelectorAll('.parameters-table__field');
+            let selectedDealer = productCard.querySelector('.list-box__item.focused');
+            let dealerName = selectedDealer ? selectedDealer.textContent : '';
+            let dealerNameField = orderModal.querySelector('[name="dealer-name"]');
+            let dealerEmail = selectedDealer ? selectedDealer.getAttribute('data-email') : '';
+            let dealerEmailField = orderModal.querySelector('[name="dealer-email"]');
+
+            orderModal.querySelector('[name="target"]').value = target;
+            dealerNameField.value = dealerName ? String(dealerName).trim() : 'без дилера';
+            dealerEmailField.value = dealerEmail ? String(dealerEmail).trim() : 'no-dealer';
+
+            parameters.forEach(function (parameter) {
+                let parameterName = parameter.getAttribute('name');
+                let parameterValue = parameter.value;
+                let parameterField = orderModal.querySelector(`[name="${parameterName}"]`);
+
+                parameterField.value = parameterValue;
+            });
+        });
+    });
+
     ////////////////////////////////////////////////////////////////////////////
     // Send callback / Send request / Buy product
     $('[data-submit]').on('click', function(e) {
@@ -295,6 +336,8 @@ $(document).ready(function () {
                 },
             },
             submitHandler: function (form) {
+                $.fancybox.close(true);
+                $('.loader').fadeIn();
 
                 // get url for redirection
                 // let redirect_url = $(form).find('#redirect_url').val();
@@ -306,32 +349,36 @@ $(document).ready(function () {
                     processData: false,
                     contentType: false,
                     beforeSend: function() {
-                        // submitBtn.prop('disabled', true).html('Отправка...');
+
                     },
                     success: function (data) {
-
-                        // enable button
-                        // submitBtn.prop('disabled', false).html(submitBtnText);
-
                         // if ( redirect_url ) { // if need redirect
                         //     window.location.replace( redirect_url );
                         // }
 
-                        $.fancybox.open({
-                            src: '#js-thanks-modal',
-                            type : 'inline',
-                            touch : false,
-                            btnTpl: {
-                                smallBtn: `
+                        setTimeout(function () {
+                            $('.loader').fadeOut();
+                        },800);
+
+                        setTimeout(function () {
+                            $.fancybox.open({
+                                src: '#js-thanks-modal',
+                                type : 'inline',
+                                touch : false,
+                                backFocus: false,
+                                btnTpl: {
+                                    smallBtn: `
                                         <button class="common-modal__close fancybox-button fancybox-close-small" type="button" data-fancybox-close title="Закрыть">
                                             <svg width="15" height="15" viewBox="0 0 320 320" fill="#000" xmlns="http://www.w3.org/2000/svg"><path d="M207.6 160L315.3 52.3c6.2-6.2 6.2-16.3 0-22.6l-25-25c-6.2-6.2-16.3-6.2-22.6 0L160 112.4 52.3 4.7c-6.2-6.2-16.3-6.2-22.6 0l-25 25c-6.2 6.2-6.2 16.3 0 22.6L112.4 160 4.7 267.7c-6.2 6.2-6.2 16.3 0 22.6l25 25c6.2 6.2 16.3 6.2 22.6 0L160 207.6l107.7 107.7c6.2 6.2 16.3 6.2 22.6 0l25-25c6.2-6.2 6.2-16.3 0-22.6L207.6 160z"/></svg>
                                         </button>`
-                            },
-                            afterClose: function () {
-                                $.fancybox.close();
-                            }
-                        });
-                        // jQuery(form).find('.form__field').each(function(){ jQuery(this).val(''); });
+                                },
+                                afterClose: function () {
+                                    $.fancybox.close();
+                                }
+                            });
+                        },1100);
+
+                        jQuery(form).find('.fields-list__field').each(function(){ jQuery(this).val(''); });
                     }
                 });
 

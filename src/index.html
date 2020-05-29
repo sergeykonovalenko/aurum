@@ -72,7 +72,7 @@
                     </div><!-- / .feedback-small -->
                     <ul class="main-header__language-switch language-switch">
                         <li class="menu-item-has-children">
-                            <a href="#">
+                            <a href="#pll_switcher">
                                 <img src="img/base/uk.svg" title="UA" alt="UA">
                                 <span>UA</span>
                             </a>
@@ -764,6 +764,7 @@
                         <p>Введіть свою електронну адресу для отримання повного опису</p>
                     </div>
                     <form class="get-description__form form js-form" action="#" method="post">
+                        <input class="form-type" type="hidden" name="form-type" value="Получить полное описание спецодежды AURUM">
                         <ul class="form__fields-list fields-list">
                             <li class="fields-list__item">
                                 <label class="visually-hidden" for="get-description-form-phone">Ваш телефон</label>
@@ -1510,6 +1511,7 @@
             <p>Залиште номер, ми передзвонимо Вам найближчого часу</p>
         </div>
         <form class="form-modal__form form js-form" action="#" method="post">
+            <input class="form-type" type="hidden" name="form-type" value="Перезвоните мне">
             <ul class="form__fields-list fields-list">
                 <li class="fields-list__item">
                     <label class="visually-hidden" for="back-call-form-name">Ваше ім’я</label>
@@ -1627,6 +1629,16 @@
             <p>Наш експерт зв’яжеться з Вами</p>
         </div>
         <form class="form-modal__form form js-form" action="#" method="post">
+            <input type="hidden" name="form-type" value="Заказ товара">
+            <input type="hidden" name="target">
+            <input type="hidden" name="dealer-name">
+            <input type="hidden" name="dealer-email">
+            <input type="hidden" name="quantity-xs">
+            <input type="hidden" name="quantity-s">
+            <input type="hidden" name="quantity-m">
+            <input type="hidden" name="quantity-l">
+            <input type="hidden" name="quantity-xl">
+            <input type="hidden" name="quantity-2xl">
             <ul class="form__fields-list fields-list">
                 <li class="fields-list__item">
                     <label class="visually-hidden" for="order-modal-form-name">Ваше ім’я</label>
@@ -1775,7 +1787,7 @@
                                 <!--<span class="product-card__status product-card__status&#45;&#45;not-available">Немає в наявності</span>-->
                                 <p class="product-card__price">Ціна <strong>1 800</strong> грн.</p>
                             </div>
-                            <a class="product-card__button button button--with-icon btn-modal" href="#js-order-modal">
+                            <a class="product-card__button button button--with-icon btn-modal" href="#js-order-modal" data-extra-txt="Куртка AURUM ANTISTAT">
                                 Придбати
                                 <span class="button__icon">
                                     <svg width="30" height="27" fill="#be893d">
@@ -1896,49 +1908,49 @@
                                         tabindex="0"
                                         role="listbox"
                                         aria-labelledby="ss_elem-1-1">
-                                        <li class="list-box__item" id="ss_elem_1-1" role="option">
+                                        <li class="list-box__item" id="ss_elem_1-1" role="option" data-email="no-dealer">
                                             Без дилера
                                         </li>
-                                        <li class="list-box__item" id="ss_elem_1-2" role="option">
+                                        <li class="list-box__item" id="ss_elem_1-2" role="option" data-email="uzgroup.ua@gmail.com">
                                             ООО "АНВИ ГРУПП"  Киев, ул. Новоконстантиновская, 1В
                                         </li>
-                                        <li class="list-box__item" id="ss_elem_1-3" role="option">
+                                        <li class="list-box__item" id="ss_elem_1-3" role="option" data-email="uzgroup.ua@gmail.com">
                                             ООО "ЕВРОСИЗ" Киев, ул. Гвардейская, 80-А
                                         </li>
-                                        <li class="list-box__item" id="ss_elem_1-4" role="option">
+                                        <li class="list-box__item" id="ss_elem_1-4" role="option" data-email="uzgroup.ua@gmail.com">
                                             ООО "ТРЕЙД  ВЕЙ" Киев, ул. Бориспольская, 7
                                         </li>
-                                        <li class="list-box__item" id="ss_elem_1-5" role="option">
+                                        <li class="list-box__item" id="ss_elem_1-5" role="option" data-email="uzgroup.ua@gmail.com">
                                             NG optics Киев, ул. П. Кайсарова, 2
                                         </li>
-                                        <li class="list-box__item" id="ss_elem_1-6" role="option">
+                                        <li class="list-box__item" id="ss_elem_1-6" role="option" data-email="uzgroup.ua@gmail.com">
                                             ЧП "ТК-Спецодежда" Киев, ул. Здолбуновская, 7д
                                         </li>
-                                        <li class="list-box__item" id="ss_elem_1-7" role="option">
+                                        <li class="list-box__item" id="ss_elem_1-7" role="option" data-email="uzgroup.ua@gmail.com">
                                             ООО "СВТ ЗИЗ ПЛЮС" Винница, ул. Добролюбова, 33
                                         </li>
-                                        <li class="list-box__item" id="ss_elem_1-8" role="option">
+                                        <li class="list-box__item" id="ss_elem_1-8" role="option" data-email="uzgroup.ua@gmail.com">
                                             ООО "АВИКОМ-СЕРВИС" Черкассы, ул. Вячеслава Черновола, 253
                                         </li>
-                                        <li class="list-box__item" id="ss_elem_1-9" role="option">
+                                        <li class="list-box__item" id="ss_elem_1-9" role="option" data-email="uzgroup.ua@gmail.com">
                                             ЧП «Днепр-Спец-СИЗ» Днепр, ул. Береговая, 200
                                         </li>
-                                        <li class="list-box__item" id="ss_elem_1-10" role="option">
+                                        <li class="list-box__item" id="ss_elem_1-10" role="option" data-email="uzgroup.ua@gmail.com">
                                             ЧП "ТОГ Трейд"  Днепр, пр. Александра Поля, 76
                                         </li>
-                                        <li class="list-box__item" id="ss_elem_1-11" role="option">
+                                        <li class="list-box__item" id="ss_elem_1-11" role="option" data-email="uzgroup.ua@gmail.com">
                                             ЧП Мальт Запорожье, ул. Брянская, 2
                                         </li>
-                                        <li class="list-box__item" id="ss_elem_1-12" role="option">
+                                        <li class="list-box__item" id="ss_elem_1-12" role="option" data-email="uzgroup.ua@gmail.com">
                                             ООО "Валтекс" Белая Церковь, пер. Гординского, 2
                                         </li>
-                                        <li class="list-box__item" id="ss_elem_1-13" role="option">
+                                        <li class="list-box__item" id="ss_elem_1-13" role="option" data-email="uzgroup.ua@gmail.com">
                                             ООО "Профиснаб" Кривой Рог, ул. Волгоградская, 1Д
                                         </li>
-                                        <li class="list-box__item" id="ss_elem_1-14" role="option">
+                                        <li class="list-box__item" id="ss_elem_1-14" role="option" data-email="uzgroup.ua@gmail.com">
                                             ПКФ "Комплект" Одесса, ул. Проценко, 23а
                                         </li>
-                                        <li class="list-box__item" id="ss_elem_1-15" role="option">
+                                        <li class="list-box__item" id="ss_elem_1-15" role="option" data-email="uzgroup.ua@gmail.com">
                                             ТОВ "МИК Альянс" Черкассы
                                         </li>
                                     </ul><!-- / .list-box -->
@@ -2095,7 +2107,7 @@
                                 <span class="product-card__status">В наявності</span>
                                 <p class="product-card__price">Ціна <strong>2 100</strong> грн.</p>
                             </div>
-                            <a class="product-card__button button button--with-icon btn-modal" href="#">
+                            <a class="product-card__button button button--with-icon btn-modal" href="#js-order-modal" data-extra-txt="Штаны AURUM ANTISTAT">
                                 Придбати
                                 <span class="button__icon">
                                     <svg width="30" height="27" fill="#be893d">
@@ -2216,49 +2228,49 @@
                                         tabindex="0"
                                         role="listbox"
                                         aria-labelledby="ss_elem-1-2">
-                                        <li class="list-box__item" id="ss_elem_2-1" role="option">
+                                        <li class="list-box__item" id="ss_elem_2-1" role="option" data-email="uzgroup.ua@gmail.com">
                                             Без дилера
                                         </li>
-                                        <li class="list-box__item" id="ss_elem_2-2" role="option">
+                                        <li class="list-box__item" id="ss_elem_2-2" role="option" data-email="uzgroup.ua@gmail.com">
                                             ООО "АНВИ ГРУПП"  Киев, ул. Новоконстантиновская, 1В
                                         </li>
-                                        <li class="list-box__item" id="ss_elem_2-3" role="option">
+                                        <li class="list-box__item" id="ss_elem_2-3" role="option" data-email="uzgroup.ua@gmail.com">
                                             ООО "ЕВРОСИЗ" Киев, ул. Гвардейская, 80-А
                                         </li>
-                                        <li class="list-box__item" id="ss_elem_2-4" role="option">
+                                        <li class="list-box__item" id="ss_elem_2-4" role="option" data-email="uzgroup.ua@gmail.com">
                                             ООО "ТРЕЙД  ВЕЙ" Киев, ул. Бориспольская, 7
                                         </li>
-                                        <li class="list-box__item" id="ss_elem_2-5" role="option">
+                                        <li class="list-box__item" id="ss_elem_2-5" role="option" data-email="uzgroup.ua@gmail.com">
                                             NG optics Киев, ул. П. Кайсарова, 2
                                         </li>
-                                        <li class="list-box__item" id="ss_elem_2-6" role="option">
+                                        <li class="list-box__item" id="ss_elem_2-6" role="option" data-email="uzgroup.ua@gmail.com">
                                             ЧП "ТК-Спецодежда" Киев, ул. Здолбуновская, 7д
                                         </li>
-                                        <li class="list-box__item" id="ss_elem_2-7" role="option">
+                                        <li class="list-box__item" id="ss_elem_2-7" role="option" data-email="uzgroup.ua@gmail.com">
                                             ООО "СВТ ЗИЗ ПЛЮС" Винница, ул. Добролюбова, 33
                                         </li>
-                                        <li class="list-box__item" id="ss_elem_2-8" role="option">
+                                        <li class="list-box__item" id="ss_elem_2-8" role="option" data-email="uzgroup.ua@gmail.com">
                                             ООО "АВИКОМ-СЕРВИС" Черкассы, ул. Вячеслава Черновола, 253
                                         </li>
-                                        <li class="list-box__item" id="ss_elem_2-9" role="option">
+                                        <li class="list-box__item" id="ss_elem_2-9" role="option" data-email="uzgroup.ua@gmail.com">
                                             ЧП «Днепр-Спец-СИЗ» Днепр, ул. Береговая, 200
                                         </li>
-                                        <li class="list-box__item" id="ss_elem_2-10" role="option">
+                                        <li class="list-box__item" id="ss_elem_2-10" role="option" data-email="uzgroup.ua@gmail.com">
                                             ЧП "ТОГ Трейд"  Днепр, пр. Александра Поля, 76
                                         </li>
-                                        <li class="list-box__item" id="ss_elem_2-11" role="option">
+                                        <li class="list-box__item" id="ss_elem_2-11" role="option" data-email="uzgroup.ua@gmail.com">
                                             ЧП Мальт Запорожье, ул. Брянская, 2
                                         </li>
-                                        <li class="list-box__item" id="ss_elem_2-12" role="option">
+                                        <li class="list-box__item" id="ss_elem_2-12" role="option" data-email="uzgroup.ua@gmail.com">
                                             ООО "Валтекс" Белая Церковь, пер. Гординского, 2
                                         </li>
-                                        <li class="list-box__item" id="ss_elem_2-13" role="option">
+                                        <li class="list-box__item" id="ss_elem_2-13" role="option" data-email="uzgroup.ua@gmail.com">
                                             ООО "Профиснаб" Кривой Рог, ул. Волгоградская, 1Д
                                         </li>
-                                        <li class="list-box__item" id="ss_elem_2-14" role="option">
+                                        <li class="list-box__item" id="ss_elem_2-14" role="option" data-email="uzgroup.ua@gmail.com">
                                             ПКФ "Комплект" Одесса, ул. Проценко, 23а
                                         </li>
-                                        <li class="list-box__item" id="ss_elem_2-15" role="option">
+                                        <li class="list-box__item" id="ss_elem_2-15" role="option" data-email="uzgroup.ua@gmail.com">
                                             ТОВ "МИК Альянс" Черкассы
                                         </li>
                                     </ul><!-- / .list-box -->
@@ -2415,7 +2427,7 @@
                                 <span class="product-card__status">В наявності</span>
                                 <p class="product-card__price">Ціна <strong>2 500</strong> грн.</p>
                             </div>
-                            <a class="product-card__button button button--with-icon btn-modal" href="#">
+                            <a class="product-card__button button button--with-icon btn-modal" href="#js-order-modal" data-extra-txt="Полукомбинезон AURUM ANTISTAT">
                                 Придбати
                                 <span class="button__icon">
                                     <svg width="30" height="27" fill="#be893d">
@@ -2536,49 +2548,49 @@
                                         tabindex="0"
                                         role="listbox"
                                         aria-labelledby="ss_elem-1-3">
-                                        <li class="list-box__item" id="ss_elem_3-1" role="option">
+                                        <li class="list-box__item" id="ss_elem_3-1" role="option" data-email="uzgroup.ua@gmail.com">
                                             Без дилера
                                         </li>
-                                        <li class="list-box__item" id="ss_elem_3-2" role="option">
+                                        <li class="list-box__item" id="ss_elem_3-2" role="option" data-email="uzgroup.ua@gmail.com">
                                             ООО "АНВИ ГРУПП"  Киев, ул. Новоконстантиновская, 1В
                                         </li>
-                                        <li class="list-box__item" id="ss_elem_3-3" role="option">
+                                        <li class="list-box__item" id="ss_elem_3-3" role="option" data-email="uzgroup.ua@gmail.com">
                                             ООО "ЕВРОСИЗ" Киев, ул. Гвардейская, 80-А
                                         </li>
-                                        <li class="list-box__item" id="ss_elem_3-4" role="option">
+                                        <li class="list-box__item" id="ss_elem_3-4" role="option" data-email="uzgroup.ua@gmail.com">
                                             ООО "ТРЕЙД  ВЕЙ" Киев, ул. Бориспольская, 7
                                         </li>
-                                        <li class="list-box__item" id="ss_elem_3-5" role="option">
+                                        <li class="list-box__item" id="ss_elem_3-5" role="option" data-email="uzgroup.ua@gmail.com">
                                             NG optics Киев, ул. П. Кайсарова, 2
                                         </li>
-                                        <li class="list-box__item" id="ss_elem_3-6" role="option">
+                                        <li class="list-box__item" id="ss_elem_3-6" role="option" data-email="uzgroup.ua@gmail.com">
                                             ЧП "ТК-Спецодежда" Киев, ул. Здолбуновская, 7д
                                         </li>
-                                        <li class="list-box__item" id="ss_elem_3-7" role="option">
+                                        <li class="list-box__item" id="ss_elem_3-7" role="option" data-email="uzgroup.ua@gmail.com">
                                             ООО "СВТ ЗИЗ ПЛЮС" Винница, ул. Добролюбова, 33
                                         </li>
-                                        <li class="list-box__item" id="ss_elem_3-8" role="option">
+                                        <li class="list-box__item" id="ss_elem_3-8" role="option" data-email="uzgroup.ua@gmail.com">
                                             ООО "АВИКОМ-СЕРВИС" Черкассы, ул. Вячеслава Черновола, 253
                                         </li>
-                                        <li class="list-box__item" id="ss_elem_3-9" role="option">
+                                        <li class="list-box__item" id="ss_elem_3-9" role="option" data-email="uzgroup.ua@gmail.com">
                                             ЧП «Днепр-Спец-СИЗ» Днепр, ул. Береговая, 200
                                         </li>
-                                        <li class="list-box__item" id="ss_elem_3-10" role="option">
+                                        <li class="list-box__item" id="ss_elem_3-10" role="option" data-email="uzgroup.ua@gmail.com">
                                             ЧП "ТОГ Трейд"  Днепр, пр. Александра Поля, 76
                                         </li>
-                                        <li class="list-box__item" id="ss_elem_3-11" role="option">
+                                        <li class="list-box__item" id="ss_elem_3-11" role="option" data-email="uzgroup.ua@gmail.com">
                                             ЧП Мальт Запорожье, ул. Брянская, 2
                                         </li>
-                                        <li class="list-box__item" id="ss_elem_3-12" role="option">
+                                        <li class="list-box__item" id="ss_elem_3-12" role="option" data-email="uzgroup.ua@gmail.com">
                                             ООО "Валтекс" Белая Церковь, пер. Гординского, 2
                                         </li>
-                                        <li class="list-box__item" id="ss_elem_3-13" role="option">
+                                        <li class="list-box__item" id="ss_elem_3-13" role="option" data-email="uzgroup.ua@gmail.com">
                                             ООО "Профиснаб" Кривой Рог, ул. Волгоградская, 1Д
                                         </li>
-                                        <li class="list-box__item" id="ss_elem_3-14" role="option">
+                                        <li class="list-box__item" id="ss_elem_3-14" role="option" data-email="uzgroup.ua@gmail.com">
                                             ПКФ "Комплект" Одесса, ул. Проценко, 23а
                                         </li>
-                                        <li class="list-box__item" id="ss_elem_3-15" role="option">
+                                        <li class="list-box__item" id="ss_elem_3-15" role="option" data-email="uzgroup.ua@gmail.com">
                                             ТОВ "МИК Альянс" Черкассы
                                         </li>
                                     </ul><!-- / .list-box -->
@@ -2634,6 +2646,15 @@
             <p>Наш експерт зв’яжеться з Вами<br> найближчого часу</p>
         </div>
     </div><!-- / .thanks-modal -->
+
+    <!-- Loader -->
+    <div class="loader">
+        <div class="loader__icon">
+            <svg width="65" height="65" fill="#1d1d1d">
+                <use xlink:href="#icon-loader"></use>
+            </svg>
+        </div>
+    </div><!-- / .loader -->
 
     <script>
         let storesData = [{"dealerLocation":{"address":"ул. Амосова, 32\/2, Софиевская Борщаговка, Киевская область, Украина, 08131","lat":50.402464600000001837543095462024211883544921875,"lng":30.3786726000000015801560948602855205535888671875,"zoom":6,"place_id":"EkhBbW9zb3ZhIFN0LCAzMiwgU29maWl2c2thIEJvcnNoY2hhaGl2a2EsIEt5aXZzJ2thIG9ibGFzdCwgVWtyYWluZSwgMDgxMzEiMBIuChQKEglXQhqlz8vUQBE3kTEL0omQoxAgKhQKEgklMS-az8vUQBF4Rwg1VrtgGw","name":"вулиця Амосова, 32","street_number":"32","street_name":"вулиця Амосова","city":"Софіївська Борщагівка","state":"Київська область","state_short":"Київська обл.","post_code":"08131","country":"Украина","country_short":"UA"},"dealerRegion":{"term_id":21,"name":"Софіївська Борщагівка","slug":"sofi%d1%97vska-borshhagivka","term_group":0,"term_taxonomy_id":21,"taxonomy":"regions","description":"","parent":0,"count":0,"filter":"raw"},"dealerCompany":"ТОВ \"БІСЕЙФ\"","dealerAddress":"с. Софіївська Борщагівка, вул. Амосова 32\/2","dealerPhones":[{"dealerPhone":"(068) 131-31-01"}],"dealerSite":"https:\/\/aurum.ua"},{"dealerLocation":{"address":"ул. Новоконстантиновская, 1в, Киев, Украина, 02000","lat":50.4801997000000000070940586738288402557373046875,"lng":30.49030090000000114969225251115858554840087890625,"zoom":6,"place_id":"Ei9Ob3Zva29zdGlhbnR5bml2c2thIFN0LCAxLCBLeWl2LCBVa3JhaW5lLCAwMjAwMCIwEi4KFAoSCaUJ-tbjzdRAERovm_n6sB47EAEqFAoSCdV3wHXkzdRAEapYFM1l1KAm","name":"вулиця Новокостянтинівська, 1","street_number":"1","street_name":"вулиця Новокостянтинівська","city":"Київ","state":"місто Київ","post_code":"02000","country":"Украина","country_short":"UA"},"dealerRegion":{"term_id":27,"name":"Київ","slug":"ki%d1%97v","term_group":0,"term_taxonomy_id":27,"taxonomy":"regions","description":"","parent":0,"count":0,"filter":"raw"},"dealerCompany":"ТОВ \"АНВІ ГРУП\"","dealerAddress":"м. Київ, вул. Новокостянтинівська, 1В","dealerPhones":[{"dealerPhone":"(067) 480-37-17"},{"dealerPhone":"(044) 227-88-67"}],"dealerSite":"https:\/\/anvigroup.ua"},{"dealerLocation":{"address":"80A, ул. Гвардейская, 80А, Киев, Украина, 02000","lat":50.3989021000000008143615559674799442291259765625,"lng":30.4946340999999989662683219648897647857666015625,"zoom":6,"place_id":"ChIJMRaO9tHI1EAR1B-CyLQRk0E","name":"80A","street_number":"80А","street_name":"вулиця Гвардійська","city":"Київ","state":"місто Київ","post_code":"02000","country":"Украина","country_short":"UA"},"dealerRegion":{"term_id":27,"name":"Київ","slug":"ki%d1%97v","term_group":0,"term_taxonomy_id":27,"taxonomy":"regions","description":"","parent":0,"count":0,"filter":"raw"},"dealerCompany":"ТОВ \"ЄВРОЗІЗ\"","dealerAddress":"м. Київ, вул. Гвардійська, 80-А","dealerPhones":[{"dealerPhone":"(067) 333-00-76"},{"dealerPhone":"(044) 383-63-11"}],"dealerSite":"https:\/\/eurosiz.ua"},{"dealerLocation":{"address":"пл. Князя Святослава, 11, Львов, Львовская область, Украина, 79000","lat":49.8422824000000019850631360895931720733642578125,"lng":24.0092862999999994144673109985888004302978515625,"zoom":6,"place_id":"EkdLbmlhemlhIFN2aWF0b3NsYXZhIFNxdWFyZSwgMTEsIEwndml2LCBMJ3ZpdnMna2Egb2JsYXN0LCBVa3JhaW5lLCA3OTAwMCIwEi4KFAoSCUdGUpmd3TpHEbG8ccvGRw3AEAsqFAoSCSUKBZqd3TpHEbTaSb-w4vYi","name":"площа Князя Святослава, 11","street_number":"11","street_name":"площа Князя Святослава","city":"Львів","state":"Львівська область","post_code":"79000","country":"Украина","country_short":"UA"},"dealerRegion":{"term_id":70,"name":"Львів","slug":"lviv","term_group":0,"term_taxonomy_id":70,"taxonomy":"regions","description":"","parent":0,"count":0,"filter":"raw"},"dealerCompany":"ПП \"АБРАЗИВ\"","dealerAddress":"м. Львів, пл. Кн. Святослава, 11г","dealerPhones":[{"dealerPhone":"(067) 22-050-22"},{"dealerPhone":"(032) 29-029-00"}],"dealerSite":"https:\/\/abrazyv.com.ua"},{"dealerLocation":{"address":"ул. Бориспольская, 7, Киев, Украина, 02000","lat":50.420235200000007580456440337002277374267578125,"lng":30.706937599999999832789399079047143459320068359375,"zoom":6,"place_id":"EiRCb3J5c3BpbHNrYSBTdCwgS3lpdiwgVWtyYWluZSwgMDIwMDAiLiosChQKEglHYiR-lcTUQBHQIl19I3Fl8xIUChIJBUVa4U7P1EAR_kYBF9IxSXY","name":"улица Бориспольская","street_name":"вулиця Бориспільська","city":"Київ","state":"місто Київ","post_code":"02000","country":"Украина","country_short":"UA"},"dealerRegion":{"term_id":27,"name":"Київ","slug":"ki%d1%97v","term_group":0,"term_taxonomy_id":27,"taxonomy":"regions","description":"","parent":0,"count":0,"filter":"raw"},"dealerCompany":"ТОВ \"ТРЕЙД  ВЕЙ\"","dealerAddress":"м. Київ, вул. Бориспільська, 7","dealerPhones":[{"dealerPhone":"(044) 223-67-73"},{"dealerPhone":"(067) 595-90-11"}],"dealerSite":"https:\/\/tradeway.com.ua"},{"dealerLocation":{"address":"ул. Кайсарова, 2, Киев, Украина, 02000","lat":50.3979905999999999721694621257483959197998046875,"lng":30.482432299999999258943716995418071746826171875,"zoom":6,"place_id":"EiVLYWlzYXJvdmEgU3QsIDIsIEt5aXYsIFVrcmFpbmUsIDAyMDAwIjASLgoUChIJXXVfFdfI1EARwKIVgDQGtAoQAioUChIJuz4AxtXI1EARMRHwnqFXgyg","name":"вулиця Кайсарова, 2","street_number":"2","street_name":"вулиця Кайсарова","city":"Київ","state":"місто Київ","post_code":"02000","country":"Украина","country_short":"UA"},"dealerRegion":{"term_id":27,"name":"Київ","slug":"ki%d1%97v","term_group":0,"term_taxonomy_id":27,"taxonomy":"regions","description":"","parent":0,"count":0,"filter":"raw"},"dealerCompany":"NG optics","dealerAddress":"м. Київ, вул. П. Кайсарова, 2","dealerPhones":[{"dealerPhone":"(095) 608-11-40"},{"dealerPhone":"(044) 299-79-89"}],"dealerSite":"http:\/\/ngoptics.com.ua"},{"dealerLocation":{"address":"ул. Добролюбова, 33, Винница, Винницкая область, Украина, 21000","lat":49.24082560000000086120053310878574848175048828125,"lng":28.442486200000001161924956250004470348358154296875,"zoom":6,"place_id":"EkFEb2Jyb2x5dWJvdmEgU3QsIDMzLCBWaW5ueXRzaWEsIFZpbm55dHMna2Egb2JsYXN0LCBVa3JhaW5lLCAyMTAwMCIwEi4KFAoSCW0n9tOPXC1HEfn8__T9x53kECEqFAoSCb1c0KmRXC1HEVRkh_ocuhKI","name":"вулиця Добролюбова, 33","street_number":"33","street_name":"вулиця Добролюбова","city":"Вінниця","state":"Вінницька область","post_code":"21000","country":"Украина","country_short":"UA"},"dealerRegion":{"term_id":33,"name":"Вінниця","slug":"vinniczya","term_group":0,"term_taxonomy_id":33,"taxonomy":"regions","description":"","parent":0,"count":0,"filter":"raw"},"dealerCompany":"ТОВ \"СВТ ЗіЗ ПЛЮС\"","dealerAddress":"м. Вінниця, вул. Добролюбова, 33","dealerPhones":[{"dealerPhone":"(050) 504-32-77"}],"dealerSite":"http:\/\/svtziz.com.ua"},{"dealerLocation":{"address":"вулиця В'ячеслава Чорновола, 253, Черкаси, Черкаська область, Украина, 18000","lat":49.40304660000000325226210406981408596038818359375,"lng":32.04998830000000253903635893948376178741455078125,"zoom":6,"place_id":"EktWaWFjaGVzbGF2YSBDaG9ybm92b2xhIFN0LCAyNTMsIENoZXJrYXN5LCBDaGVya2FzJ2thIG9ibGFzdCwgVWtyYWluZSwgMTgwMDAiMRIvChQKEgnrrCUM3UvRQBGj4N8tn5tvPxD9ASoUChIJw7U_jr9L0UARdhjDMjaWHKo","name":"вулиця В'ячеслава Чорновола, 253","street_number":"253","street_name":"вулиця В'ячеслава Чорновола","city":"Черкаси","state":"Черкаська область","post_code":"18000","country":"Украина","country_short":"UA"},"dealerRegion":{"term_id":39,"name":"Черкаси","slug":"cherkasi","term_group":0,"term_taxonomy_id":39,"taxonomy":"regions","description":"","parent":0,"count":0,"filter":"raw"},"dealerCompany":"ТОВ \"АВІКОМ-СЕРВІС\"","dealerAddress":"м. Черкаси, вул. В'ячеслава Чорновола, 253","dealerPhones":[{"dealerPhone":"(0472) 54-05-14"},{"dealerPhone":"(067) 470-29-51"}],"dealerSite":""},{"dealerLocation":{"address":"Брянская ул., 2, Запорожье, Запорожская область, Украина, 69061","lat":47.852635300000002871456672437489032745361328125,"lng":35.1337639999999993278834153898060321807861328125,"zoom":6,"place_id":"EkBCcnlhbnMna2EgU3QsIDIsIFphcG9yaXpoemhpYSwgWmFwb3JpeidrYSBvYmxhc3QsIFVrcmFpbmUsIDY5MDYxIjASLgoUChIJKY9WvyRn3EAR_pVXkclD240QAioUChIJ1wJPmDtn3EARXI11mSmufRw","name":"Брянська вулиця, 2","street_number":"2","street_name":"Брянська вулиця","city":"Запоріжжя","state":"Запорізька область","post_code":"69061","country":"Украина","country_short":"UA"},"dealerRegion":{"term_id":45,"name":"Запоріжжя","slug":"zaporizhzhya","term_group":0,"term_taxonomy_id":45,"taxonomy":"regions","description":"","parent":0,"count":0,"filter":"raw"},"dealerCompany":"ПП Мальт","dealerAddress":"м. Запоріжжя, вул. Брянська, 2","dealerPhones":[{"dealerPhone":"(067) 618-92-95"},{"dealerPhone":"(066) 627-60-16"}],"dealerSite":"www.malt.zp.ua"},{"dealerLocation":{"address":"пер. Гординского, Белая Церковь, Киевская область, Украина, 09100","lat":49.79823620000001227481334353797137737274169921875,"lng":30.1110358000000104539140011183917522430419921875,"zoom":6,"place_id":"Ej5Ib3JkeW5zJ2tvaG8gTG4sIEJpbGEgVHNlcmt2YSwgS3lpdnMna2Egb2JsYXN0LCBVa3JhaW5lLCAwOTEwMCIuKiwKFAoSCVMTJRciQtNAEVeMngO6d4nIEhQKEgmdeyI3PkLTQBHoxixY-BHjhA","name":"переулок Гординского","street_name":"провулок Гординського","city":"Біла Церква","state":"Київська область","state_short":"Київська обл.","post_code":"09100","country":"Украина","country_short":"UA"},"dealerRegion":{"term_id":51,"name":"Біла Церква","slug":"bila-czerkva","term_group":0,"term_taxonomy_id":51,"taxonomy":"regions","description":"","parent":0,"count":0,"filter":"raw"},"dealerCompany":"ТОВ \"Валтекс\"","dealerAddress":"м. Біла Церква, пер. Гординського, 2","dealerPhones":[{"dealerPhone":"(097) 407-71-04"},{"dealerPhone":"(067) 441-05-37"}],"dealerSite":"http:\/\/valtex.org.ua"},{"dealerLocation":{"address":"ул. Проценко, 23б, Одесса, Одесская область, Украина, 65000","lat":46.4836494999999985111571731977164745330810546875,"lng":30.68650029999999873098204261623322963714599609375,"zoom":6,"place_id":"EjdQcm90c2Vua2EgU3QsIDIzLCBPZGVzYSwgT2RlcydrYSBvYmxhc3QsIFVrcmFpbmUsIDY1MDAwIjASLgoUChIJUzQYEf4xxkARmXeb5llvpvkQFyoUChIJExvJEf4xxkARLE1XifxIplo","name":"вулиця Проценка, 23","street_number":"23","street_name":"вулиця Проценка","city":"Одеса","state":"Одеська область","post_code":"65000","country":"Украина","country_short":"UA"},"dealerRegion":{"term_id":57,"name":"Одеса","slug":"odesa","term_group":0,"term_taxonomy_id":57,"taxonomy":"regions","description":"","parent":0,"count":0,"filter":"raw"},"dealerCompany":"Комплект","dealerAddress":"м. Одеса, вул. Проценко, 23а","dealerPhones":[{"dealerPhone":"(048) 750-51-81"}],"dealerSite":"https:\/\/www.komplekt.ua"},{"dealerLocation":{"address":"ул. Чкалова, 210, Николаев, Николаевская область, Украина, 54000","lat":46.96131290000000291229298454709351062774658203125,"lng":32.02808470000000085065039456821978092193603515625,"zoom":6,"place_id":"Ej9DaGthbG92YSBTdCwgMjEwLCBNeWtvbGFpdiwgTXlrb2xhaXZzJ2thIG9ibGFzdCwgVWtyYWluZSwgNTQwMDAiMRIvChQKEgk16ET6yMvFQBEy_Dw7TgSZBhDSASoUChIJ9XTKDtnLxUARA1mrDJmEgqk","name":"вулиця Чкалова, 210","street_number":"210","street_name":"вулиця Чкалова","city":"Миколаїв","state":"Миколаївська область","post_code":"54000","country":"Украина","country_short":"UA"},"dealerRegion":{"term_id":63,"name":"Миколаїв","slug":"mikola%d1%97v","term_group":0,"term_taxonomy_id":63,"taxonomy":"regions","description":"","parent":0,"count":0,"filter":"raw"},"dealerCompany":"ТОВ \"Кронос-Авто\"","dealerAddress":"м. Миколаїв, вул. Чкалова, 210","dealerPhones":[{"dealerPhone":"(067) 879-24-03"}],"dealerSite":"www.satellit.mk.ua"}];

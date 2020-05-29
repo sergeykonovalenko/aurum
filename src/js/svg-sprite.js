@@ -15,3 +15,5 @@ import '../img/svg-sprite/icon-clock-gradient.svg';
 import '../img/svg-sprite/icon-instagram.svg';
 import '../img/svg-sprite/icon-facebook.svg';
 import '../img/svg-sprite/icon-close-light.svg';
+import '../img/svg-sprite/icon-close-light.svg';
+import '../img/svg-sprite/icon-loader.svg';
