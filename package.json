@@ -53,6 +53,7 @@
   "dependencies": {
     "@babel/runtime": "^7.9.6",
     "@fancyapps/fancybox": "^3.5.7",
+    "dropzone": "^5.7.0",
     "jquery": "^3.4.1",
     "jquery-ui": "^1.12.1",
     "jquery-validation": "^1.19.1",

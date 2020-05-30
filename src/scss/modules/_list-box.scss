@@ -29,3 +29,14 @@
         }
     }
 }
+
+.list-box [role="option"][aria-selected="true"]::before {
+    content: '';
+    top: 8px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 11px;
+    height: 13px;
+    background: url("img/bg/check-mark.svg") no-repeat center center;
+    background-size: contain;
+}

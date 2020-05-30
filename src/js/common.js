@@ -8,18 +8,18 @@ import './vendor/jquery.mb.browser';
 import 'malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min';
 import 'jquery.maskedinput/src/jquery.maskedinput';
 import 'jquery-validation';
+import Dropzone from 'dropzone';
 import './svg-sprite';
 import './google-maps';
-/////////////////////////////////////////////
-// Listbox - WAI-ARIA Authoring Practices 1.1
+// WAI-ARIA Authoring Practices 1.1 (list-box)
 // import './vendor/utils';
 // import './vendor/listbox';
 // import './vendor/listbox-collapsible';
-import './vendor/utils_listbox_listbox-collapsible';
-/////////////////////////////////////////////
+import './vendor/utils_listbox_listbox-collapsible'; // соеденил файлы выше в один
 
 $(document).ready(function () {
     'use strict';
+
     const element = document.documentElement;
 
     // is mobile
@@ -56,8 +56,56 @@ $(document).ready(function () {
             // Вручную обновить позиционирование слайдеров внутри
             $('.product-gallery').slick('setPosition');
             $('.product-gallery-side__wr').slick('setPosition');
+        },
+        afterShow: function (instance, slide) {
+            // если это модальное окно товара, то включаем нужную вкладку таба
+            let currentModal = instance.current.$content[0];
+            if ( $(currentModal).hasClass('product-modal') ) {
+                activationNeedProductTabs( $(currentModal)[0] );
+            }
         }
     });
+
+    // при клике на карточку товара узнаем имя товара на карточке товара
+    let productItems = document.querySelectorAll('.product-item');
+    let productName = '';
+
+    productItems.forEach(productItem => {
+        productItem.addEventListener('click', function () {
+            productName = this.querySelector('.product-item__name').textContent.toLowerCase();
+        }, {passive: true});
+    });
+
+    // активация необходимой вкладки
+    function activationNeedProductTabs(currentModal) {
+        // let productTabs = document.querySelector('.product-types-tabs'); // если мод. окно общее
+        let productTabs = currentModal.querySelector('.product-types-tabs'); // если мод. окно индивидуальное
+        let productTabsLinks = productTabs.querySelectorAll('.product-types-tabs__nav a');
+        let IdSelectedTab = '';
+
+        productTabsLinks.forEach(function (tabsNavLink) {
+            if ( tabsNavLink.textContent.toLowerCase() === productName ) {
+                IdSelectedTab = tabsNavLink.getAttribute('href');
+            }
+        });
+
+        $(productTabs).tabs('option', 'active', id2Index(productTabs, IdSelectedTab));
+
+        function id2Index(tabs, srcId) {
+            let index = -1;
+            let i = 0, tbH = $(tabs).find('.ui-tabs-nav a');
+            let lntb = tbH.length;
+            if ( lntb > 0 ) {
+                for ( i = 0; i < lntb; i++ ) {
+                    let o = tbH[i];
+                    if ( o.href.search(srcId) > 0 ) {
+                        index = i;
+                    }
+                }
+            }
+            return index;
+        }
+    }
 
     // smooth page scrolling
     $('.scrollto:not([href="#pll_switcher"])').on('click', function () {
@@ -259,42 +307,6 @@ $(document).ready(function () {
                     </button>`,
     });
 
-    // activation of the requested product tab
-    let products = document.querySelectorAll('.product-item__thumb-link');
-
-    products.forEach(product => {
-        product.addEventListener('click', function () {
-            let productName = this.querySelector('.product-item__name').textContent.toLowerCase();
-            let productTabs = document.querySelector('.product-types-tabs'); // мод. окно общее
-            // let productTabs = this.querySelector('.product-types-tabs'); // мод. окно индивидуальное
-            let productTabsLinks = productTabs.querySelectorAll('.product-types-tabs__nav a');
-            let IdSelectedTab;
-
-            productTabsLinks.forEach(function (tabsNavLink) {
-                if ( tabsNavLink.textContent.toLowerCase() === productName ) {
-                    IdSelectedTab = tabsNavLink.getAttribute('href');
-                }
-            });
-
-            $(productTabs).tabs('option', 'active', id2Index('.product-modal__tabs', IdSelectedTab));
-        });
-    });
-
-    function id2Index(tabs, srcId) {
-        let index = -1;
-        let i = 0, tbH = $(tabs).find('.ui-tabs-nav a');
-        let lntb = tbH.length;
-        if ( lntb > 0 ) {
-            for ( i = 0; i < lntb; i++ ) {
-                let o = tbH[i];
-                if ( o.href.search(srcId) > 0 ) {
-                    index = i;
-                }
-            }
-        }
-        return index;
-    }
-
     // transfer of order parameters to the form
     let productCardButtons = document.querySelectorAll('.product-card__button');
     let orderModal = document.querySelector('.order-modal');
@@ -321,27 +333,49 @@ $(document).ready(function () {
 
                 parameterField.value = parameterValue;
             });
-        });
+        }, {passive: true});
     });
+
+    // init dropzone
+    // Dropzone.autoDiscover = false;
+    //
+    // let myDropZone = new Dropzone('.my-dropzone', {
+    //     paramName: 'form_file', // The name that will be used to transfer the file
+    //     method: 'files', // потом попробовать без этого параметра
+    //     url: `${templateUrl}/uploads`,
+    //     autoProcessQueue: false,
+    //     addRemoveLinks: true,
+    //     maxFilesize: 5, // MB
+    //     accept: function(file, done) {
+    //         // if (file.name == "justinbieber.jpg") {
+    //         //     // done("Naha, you don't.");
+    //         // }
+    //         // else { done(); }
+    //     },
+    // });
 
     ////////////////////////////////////////////////////////////////////////////
     // Send callback / Send request / Buy product
-    $('[data-submit]').on('click', function(e) {
-        e.preventDefault();
-        $(this).parent('form').submit();
+    // $('[data-submit]').on('click', function(e) {
+    //     e.preventDefault();
+    //     $(this).parent('form').submit();
+    // });
+
+    $('.js-form').each(function() {
+        sendData( $(this) );
     });
 
     $.validator.addMethod(
-        "regex",
+        'regex',
         function(value, element, regexp) {
             let re = new RegExp(regexp);
             return this.optional(element) || re.test(value);
         },
-        "Пожалуйста, проверьте свои данные",
+        'Пожалуйста, проверьте свои данные',
     );
 
-    function valEl(el) {
-        let validator = el.validate({
+    function sendData(form) {
+        let validator = form.validate({
             rules:{
                 'phone': {
                     required: true,
@@ -360,6 +394,28 @@ $(document).ready(function () {
                 },
             },
             submitHandler: function (form) {
+                // Код события Пиксель Facebook после успешной отправки заявки
+                // Ко всем формам кроме "Оставить отзыв"
+                if ( $(form).find('[name="form-type"]') !== 'Оставить отзыв' || fbq ) {
+                    if (typeof fbq !== 'undefined') {
+                        fbq('track', 'Purchase');
+                    }
+                }
+
+                // myDropzone.processQueue();
+
+                // объект, посредством которого будем кодировать форму перед отправкой её на сервер
+                // let formData = new FormData();
+                // добавить в formData файлы
+                // let fileList = myDropZone.files;
+                // console.log('fileList:' + fileList);
+                // // если элемент не содержит файлов, то перейти к следующей
+                // if ( fileList.length > 0 ) {
+                //     for ( let i = 0; i < fileList.length; i++ ) {
+                //         formData.append('form_file', fileList[i], fileList[i].name);
+                //     }
+                // }
+
                 $.fancybox.close(true);
                 $('.loader').fadeIn();
 
@@ -410,10 +466,6 @@ $(document).ready(function () {
             }
         });
     }
-
-    $('.js-form').each(function() {
-        valEl( $(this) );
-    });
     ////////////////////////////////////////////////////////////////////////////
 
     // show/hide dealers
@@ -483,7 +535,7 @@ $(document).ready(function () {
         scrollButtons: { enable: true }
     });
 
-    // init tabs
+    // init tabs•
     $('.product-types-tabs').tabs({
         active: 0,
         activate: function( event, ui ) {

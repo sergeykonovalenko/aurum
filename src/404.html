@@ -403,7 +403,7 @@
             <p>Залиште номер, ми передзвонимо Вам найближчого часу</p>
         </div>
         <form class="form-modal__form form js-form" action="#" method="post">
-            <input class="form-type" type="hidden" name="form-type" value="Перезвоните мне">
+            <input type="hidden" name="form-type" value="Перезвоните мне">
             <ul class="form__fields-list fields-list">
                 <li class="fields-list__item">
                     <label class="visually-hidden" for="back-call-form-name">Ваше ім’я</label>
@@ -449,7 +449,7 @@
             <p>Наш експерт зв’яжеться з Вами</p>
         </div>
         <form class="form-modal__form form js-form" action="#" method="post">
-            <input class="form-type" type="hidden" name="form-type" value="Хочу стать дилером">
+            <input type="hidden" name="form-type" value="Хочу стать дилером">
             <ul class="form__fields-list fields-list">
                 <li class="fields-list__item">
                     <label class="visually-hidden" for="dealer-modal-form-name">Ваше ім’я</label>
@@ -477,11 +477,12 @@
     </div><!-- / .dealer-modal -->
 
     <!-- Feedback modal -->
-    <div class="feedback-modal form-modal common-modal common-modal--has-border" id="js-feedback-modal" style="display: none">
+    <div class="feedback-modal form-modal common-modal common-modal--has-border js-form" id="js-feedback-modal" style="display: none">
         <div class="form-modal__head">
             <p><strong>Залишити відгук</strong></p>
         </div>
-        <form class="feedback-modal__form feedback-form" action="#" method="post">
+        <form class="feedback-modal__form feedback-form js-form" action="#" method="post">
+            <input type="hidden" name="form-type" value="Оставить отзыв">
             <div class="feedback-form__row">
                 <div class="feedback-form__col">
                     <ul class="feedback-form__fields-list fields-list">
@@ -508,11 +509,16 @@
                     </ul><!-- / .fields-list -->
                 </div>
             </div>
+            <div class="feedback-modal__my-dropzone my-dropzone"></div>
             <div class="feedback-form__bottom">
-                <button class="feedback-form__button button">Опублікувати</button>
+                <button class="feedback-form__button button" data-submit>Опублікувати</button>
             </div>
         </form><!-- / .form -->
     </div><!-- / .feedback-modal -->
+
+    <form action="/file-upload"
+          class="dropzone"
+          id="my-awesome-dropzone"></form>
 
     <!-- Order modal -->
     <div class="order-modal form-modal common-modal common-modal--has-border" id="js-order-modal" style="display: none">
@@ -700,88 +706,88 @@
                                 <div class="dropdown__box dropdown__box--sizes dropdown__box--custom-scroller-x parameters js-custom-scroller-dark-x">
                                     <table class="parameters__table parameters-table">
                                         <thead>
-                                            <tr>
-                                                <th></th>
-                                                <th>Розмір</th>
-                                                <th>Обхват грудей</th>
-                                                <th>Обхват талії</th>
-                                                <th>Зріст</th>
-                                                <th>Кількість</th>
-                                            </tr>
+                                        <tr>
+                                            <th></th>
+                                            <th>Розмір</th>
+                                            <th>Обхват грудей</th>
+                                            <th>Обхват талії</th>
+                                            <th>Зріст</th>
+                                            <th>Кількість</th>
+                                        </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <th>XS</th>
-                                                <td>40-42</td>
-                                                <td>82-90</td>
-                                                <td>68-80</td>
-                                                <td>170-176</td>
-                                                <td>
-                                                    <label>
-                                                        <input class="parameters-table__field" type="number" name="quantity-xs" min="1">
-                                                    </label>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th>S</th>
-                                                <td>40-42</td>
-                                                <td>82-90</td>
-                                                <td>68-80</td>
-                                                <td>170-176</td>
-                                                <td>
-                                                    <label>
-                                                        <input class="parameters-table__field" type="number" name="quantity-s" min="1">
-                                                    </label>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th>M</th>
-                                                <td>40-42</td>
-                                                <td>82-90</td>
-                                                <td>68-80</td>
-                                                <td>170-176</td>
-                                                <td>
-                                                    <label>
-                                                        <input class="parameters-table__field" type="number" name="quantity-m" min="1">
-                                                    </label>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th>L</th>
-                                                <td>40-42</td>
-                                                <td>82-90</td>
-                                                <td>68-80</td>
-                                                <td>170-176</td>
-                                                <td>
-                                                    <label>
-                                                        <input class="parameters-table__field" type="number" name="quantity-l" min="1">
-                                                    </label>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th>XL</th>
-                                                <td>40-42</td>
-                                                <td>82-90</td>
-                                                <td>68-80</td>
-                                                <td>170-176</td>
-                                                <td>
-                                                    <label>
-                                                        <input class="parameters-table__field" type="number" name="quantity-xl" min="1">
-                                                    </label>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th>2XL</th>
-                                                <td>40-42</td>
-                                                <td>82-90</td>
-                                                <td>68-80</td>
-                                                <td>170-176</td>
-                                                <td>
-                                                    <label>
-                                                        <input class="parameters-table__field" type="number" name="quantity-2xl" min="1">
-                                                    </label>
-                                                </td>
-                                            </tr>
+                                        <tr>
+                                            <th>XS</th>
+                                            <td>40-42</td>
+                                            <td>82-90</td>
+                                            <td>68-80</td>
+                                            <td>170-176</td>
+                                            <td>
+                                                <label>
+                                                    <input class="parameters-table__field" type="number" name="quantity-xs" min="1">
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>S</th>
+                                            <td>40-42</td>
+                                            <td>82-90</td>
+                                            <td>68-80</td>
+                                            <td>170-176</td>
+                                            <td>
+                                                <label>
+                                                    <input class="parameters-table__field" type="number" name="quantity-s" min="1">
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>M</th>
+                                            <td>40-42</td>
+                                            <td>82-90</td>
+                                            <td>68-80</td>
+                                            <td>170-176</td>
+                                            <td>
+                                                <label>
+                                                    <input class="parameters-table__field" type="number" name="quantity-m" min="1">
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>L</th>
+                                            <td>40-42</td>
+                                            <td>82-90</td>
+                                            <td>68-80</td>
+                                            <td>170-176</td>
+                                            <td>
+                                                <label>
+                                                    <input class="parameters-table__field" type="number" name="quantity-l" min="1">
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>XL</th>
+                                            <td>40-42</td>
+                                            <td>82-90</td>
+                                            <td>68-80</td>
+                                            <td>170-176</td>
+                                            <td>
+                                                <label>
+                                                    <input class="parameters-table__field" type="number" name="quantity-xl" min="1">
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>2XL</th>
+                                            <td>40-42</td>
+                                            <td>82-90</td>
+                                            <td>68-80</td>
+                                            <td>170-176</td>
+                                            <td>
+                                                <label>
+                                                    <input class="parameters-table__field" type="number" name="quantity-2xl" min="1">
+                                                </label>
+                                            </td>
+                                        </tr>
                                         </tbody>
                                     </table><!-- / .parameters-table -->
                                     <p class="parameters__button-box">

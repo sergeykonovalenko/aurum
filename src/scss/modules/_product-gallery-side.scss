@@ -6,6 +6,10 @@
     @include slider-fix(92.5px);
 }
 
+.product-gallery-side .slick-slide > div {
+    font-size: 0;
+}
+
 .product-gallery-side__item {
     padding: 0 2px;
     cursor: pointer;
