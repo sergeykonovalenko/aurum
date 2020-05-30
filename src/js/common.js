@@ -260,16 +260,40 @@ $(document).ready(function () {
     });
 
     // activation of the requested product tab
-    let productItemLinks = document.querySelectorAll('.product-item__thumb-link');
-    productItemLinks.forEach(productItemLink => {
-        productItemLink.addEventListener('click', function () {
-            // let productTabs = this.querySelector('.product-modal__tabs');
-            // let productTabs = document.querySelector('.product-modal__tabs');
-            // $(productTabs).tabs({
-            //     active: 1
-            // });
+    let products = document.querySelectorAll('.product-item__thumb-link');
+
+    products.forEach(product => {
+        product.addEventListener('click', function () {
+            let productName = this.querySelector('.product-item__name').textContent.toLowerCase();
+            let productTabs = document.querySelector('.product-types-tabs'); // мод. окно общее
+            // let productTabs = this.querySelector('.product-types-tabs'); // мод. окно индивидуальное
+            let productTabsLinks = productTabs.querySelectorAll('.product-types-tabs__nav a');
+            let IdSelectedTab;
+
+            productTabsLinks.forEach(function (tabsNavLink) {
+                if ( tabsNavLink.textContent.toLowerCase() === productName ) {
+                    IdSelectedTab = tabsNavLink.getAttribute('href');
+                }
+            });
+
+            $(productTabs).tabs('option', 'active', id2Index('.product-modal__tabs', IdSelectedTab));
         });
     });
+
+    function id2Index(tabs, srcId) {
+        let index = -1;
+        let i = 0, tbH = $(tabs).find('.ui-tabs-nav a');
+        let lntb = tbH.length;
+        if ( lntb > 0 ) {
+            for ( i = 0; i < lntb; i++ ) {
+                let o = tbH[i];
+                if ( o.href.search(srcId) > 0 ) {
+                    index = i;
+                }
+            }
+        }
+        return index;
+    }
 
     // transfer of order parameters to the form
     let productCardButtons = document.querySelectorAll('.product-card__button');
