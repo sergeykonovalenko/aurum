@@ -1,7 +1,7 @@
 .description-clothes {
     margin-bottom: -130px;
-    padding-top: calc(56px + 120px);
-    padding-bottom: calc(70px + 130px);
+    padding-top: 176px;
+    padding-bottom: 220px;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -100,24 +100,26 @@
 }
 
 @media screen and (max-width: 992px) {
+    .description-clothes {
+        margin-bottom: -180px;
+    }
+
     .description-clothes__box {
         width: 739px;
     }
 
-    @media screen and (max-width: 1510px) {
-        .description-clothes__img {
+    .description-clothes__img {
 
-            &--jacket {
-                width: 420px;
-            }
+        &--jacket {
+            width: 420px;
+        }
 
-            &--pants {
-                width: 334px;
-            }
+        &--pants {
+            width: 334px;
+        }
 
-            &--half-bombardment {
-                width: 323px;
-            }
+        &--half-bombardment {
+            width: 323px;
         }
     }
 }

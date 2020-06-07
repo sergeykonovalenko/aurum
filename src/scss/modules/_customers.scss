@@ -53,7 +53,16 @@
         }
 
         span {
-            font-size: 36px;
+            font-size: 33px;
+        }
+    }
+}
+
+@media screen and (max-width: 365px) {
+    .customers__title {
+
+        span {
+            font-size: 28px;
         }
     }
 }

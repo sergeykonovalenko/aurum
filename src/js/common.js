@@ -530,6 +530,12 @@ $(document).ready(function () {
         scrollButtons: { enable: true }
     });
 
+    $('.js-custom-scroller-dark-y-x').mCustomScrollbar({
+        theme: 'dark',
+        axis: 'yx',
+        scrollButtons: { enable: true }
+    });
+
     $('.js-custom-scroller-light-y').mCustomScrollbar({
         theme: 'light',
         scrollButtons: { enable: true }

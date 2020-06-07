@@ -292,6 +292,10 @@
             margin-bottom: -120px;
         }
 
+        &--1--2::before {
+            margin-left: 0;
+        }
+
         &--2--1::before {
             margin-bottom: -180px;
         }

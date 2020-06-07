@@ -1,0 +1,33 @@
+/* ==========================================================================
+   STYLES FOR BINOTEL
+   ========================================================================== */
+
+/* Для изменения цвета кнопки
+   ========================================================================== */
+body #bingc-phone-button svg.bingc-phone-button-circle circle.bingc-phone-button-circle-inside {
+    fill: #f1b643 !important;
+}
+
+body #bingc-phone-button:hover svg.bingc-phone-button-circle circle.bingc-phone-button-circle-inside {
+    fill: #f1b643 !important;
+}
+
+body #bingc-phone-button div.bingc-phone-button-tooltip {
+    background: #f1b643 !important;
+}
+
+body #bingc-phone-button div.bingc-phone-button-tooltip svg.bingc-phone-button-arrow polyline {
+    fill: #f1b643 !important;
+}
+
+/* Для изменения цвета фона пасивной формы
+   ========================================================================== */
+body #bingc-passive > div.bingc-passive-overlay {
+    background: #f1b643 !important;
+}
+
+/* Для изменения цвета фона активной формы
+   ========================================================================== */
+body #bingc-active {
+    background: #f1b643 !important;
+}

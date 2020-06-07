@@ -86,6 +86,11 @@
     &--custom-scroller-x {
         overflow-x: auto;
     }
+
+    &--custom-scroller-y-x {
+        max-height: 390px;
+        overflow: auto;
+    }
 }
 
 .dropdown__box .mCSB_inside > .mCSB_container {
