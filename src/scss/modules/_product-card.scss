@@ -68,6 +68,12 @@
     margin: 0;
 }
 
+.product-card__get-desc-mobile {
+    width: 510px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
 @media screen and (max-width: 992px) {
     .product-card {
         display: block;
@@ -81,6 +87,10 @@
 
     .product-card__right {
         width: 100%;
+    }
+
+    .product-card__tabs {
+        margin-bottom: 45px;
     }
 }
 

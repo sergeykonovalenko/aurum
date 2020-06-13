@@ -1,5 +1,8 @@
 .get-description-small {
 
+    &--only-mobile {
+        display: none;
+    }
 }
 
 .get-description-small__title {
@@ -12,5 +15,24 @@
     strong {
         font-weight: 500;
         color: $color-main;
+    }
+
+    .get-description-small--only-mobile & {
+        text-align: center;
+        font-size: 18px;
+        text-transform: none;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .get-description-small {
+
+        &--only-desktop {
+            display: none;
+        }
+
+        &--only-mobile {
+            display: block;
+        }
     }
 }

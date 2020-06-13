@@ -1,5 +1,6 @@
 .parameters-table {
-    width: 498px;
+    //width: 498px;
+    width: 100%;
     border-collapse: collapse;
     font-size: 14px;
     line-height: 1.25;
@@ -20,7 +21,7 @@
 
 .parameters-table td {
     color: #999696;
-    white-space: nowrap;
+    //white-space: nowrap;
 }
 
 .parameters-table__field {
@@ -52,4 +53,15 @@
 .parameters__button {
     margin-bottom: 3px;
     margin-left: auto;
+}
+
+@media screen and (max-width: 576px) {
+    .parameters-table th {
+        font-size: 12px;
+    }
+
+    .parameters-table td,
+    .parameters-table th {
+        padding: 3px;
+    }
 }
