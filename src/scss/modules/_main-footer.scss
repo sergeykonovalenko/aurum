@@ -1,6 +1,7 @@
 .main-footer {
-    padding-top: calc(145px + 195px);
+    padding-top: 340px;
     padding-bottom: 30px;
+    background-color: #fff;
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
@@ -24,6 +25,13 @@
     width: 790px;
     max-width: 100%;
     margin: 0 auto 120px;
+}
+
+@media screen and (min-width: 2100px) {
+    .main-footer {
+        width: 1920px;
+        margin: -1px auto 0;
+    }
 }
 
 @media screen and (max-width: 576px) {

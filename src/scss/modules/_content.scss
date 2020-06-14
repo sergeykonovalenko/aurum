@@ -2,10 +2,6 @@
 
 }
 
-.content h1 {
-    //font-size: 38px;
-}
-
 .content p,
 .content ul {
     margin: 1em 0;
@@ -59,19 +55,3 @@
 .content *:last-child {
     margin-bottom: 0;
 }
-
-//@media screen and (max-width: 576px) {
-//    .content h1 {
-//        font-size: 35px;
-//    }
-//
-//    .content h2,
-//    .content .heading-2 {
-//        font-size: 30px;
-//    }
-//
-//    .content h3,
-//    .content .heading-3 {
-//        font-size: 24px;
-//    }
-//}

@@ -1,7 +1,15 @@
 .main {
+    background-color: #fff;
     overflow: hidden;
 }
 
 .main__offer-bg-wr {
     background-color: #1d1b19;
+}
+
+@media screen and (min-width: 2100px) {
+    .main {
+        width: 1920px;
+        margin: 0 auto;
+    }
 }

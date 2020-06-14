@@ -1,20 +1,16 @@
 // Colors
-//$color-main--lightest: #b7b7b7;
-//$color-main--lighten:  #8f8f8f;
 $color-main--light:    #f0c259;
 $color-main:           #f0b644;
 $color-main--dark:     #e8a82d;
-//$color-main--darken:   #1F1F1F;
-//$color-main--darkest:  #0D0D0D;
 
 $color-secondary:      #1d1d1d;
 $color-bg:             #252528;
-$gray:                 #cac6c5;
 
 $model-antistat:       #28527e;
 $model-gray:           #80818e;
 
-//$color-accent:         #54CC80;
+$gray:                 #cac6c5;
+
 $color-warning:        #fb5258;
 $color-warning-bg:     #f3b2b2;
-$color-warning-shadow: rgba(251, 82, 88, .7);
+$color-warning-shadow: rgba($color-warning, .7);

@@ -23,7 +23,7 @@ body {
     font-family: "Ubuntu", Tahoma, sans-serif;
     color: $color-secondary;
     word-wrap: break-word;
-    background-color: #fff;
+    background-color: $color-secondary;
 }
 
 a {

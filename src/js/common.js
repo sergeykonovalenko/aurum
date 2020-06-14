@@ -8,7 +8,7 @@ import './vendor/jquery.mb.browser';
 import 'malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min';
 import 'jquery.maskedinput/src/jquery.maskedinput';
 import 'jquery-validation';
-import Dropzone from 'dropzone';
+// import Dropzone from 'dropzone';
 import './svg-sprite';
 import './google-maps';
 // WAI-ARIA Authoring Practices 1.1 (list-box)

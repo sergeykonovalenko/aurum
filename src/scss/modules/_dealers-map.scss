@@ -6,6 +6,12 @@
     width: calc(50vw - (var(--scrollbar-width) / 2) + 25px);
 }
 
+@media screen and (min-width: 2100px) {
+    .dealers-map__map {
+        width: 985px;
+    }
+}
+
 @media screen and (max-width: 1200px) {
     .dealers-map__map {
         width: calc(100vw - var(--scrollbar-width) - 575px); // 560px + 15px = 575px
