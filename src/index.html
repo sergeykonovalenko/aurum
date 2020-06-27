@@ -7464,7 +7464,7 @@
                     </div><!-- / .review -->
                 </div><!-- / .reviews-slider -->
                 <p class="reviews__button-box">
-                    <a class="reviews__button button button--with-icon btn-modal" href="#js-feedback-modal">
+                    <a class="reviews__button button button--with-icon btn-modal" href="#js-feedback-modal" data-extra-txt="Общий отзыв">
                         Залишити відгук
                         <span class="button__icon">
                         <svg class="" width="30" height="33" fill="#be893d">
@@ -7963,6 +7963,7 @@
         </div>
         <form class="feedback-modal__form feedback-form js-form" action="#" method="post">
             <input type="hidden" name="form-type" value="Оставить отзыв">
+            <input type="hidden" name="target">
             <div class="feedback-form__row">
                 <div class="feedback-form__col">
                     <ul class="feedback-form__fields-list fields-list">
@@ -7989,10 +7990,18 @@
                     </ul><!-- / .fields-list -->
                 </div>
             </div>
-            <div class="feedback-modal__my-dropzone my-dropzone"></div>
-            <div class="feedback-form__bottom">
-                <button class="feedback-form__button button" data-submit>Опублікувати</button>
-            </div>
+            <div class="feedback-modal__my-dropzone my-dropzone">
+                <div class="my-dropzone__message">
+                    <svg class="my-dropzone__icon" width="150" height="108" fill="#f0b644">
+                        <use xlink:href="#icon-cloud-upload"></use>
+                    </svg>
+                    <p class="my-dropzone__title">Скиньте сюди свої .png або .jpg файли!</p>
+                    <p class="my-dropzone__subtitle">До 10 зображень, максимум 5 Мб кожне.</p>
+                </div>
+            </div><!-- / .my-dropzone -->
+            <p class="feedback-form__button-box">
+                <button class="feedback-form__button button" disabled data-submit>Надіслати</button>
+            </p>
         </form><!-- / .form -->
     </div><!-- / .feedback-modal -->
 
@@ -9019,6 +9028,13 @@
         <div class="thanks-modal__head content">
             <p><strong>Дякуємо! Ваша заявка відправлена</strong></p>
             <p>Наш експерт зв’яжеться з Вами<br> найближчого часу</p>
+        </div>
+    </div><!-- / .thanks-modal -->
+
+    <!-- Thanks modal review -->
+    <div class="thanks-modal common-modal common-modal--has-border" id="js-thanks-modal-review" style="display: none">
+        <div class="thanks-modal__head content">
+            <p><strong>Дякуємо! Ваш відгук відправлений</strong></p>
         </div>
     </div><!-- / .thanks-modal -->
 

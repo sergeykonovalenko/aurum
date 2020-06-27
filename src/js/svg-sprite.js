@@ -17,3 +17,4 @@ import '../img/svg-sprite/icon-facebook.svg';
 import '../img/svg-sprite/icon-close-light.svg';
 import '../img/svg-sprite/icon-close-light.svg';
 import '../img/svg-sprite/icon-loader.svg';
+import '../img/svg-sprite/icon-cloud-upload.svg';

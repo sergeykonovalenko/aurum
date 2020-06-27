@@ -3,9 +3,32 @@
    ========================================================================== */
 .my-dropzone {
     min-height: 100px;
-    background-color: aqua;
 }
 
+.my-dropzone__message {
+    text-align: center;
+    pointer-events: none;
+
+    .dz-started & {
+        display: none;
+    }
+}
+
+.my-dropzone__icon {
+    margin-bottom: 8px;
+}
+
+.my-dropzone__title {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.my-dropzone__subtitle {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+}
 
 /* ==========================================================================
    basic.scss
@@ -61,10 +84,7 @@
             left: 50%;
             margin-left: -(54px/2);
         }
-
-
     }
-
 }
 
 /* ==========================================================================
@@ -82,7 +102,6 @@
     }
 }
 
-
 @mixin prefix($map, $vendors: webkit moz ms o) {
     @each $prop, $value in $map {
         @if $vendors {
@@ -94,7 +113,6 @@
         #{$prop}: #{$value};
     }
 }
-
 
 @include keyframes(passing-through) {
 
@@ -114,7 +132,6 @@
     }
 }
 
-
 @include keyframes(slide-in) {
 
     0% {
@@ -128,8 +145,6 @@
     }
 }
 
-
-
 @include keyframes(pulse) {
 
     0% { @include prefix((transform: scale(1))); }
@@ -138,11 +153,10 @@
 
 }
 
-
-
 .my-dropzone, .my-dropzone * {
     box-sizing: border-box;
 }
+
 .my-dropzone {
 
     $image-size: 120px;
@@ -163,9 +177,10 @@
     }
 
     min-height: 150px;
-    border: 2px solid rgba(0, 0, 0, 0.3);
-    background: white;
     padding: 20px 20px;
+    //background: #e6e6e6;
+    border: 2px dashed #dadada;
+    border-radius: 5px;
 
     &.dz-started {
         .dz-message {
@@ -174,7 +189,8 @@
     }
 
     &.dz-drag-hover {
-        border-style: solid;
+        //border-style: solid;
+        border-color: $color-main;
         .dz-message {
             opacity: 0.5;
         }
@@ -193,8 +209,6 @@
             outline: inherit;
         }
     }
-
-
 
     .dz-preview {
         position: relative;
@@ -227,7 +241,7 @@
         }
 
         &.dz-image-preview {
-            background: white;
+            //background: white;
             .dz-details {
                 @include prefix((transition: opacity 0.2s linear));
             }
@@ -237,10 +251,14 @@
             font-size: 14px;
             text-align: center;
             display: block;
+            color: $color-secondary;
             cursor: pointer;
             border: none;
+            transition: all .15s ease-out;
+
             &:hover {
-                text-decoration: underline;
+                //text-decoration: underline;
+                color: $color-main--dark;
             }
         }
 
@@ -353,10 +371,11 @@
 
             position: absolute;
             display: block;
-            top: 50%;
+            //top: 50%;
+            top: 33px;
             left: 50%;
             margin-left: -($image-width/2);
-            margin-top: -($image-height/2);
+            //margin-top: -($image-height/2);
 
             svg {
                 display: block;
@@ -430,7 +449,8 @@
         }
 
         .dz-error-message {
-            $width: $image-size + 20px;
+            //$width: $image-size + 20px;
+            $width: $image-size + 35px;
             $color: rgb(190, 38, 38);
 
             pointer-events: none;
@@ -442,7 +462,8 @@
             @include prefix((transition: opacity 0.3s ease));
             border-radius: 8px;
             font-size: 13px;
-            top: $image-size + 10px;
+            //top: $image-size + 10px;
+            top: $image-size + 30px;
             left: -10px;
             width: $width;
             background: $color;

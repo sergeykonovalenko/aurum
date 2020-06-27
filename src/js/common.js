@@ -1,3 +1,4 @@
+import Dropzone from 'dropzone';
 import 'jquery-ui/ui/widgets/tabs';
 import 'rater-jquery';
 import '@fancyapps/fancybox/dist/jquery.fancybox.min';
@@ -8,7 +9,6 @@ import './vendor/jquery.mb.browser';
 import 'malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min';
 import 'jquery.maskedinput/src/jquery.maskedinput';
 import 'jquery-validation';
-// import Dropzone from 'dropzone';
 import './svg-sprite';
 import './google-maps';
 // WAI-ARIA Authoring Practices 1.1 (list-box)
@@ -336,26 +336,159 @@ $(document).ready(function () {
         }, {passive: true});
     });
 
-    // init dropzone
-    // Dropzone.autoDiscover = false;
-    //
-    // let myDropZone = new Dropzone('.my-dropzone', {
-    //     paramName: 'form_file', // The name that will be used to transfer the file
-    //     method: 'files', // потом попробовать без этого параметра
-    //     url: `${templateUrl}/uploads`,
-    //     autoProcessQueue: false,
-    //     addRemoveLinks: true,
-    //     maxFilesize: 5, // MB
-    //     accept: function(file, done) {
-    //         // if (file.name == "justinbieber.jpg") {
-    //         //     // done("Naha, you don't.");
-    //         // }
-    //         // else { done(); }
-    //     },
-    // });
+    // передать информацию какому именно товару был оставлен отзыв
+    let buttonsLeaveReview = document.querySelectorAll('.rating-and-review__btn-review');
+    let targetReview = document.querySelector('.feedback-modal [name="target"]');
+    let reviewsButton = document.querySelector('.reviews__button');
+
+    buttonsLeaveReview.forEach(buttonLeaveReview => {
+        buttonLeaveReview.addEventListener('click', function () {
+
+            let target = this.closest('.product-modal')
+                .querySelector('.product-card[aria-hidden="false"] .product-card__button')
+                .dataset.extraTxt;
+
+            targetReview.value = target;
+
+        }, {passive: true});
+    });
+
+    reviewsButton.addEventListener('click', function () {
+
+        let target = this.dataset.extraTxt;
+        targetReview.value = target;
+
+    }, {passive: true});
 
     ////////////////////////////////////////////////////////////////////////////
-    // Send callback / Send request / Buy product
+    // INIT DROPZONE
+
+    // Dropzone.autoDiscover = false;
+
+    let feedbackFormButton = document.querySelector('.feedback-form__button');
+    let feedbackFormButtonTxt = feedbackFormButton.textContent;
+
+    let myDropZone = new Dropzone('.my-dropzone', {
+        url: `${templateUrl}/tpl-sys-request.php`,
+        // paramName: 'form_file', // The name that will be used to transfer the file
+        uploadMultiple: true, // отправлять несколько файлов в одном запросе
+        autoProcessQueue: false, // предотвращаем стандартную загрузку, у нас свой обработчик
+        parallelUploads: 10, // сколько загрузок файлов обрабатывать параллельно
+        addRemoveLinks: true,
+        maxFilesize: 5, // MB
+        maxFiles: 10, // ограничить максимальное количество файлов
+        timeout: 180000,
+        acceptedFiles: 'image/jpeg, image/png',
+        dictRemoveFile: 'Видалити',
+        dictCancelUpload: 'Скасувати',
+        dictMaxFilesExceeded: 'Максимальна кількість файлів - {{maxFiles}}',
+        dictFileTooBig: 'Файл занадто великий ({{filesize}}Mb). Макс. розмір файлу – {{maxFilesize}}Mb.',
+        init: function () {
+
+            let form = this.element.closest('form');
+            let submitButton = form.querySelector('[data-submit]');
+            // let DropZone = this;
+
+            submitButton.addEventListener('click', event => {
+
+                event.preventDefault();
+
+                if (myDropZone.files.length > 0) { // Если есть файлы
+
+                    // Проверить заполненность полей
+                    if ($('#feedback-modal-form-name').val() == '' || $('#feedback-modal-form-phone').val() == '' || $('#feedback-modal-form-email').val() == '' || $('#feedback-modal-form-comment').val() == '') {
+
+                        // Проверить заполненность полей
+                        console.log('Если пустое хоть одно значение, то проверить и вернуть');
+                        $(form).submit();
+
+                        return;
+                    }
+
+                    // Обработать Dropzone отправку
+                    console.log('Обработать Dropzone отправку');
+                    console.log(myDropZone.files);
+
+                    myDropZone.processQueue();
+
+                } else {  // Если нет файлов
+
+                    // Просто обработать форму без Dropzone
+                    console.log('Просто обработать форму без Dropzone');
+                    $(form).submit();
+                }
+
+            });
+
+            // Добавляем наши поля в formData для Dropzone
+            this.on('sendingmultiple', (data, xhr, formData) => {
+                formData.append('name', $('#feedback-modal-form-name').val());
+                formData.append('phone', $('#feedback-modal-form-phone').val());
+                formData.append('email', $('#feedback-modal-form-email').val());
+                formData.append('comment', $('#feedback-modal-form-comment').val());
+                formData.append('form-type', $('.feedback-form [name="form-type"]').val());
+                formData.append('target', $('.feedback-form [name="target"]').val());
+
+                console.log('Событие sendingmultiple');
+
+                feedbackFormButton.textContent = "Завантаження...";
+                feedbackFormButton.disabled = true;
+            });
+
+            // Обработка успешной отправки с файлами
+            this.on('successmultiple', () => {
+                console.log('Успех');
+
+                setTimeout(() => {
+                    $.fancybox.close(true);
+                    feedbackFormButton.textContent = feedbackFormButtonTxt;
+                    feedbackFormButton.disabled = false;
+                    showThanksForReview();
+                    $('.fields-list__field').each(function() { $(this).val(''); });
+                    myDropZone.removeAllFiles();
+                }, 1500);
+            });
+
+            // Обработка ошибки
+            this.on('error', () => {
+                console.log('Ошибка');
+
+                feedbackFormButton.textContent = feedbackFormButtonTxt;
+            });
+
+        },
+        // accept: function(file, done) {
+        //     if (file.name == "justinbieber.jpg") {
+        //         // done("Naha, you don't.");
+        //     }
+        //     else { done(); }
+        // },
+    });
+
+    // END INIT DROPZONE
+    ////////////////////////////////////////////////////////////////////////////
+
+    function showThanksForReview() {
+        $.fancybox.open({
+            src: '#js-thanks-modal-review',
+            type : 'inline',
+            touch : false,
+            backFocus: false,
+            btnTpl: {
+                smallBtn: `
+                    <button class="common-modal__close fancybox-button fancybox-close-small" type="button" data-fancybox-close title="Закрыть">
+                        <svg width="15" height="15" viewBox="0 0 320 320" fill="#000" xmlns="http://www.w3.org/2000/svg"><path d="M207.6 160L315.3 52.3c6.2-6.2 6.2-16.3 0-22.6l-25-25c-6.2-6.2-16.3-6.2-22.6 0L160 112.4 52.3 4.7c-6.2-6.2-16.3-6.2-22.6 0l-25 25c-6.2 6.2-6.2 16.3 0 22.6L112.4 160 4.7 267.7c-6.2 6.2-6.2 16.3 0 22.6l25 25c6.2 6.2 16.3 6.2 22.6 0L160 207.6l107.7 107.7c6.2 6.2 16.3 6.2 22.6 0l25-25c6.2-6.2 6.2-16.3 0-22.6L207.6 160z"/></svg>
+                    </button>`
+            },
+            afterClose: function () {
+                $.fancybox.close();
+            }
+        });
+    }
+
+    ////////////////////////////////////////////////////////////////////////////
+    // FORM HANDLER
+
     // $('[data-submit]').on('click', function(e) {
     //     e.preventDefault();
     //     $(this).parent('form').submit();
@@ -394,15 +527,16 @@ $(document).ready(function () {
                 },
             },
             submitHandler: function (form) {
-                // Код события Пиксель Facebook после успешной отправки заявки
-                // Ко всем формам кроме "Оставить отзыв"
-                if ( $(form).find('[name="form-type"]') !== 'Оставить отзыв' || fbq ) {
+                /*
+                * Код события Пиксель Facebook после успешной отправки заявки
+                * ко всем формам кроме "Оставить отзыв"
+                */
+                if ( $(form).find('[name="form-type"]').val() !== 'Оставить отзыв') {
+
                     if (typeof fbq !== 'undefined') {
                         fbq('track', 'Purchase');
                     }
                 }
-
-                // myDropzone.processQueue();
 
                 // объект, посредством которого будем кодировать форму перед отправкой её на сервер
                 // let formData = new FormData();
@@ -440,6 +574,13 @@ $(document).ready(function () {
                             $('.loader').fadeOut();
                         },800);
 
+                        // Если это форма "Оставить отзыв"
+                        if ( $(form).find('[name="form-type"]').val() === 'Оставить отзыв' ) {
+                            showThanksForReview();
+                            jQuery(form).find('.fields-list__field').each(function(){ jQuery(this).val(''); });
+                            return;
+                        }
+
                         setTimeout(function () {
                             $.fancybox.open({
                                 src: '#js-thanks-modal',
@@ -459,7 +600,10 @@ $(document).ready(function () {
                         },1100);
 
                         jQuery(form).find('.fields-list__field').each(function(){ jQuery(this).val(''); });
-                    }
+                    },
+                    error: () => {
+                        console.log('Ошибка');
+                    },
                 });
 
                 return false;
