@@ -51,11 +51,26 @@
     line-height: 1.25;
     color: #b3b3b3;
 
-    strong {
-        margin: 0 5px;
-        font-weight: 400;
+    del {
+        margin-left: 5px;
+        font-size: 23px;
+
+        span {
+            font-size: 16px;
+        }
+    }
+
+    ins {
+        margin-left: 5px;
+        font-weight: 500;
         font-size: 36px;
-        color: $color-secondary;
+        text-decoration: none;
+        //color: $color-secondary;
+        color: $color-main--dark;
+
+        span {
+            font-size: 20px;
+        }
     }
 }
 
@@ -137,5 +152,11 @@
             position: relative;
             margin-right: 0;
         }
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .product-card__price ins {
+        font-size: 30px;
     }
 }

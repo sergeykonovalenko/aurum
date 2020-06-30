@@ -190,6 +190,22 @@
     margin: 0;
 }
 
+.main-header__stock {
+    position: fixed;
+    z-index: 1;
+    top: 100px;
+    left: calc((100vw - 1170px - 17px) / 2);
+    margin: 0;
+    text-align: center;
+    color: #ff0000;
+    transform: rotate(-45deg);
+    pointer-events: none;
+
+    b {
+        font-weight: 700;
+    }
+}
+
 @media screen and (max-width: 1200px) {
     .main-header__hamburger {
         display: block;
@@ -205,6 +221,10 @@
         .main-header--home & {
             margin-left: 0;
         }
+    }
+
+    .main-header__stock {
+        left: 0;
     }
 }
 
