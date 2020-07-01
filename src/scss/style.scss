@@ -9,6 +9,7 @@ Version: 1.0
    VENDORS
    ========================================================================== */
 @import "~normalize.css/normalize.css";
+@import "~animate.css/animate.min.css";
 @import "~@fancyapps/fancybox/dist/jquery.fancybox.min.css";
 @import "~slick-carousel/slick/slick.css";
 @import "~malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css";
@@ -38,6 +39,7 @@ Version: 1.0
 @import "modules/language-switch";
 @import "modules/mobile-menu";
 @import "modules/show-mobile-menu";
+@import "modules/wow";
 @import "modules/main";
 @import "modules/content";
 @import "modules/main-offer";
