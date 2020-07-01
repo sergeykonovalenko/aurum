@@ -55,7 +55,7 @@
     "@fancyapps/fancybox": "^3.5.7",
     "animate.css": "^4.1.0",
     "dropzone": "^5.7.0",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "jquery-ui": "^1.12.1",
     "jquery-validation": "^1.19.1",
     "jquery.maskedinput": "^1.4.1",
