@@ -21,7 +21,8 @@
         font-weight: 500;
     }
 
-    &--aurum-antistat {
+    &--aurum-antistat,
+    &--everest-antistat {
 
         &::before {
             background-image: linear-gradient(to bottom, #95b4db 0%, #5688b6 70%, #175b90 100%);
