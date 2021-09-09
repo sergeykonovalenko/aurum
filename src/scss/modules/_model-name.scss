@@ -22,7 +22,9 @@
     }
 
     &--aurum-antistat,
-    &--everest-antistat {
+    &--everest-antistat,
+    &--aurum-antistat-4s,
+    &--aurum-everest {
 
         &::before {
             background-image: linear-gradient(to bottom, #95b4db 0%, #5688b6 70%, #175b90 100%);
@@ -34,7 +36,8 @@
         }
     }
 
-    &--aurum-grey {
+    &--aurum-grey,
+    &--aurum-4s-grey {
 
         &::before {
             background-image: linear-gradient(to bottom, #bebebf 0%, #969697 70%, #6e6e6e 100%);
